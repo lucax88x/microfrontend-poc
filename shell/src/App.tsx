@@ -7,10 +7,16 @@ const Angular1 =
   // @ts-ignore
   async () => import("angular-1/bootstrap");
 
-const React1 =
+const React1App =
   lazy(
   // @ts-ignore
   async () => import("react-1/app")
+)
+
+const React1Docs =
+  lazy(
+  // @ts-ignore
+  async () => import("react-1/docs")
 )
 
 Angular1().then((a) => {
@@ -54,7 +60,11 @@ export default () => {
       <app-remote-root />
 
       <Suspense fallback="loading...">
-        <React1 />
+        <React1App />
+      </Suspense>
+
+      <Suspense fallback="loading...">
+        <React1Docs />
       </Suspense>
     </>
   );

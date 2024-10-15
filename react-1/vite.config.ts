@@ -28,6 +28,7 @@ export default defineConfig(({ mode }) => {
 				name: 'react1',
 				exposes: {
 					'./app': './src/App.tsx',
+					'./docs': './src/Docs.tsx',
 				},
 				remotes: {},
 				shared: {

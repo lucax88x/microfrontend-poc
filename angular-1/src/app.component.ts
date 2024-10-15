@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CounterComponent } from './counter.component';
+import { AiComponent } from './ai.component';
 
 @Component({
 	selector: 'app-remote-root',
@@ -37,8 +38,9 @@ import { CounterComponent } from './counter.component';
 			</div>
 			<div style="margin-top: 10px;font-size: 25px;">Angular 1 module</div>
 			<app-remote-counter />
+			<app-remote-ai />
 		</div>
 	`,
-	imports: [CommonModule, CounterComponent],
+	imports: [CommonModule, CounterComponent, AiComponent],
 })
 export class AppComponent {}

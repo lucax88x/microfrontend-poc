@@ -1,9 +1,11 @@
+import './index.css'
+
 import { useEffect } from 'react';
 import Counter from './components/Counter';
 
 export default () => {
 	useEffect(() => {
-		console.log('Remote useEffect');
+		console.log('react-1 useEffect');
 	}, []);
 
 	return (
@@ -36,7 +38,8 @@ export default () => {
 					/>
 				</svg>
 			</div>
-			<div style={{ marginTop: '10px', fontSize: '25px' }}>React 1 module</div>
+			<div style={{ marginTop: '10px', fontSize: '25px' }}>React 1 module with subrouting</div>
+      
 			<Counter />
 		</div>
 	);
