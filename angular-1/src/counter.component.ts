@@ -16,7 +16,7 @@ import { Component, signal } from '@angular/core';
 			"
 			(click)="increment()"
 		>
-			Angular Remote counter: {{ count() }}
+			Counter: {{ count() }}
 		</button>
 	`,
 })

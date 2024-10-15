@@ -3,12 +3,17 @@ import { of, tap } from "rxjs";
 import "./App.css";
 import Counter from "./components/Counter";
 
-const Remote =
+const Angular1 =
   // @ts-ignore
-  async () => import("remote/bootstrap");
+  async () => import("angular-1/bootstrap");
 
-console.log(Remote);
-Remote().then((a) => {
+const React1 =
+  lazy(
+  // @ts-ignore
+  async () => import("react-1/app")
+)
+
+Angular1().then((a) => {
   console.log(a);
   a.bootstrap();
 });
@@ -40,16 +45,17 @@ export default () => {
               />
             </svg>
           </div>
-          <div className="title">I'm the host and react app</div>
+          <div className="title">shell</div>
           <Counter />
 
-          <app-remote-root />
         </div>
       </div>
 
-      {/* <Suspense fallback="loading..."> */}
-      {/*   <Remote /> */}
-      {/* </Suspense> */}
+      <app-remote-root />
+
+      <Suspense fallback="loading...">
+        <React1 />
+      </Suspense>
     </>
   );
 };

@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
 	plugins: [
 		federation({
 			filename: 'remoteEntry.js',
-			name: 'remote',
+			name: 'angular-1',
 			exposes: {
 				'./remote-app': './src/app.component.ts',
 				'./bootstrap': './src/main.ts',

@@ -35,7 +35,7 @@ import { CounterComponent } from './counter.component';
 					/>
 				</svg>
 			</div>
-			<div style="margin-top: 10px;font-size: 25px;">I'm the remote app</div>
+			<div style="margin-top: 10px;font-size: 25px;">Angular 1 module</div>
 			<app-remote-counter />
 		</div>
 	`,
