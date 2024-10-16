@@ -12,6 +12,13 @@ export default defineConfig(() => ({
 		federation({
 			name: 'shell',
 			remotes: {
+        "design-system": {
+          type: "module",
+          name: "design-system",
+          entry: "http://localhost:5172/remoteEntry.js",
+          entryGlobalName: "design-system",
+          shareScope: "default",
+        },
 				'angular-1': {
 					type: 'module',
 					name: 'angular-1',

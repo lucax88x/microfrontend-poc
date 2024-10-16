@@ -1,18 +1,11 @@
 {
-	"name": "module-federation-vite-angular",
-	"version": "1.0.0",
-	"description": "Module Federation Vite + Angular is now possible",
+	"name": "microfrontend-poc",
+	"version": "0.0.1",
 	"scripts": {
 		"install:deps": "pnpm -r install",
 		"postinstall:deps": "pnpm run -r build",
 		"dev": "pnpm run -r dev",
 		"build": "pnpm run -r build",
 		"preview": "pnpm run -r preview"
-	},
-	"author": {
-		"name": "Giorgio Boa",
-		"email": "giorgiob.boa@gmail.com",
-		"url": "https://github.com/gioboa"
-	},
-	"license": "ISC"
+	}
 }

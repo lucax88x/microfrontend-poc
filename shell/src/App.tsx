@@ -1,6 +1,8 @@
+import "design-system/web-components";
+import "./App.css";
+
 import { lazy, Suspense, useEffect } from "react";
 import { of, tap } from "rxjs";
-import "./App.css";
 import Counter from "./components/Counter";
 
 const Angular1 =
@@ -17,6 +19,12 @@ const React1Docs =
   lazy(
   // @ts-ignore
   async () => import("react-1/docs")
+)
+
+const React1Charts =
+  lazy(
+  // @ts-ignore
+  async () => import("react-1/charts")
 )
 
 Angular1().then((a) => {
@@ -65,6 +73,10 @@ export default () => {
 
       <Suspense fallback="loading...">
         <React1Docs />
+      </Suspense>
+
+      <Suspense fallback="loading...">
+        <React1Charts />
       </Suspense>
     </>
   );
