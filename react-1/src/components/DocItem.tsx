@@ -1,43 +1,23 @@
-import { PropsWithChildren, useCallback } from "react";
-import { Doc } from "src/models/doc";
+import { PropsWithChildren } from "react";
+import { Doc } from "../models/doc";
 
-export const DocItem = ({ doc }: PropsWithChildren<{doc: Doc}>) => {
-  const emit = useCallback(() => {
-    const event = new CustomEvent('doc-send', {
-      bubbles: true,
-      composed: true,
-      detail: doc
-    });
-        
-    document.body.dispatchEvent(event);
-  }, [])
-  
+export const DocItem = ({ doc }: PropsWithChildren<{ doc: Doc }>) => {
   return (
-    <div className="flex items-center justify-between p-4 border-b">
-      <div className="flex-1">
-        <h3 className="text-lg font-semibold">{doc.label}</h3>
-        <p className="text-sm text-gray-500">{doc.id}</p>
+    <div className="r1-flex r1-items-center r1-justify-between r1-p-4 r1-border-b">
+      <div className="r1-flex-1">
+        <h3 className="r1-text-lg r1-font-semibold">{doc.label}</h3>
+        <p className="r1-text-sm r1-text-gray-500">{doc.id}</p>
       </div>
-      <div className="flex items-center space-x-2">
+      <div className="r1-flex r1-items-center r1-space-x-2">
         <a
           href={doc.url}
           download
-          className="p-2 text-blue-600 hover:text-blue-800"
+          className="r1-p-2 r1-text-blue-600 r1-hover:text-blue-800"
           title="Download"
         >
-          {/* <Download size={20} /> */}
-          down
+          <my-icon icon="download" />
         </a>
-        <button
-          className="p-2 text-gray-600 hover:text-gray-800"
-          title="More details"
-          onClick={emit}
-        >
-          {/* <ArrowRight size={20} /> */}
-          to the angular
-        </button>
       </div>
     </div>
   );
 };
-

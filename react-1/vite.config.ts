@@ -31,8 +31,9 @@ export default defineConfig(({ mode }) => {
         name: "react1",
         exposes: {
           "./app": "./src/App.tsx",
-          "./docs": "./src/Docs.tsx",
-          "./charts": "./src/Charts.tsx",
+          "./components/list-docs": "./src/components/ListDocs.tsx",
+          "./components/line": "./src/components/Line.tsx",
+          "./components/topbar": "./src/components/Topbar.tsx",
         },
         remotes: {
           "design-system": {

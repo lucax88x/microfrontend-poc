@@ -1,9 +1,11 @@
+import "../index.css";
+
 import useDemoConfig from "../useDemoConfig";
 import React from "react";
 import { AxisOptions, Chart } from "react-charts";
 
-export default function Line() {
-  const { data, randomizeData } = useDemoConfig({
+export const Line = () => {
+  const { data } = useDemoConfig({
     series: 10,
     dataType: "time",
   });
@@ -29,11 +31,7 @@ export default function Line() {
   );
 
   return (
-    <>
-      <button onClick={randomizeData}>Randomize Data</button>
-      <br />
-      <br />
-
+    <div style={{ width: 600, height: 400 }}>
       <Chart
         options={{
           data,
@@ -41,6 +39,8 @@ export default function Line() {
           secondaryAxes,
         }}
       />
-    </>
+    </div>
   );
-}
+};
+
+export default Line;
