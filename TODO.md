@@ -9,6 +9,8 @@
 - types of federation modules? props of components, etc
 - use ts path
 - how to pass attributes from lit to inner html elements
+- pnpm shared dependencies?
+- shared logging library, "sentry" wise"?
 
 limits: 
 - must import the index.css on every component to ensure tw

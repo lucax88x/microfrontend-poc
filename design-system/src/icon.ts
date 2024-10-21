@@ -9,15 +9,27 @@ import {
   Bell,
   User,
   Download,
+  Upload,
+  MessageCircleMore,
+  CircleX,
 } from "lucide";
 
-type Icons = "menu" | "home" | "search" | "bell" | "user" | "download";
+type Icons =
+  | "menu"
+  | "home"
+  | "search"
+  | "bell"
+  | "user"
+  | "download"
+  | "upload"
+  | "chat"
+  | "close";
 
 @customElement("my-icon")
 export class Icon extends LitElement {
   static styles = css`
     :host {
-      display: inline-block;
+      display: flex;
     }
   `;
 
@@ -54,6 +66,12 @@ export class Icon extends LitElement {
         return createElement(Search);
       case "download":
         return createElement(Download);
+      case "upload":
+        return createElement(Upload);
+      case "chat":
+        return createElement(MessageCircleMore);
+      case "close":
+        return createElement(CircleX);
     }
   }
 

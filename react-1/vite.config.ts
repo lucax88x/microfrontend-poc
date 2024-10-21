@@ -34,6 +34,7 @@ export default defineConfig(({ mode }) => {
           "./components/list-docs": "./src/components/ListDocs.tsx",
           "./components/line": "./src/components/Line.tsx",
           "./components/topbar": "./src/components/Topbar.tsx",
+          "./components/drawer-chat": "./src/components/DrawerChat.tsx",
         },
         remotes: {
           "design-system": {

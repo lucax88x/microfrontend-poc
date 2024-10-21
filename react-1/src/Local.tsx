@@ -1,16 +1,16 @@
 import "design-system/web-components";
-import './index.css'
+import "./index.css";
 
-import App from './App';
-import Docs from './Docs';
-import Charts from "./Charts";
+import App from "./App";
+import { DrawerChat } from "./components/DrawerChat";
+import { Line } from "./components/Line";
 
 export default () => {
-	return (
+  return (
     <>
-      <App/>
-      <Docs/>
-      <Charts/>
+      <App />
+      <Line />
+      <DrawerChat />
     </>
-	);
+  );
 };
