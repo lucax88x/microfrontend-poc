@@ -25,3 +25,4 @@ dist-ssr
 
 # Module federation temp files
 .__mf__temp
+*storybook.log

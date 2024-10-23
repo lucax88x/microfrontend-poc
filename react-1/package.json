@@ -5,22 +5,48 @@
   "scripts": {
     "dev": "vite --port 5175",
     "build": "tsc && vite build",
-    "preview": "npm run build && vite preview --port 5175"
+    "preview": "pnpm run build && vite preview --port 5175",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "storybook": "storybook dev -p 5275",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
-    "react": "^18.3.1",
+    "react": "catalog:react",
     "react-charts": "3.0.0-beta.57",
-    "react-dom": "^18.3.1"
+    "react-dom": "catalog:react-dom"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@eslint/js": "^9.13.0",
     "@module-federation/vite": "1.1.3",
+    "@storybook/addon-essentials": "^8.3.6",
+    "@storybook/addon-interactions": "^8.3.6",
+    "@storybook/addon-links": "^8.3.6",
+    "@storybook/addon-onboarding": "^8.3.6",
+    "@storybook/blocks": "^8.3.6",
+    "@storybook/react": "^8.3.6",
+    "@storybook/react-vite": "^8.3.6",
+    "@storybook/test": "^8.3.6",
+    "@types/eslint__js": "^8.42.3",
     "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
     "@vitejs/plugin-react": "4.2.1",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-tailwindcss": "^3.17.5",
     "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "storybook": "^8.3.6",
     "tailwindcss": "^3.4.14",
     "typescript": "5.4.5",
+    "typescript-eslint": "^8.11.0",
     "vite": "5.2.10"
   }
 }

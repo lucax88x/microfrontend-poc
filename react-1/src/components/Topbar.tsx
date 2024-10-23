@@ -20,10 +20,11 @@ export const Topbar = () => {
               d="M13 10V3L4 14h7v7l9-11h-7z"
             />
           </svg>
-          <span className="r1-text-white r1-text-xl r1-font-bold">documents</span>
+          <span className="r1-text-white r1-text-xl r1-font-bold">
+            documents
+          </span>
         </div>
 
-        {/* Navigation */}
         <div className="r1-hidden md:r1-flex r1-space-x-4">
           <NavButton icon={<my-icon icon="home" />} text="Documents" />
           <NavButton icon={<my-icon icon="search" />} text="Search" />

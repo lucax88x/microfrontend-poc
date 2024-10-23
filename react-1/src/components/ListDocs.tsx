@@ -5,25 +5,14 @@ import { DocItem } from "../components/DocItem";
 import { Doc } from "../models/doc";
 
 export const ListDocs = () => {
-  const [docs, setDocs] = useState<Doc[]>([
-    {
-      id: "1",
-      label: "Document 1",
-      url: "https://morth.nic.in/sites/default/files/dd12-13_0.pdf",
-    },
-    {
-      id: "2",
-      label: "Document 2",
-      url: "https://morth.nic.in/sites/default/files/dd12-13_0.pdf",
-    },
-    {
-      id: "3",
-      label: "Document 3",
-      url: "https://morth.nic.in/sites/default/files/dd12-13_0.pdf",
-    },
-  ]);
+  const [docs, setDocs] = useState<Doc[]>([]);
 
   useEffect(() => {
+    const handleDocSend = (e: CustomEvent) => {
+      setDocs((docs) => {
+        return [...docs, e.detail];
+      });
+    };
     document.addEventListener("doc-send", handleDocSend);
 
     return () => {
@@ -31,17 +20,13 @@ export const ListDocs = () => {
     };
   }, []);
 
-  const handleDocSend = (e) => {
-    setDocs((docs) => {
-      return [...docs, e.detail];
-    });
-  };
-
   return (
     <>
-      {docs.map((doc) => (
-        <DocItem key={doc.id} doc={doc} />
-      ))}
+      {docs.length === 0 ? (
+        <p>no documents yet</p>
+      ) : (
+        docs.map((doc) => <DocItem key={doc.id} doc={doc} />)
+      )}
     </>
   );
 };

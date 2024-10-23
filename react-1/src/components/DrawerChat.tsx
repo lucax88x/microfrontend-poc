@@ -1,10 +1,15 @@
 import { PropsWithChildren, useEffect } from "react";
-import { Chat } from "./Chat";
+import { Chat, Message } from "./Chat";
 
 export const DrawerChat = ({
   isOpen,
+  question,
   onClose,
-}: PropsWithChildren<{ isOpen: boolean; onClose: () => void }>) => {
+}: PropsWithChildren<{
+  isOpen: boolean;
+  question: JSX.Element;
+  onClose: () => void;
+}>) => {
   useEffect(() => {
     const handleDrawerEvent = () => {
       onClose();
@@ -30,7 +35,7 @@ export const DrawerChat = ({
 
   return (
     <my-drawer title="Ask me" open={isOpen ? true : undefined}>
-      <Chat />
+      <Chat question={question} />
     </my-drawer>
   );
 };

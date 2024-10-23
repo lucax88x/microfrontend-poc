@@ -1,34 +1,55 @@
-import React, { useState } from "react";
+import React, { PropsWithChildren, useEffect, useState } from 'react';
 
-interface Message {
-  text: string;
+export interface Message {
+  message: JSX.Element;
   isUser: boolean;
 }
 
-export const Chat = () => {
+export const Chat = (props: PropsWithChildren<{ question: JSX.Element }>) => {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (!props.question) {
+      return;
+    }
+
+    sendQuestion(props.question);
+  }, [props.question]);
+
+  function sendQuestion(input: JSX.Element) {
+    setMessages([...messages, { message: input, isUser: true }]);
+    setIsLoading(true);
+
+    // Simulated medical function answer
+    setTimeout(() => {
+      const medicalAnswer = getMedicalAnswer();
+      setMessages((prev) => [
+        ...prev,
+        { message: <span>{medicalAnswer}</span>, isUser: false },
+      ]);
+      setIsLoading(false);
+    }, 500);
+
+    setInput('');
+  }
+
+  function getMedicalAnswer(): string {
+    const answers = [
+      'Based on the symptoms, it could be a common cold. Rest and stay hydrated.',
+      'Your description suggests a possible case of allergies. Consider taking an antihistamine.',
+      'It might be a minor infection. If symptoms persist, consult your doctor.',
+      'This could be stress-related. Try some relaxation techniques and get enough sleep.',
+      'Your symptoms are consistent with a viral infection. Monitor your condition and rest.',
+    ];
+    return answers[Math.floor(Math.random() * answers.length)];
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (input.trim()) {
-      setMessages([...messages, { text: input, isUser: true }]);
-      setIsLoading(true);
-
-      const apiUrl = "https://api.chucknorris.io/jokes/random";
-      fetch(apiUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          const joke = data.value;
-          setMessages((prev) => [...prev, { text: joke, isUser: false }]);
-          setIsLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          setIsLoading(false);
-        });
-
-      setInput("");
+      sendQuestion(<span>{input}</span>);
     }
   };
 
@@ -38,19 +59,19 @@ export const Chat = () => {
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`r1-mb-4 ${message.isUser ? "r1-text-right" : "r1-text-left"}`}
+            className={`r1-mb-4 ${message.isUser ? 'r1-text-right' : 'r1-text-left'}`}
           >
             <div
-              className={`r1-inline-block r1-p-2 r1-rounded-lg ${message.isUser ? "r1-bg-yellow-500 r1-text-white" : "r1-bg-white r1-text-gray-800"}`}
+              className={`r1-inline-block r1-p-2 r1-rounded-lg ${message.isUser ? 'r1-bg-yellow-500 r1-text-white' : 'r1-bg-white r1-text-gray-800'}`}
             >
-              {message.text}
+              {message.message}
             </div>
           </div>
         ))}
       </div>
       <form
         onSubmit={handleSubmit}
-        className="r1-p-4 r1-bg-white r1-border-t r1-border-gray-200"
+        className="r1-pt-4 r1-bg-white r1-border-t r1-border-gray-200"
       >
         <div className="r1-flex r1-gap-2">
           <input

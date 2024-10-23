@@ -50,7 +50,6 @@ export default defineConfig(({ mode }) => {
             requiredVersion: dependencies.react,
             singleton: true,
           },
-          "lit": {}
         },
       }),
       react(),

@@ -1,6 +1,7 @@
 
 - login, oidc
 - context? how to communicate properly between components?
+- check https://lit.dev/blog/2024-10-08-signals/
 - is shoelace a11y ready?
 - should we use tailwind with lit?
 - pwa
@@ -11,9 +12,12 @@
 - how to pass attributes from lit to inner html elements
 - pnpm shared dependencies?
 - shared logging library, "sentry" wise"?
+- migrate to angular components, not modules
+- how to typesafe web-components from lit?
+- eslint & prettier
+- husky force lint, conv commit, format
 
 limits: 
 - must import the index.css on every component to ensure tw
-- how to typesafe web-components from lit?
 - tailwind, needs prefix for all MFs
 - exported react components should always have default export

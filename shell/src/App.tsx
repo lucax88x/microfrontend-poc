@@ -1,41 +1,59 @@
-import "design-system/web-components";
-import "./index.css";
+import 'design-system/web-components';
+import './index.css';
 
-import { lazy, Suspense, useCallback, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 
 const React1ListDocs = lazy(
   // @ts-ignore
-  async () => import("react-1/components/list-docs"),
+  async () => import('react-1/components/list-docs'),
 );
 
 const React1Chart = lazy(
   // @ts-ignore
-  async () => import("react-1/components/line"),
+  async () => import('react-1/components/line'),
 );
 
 const React1Topbar =
   // @ts-ignore
-  lazy(async () => import("react-1/components/topbar"));
+  lazy(async () => import('react-1/components/topbar'));
 
 const React1DrawerChat =
   // @ts-ignore
-  lazy(async () => import("react-1/components/drawer-chat"));
+  lazy(async () => import('react-1/components/drawer-chat'));
 
 export default () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isOpenChat, setIsOpenChat] = useState(false);
+  const [question, setQuestion] = useState<JSX.Element | null>(null);
+
+  useEffect(() => {
+    const handleAskChat = (e: CustomEvent) => {
+      setIsOpenChat(true);
+      setQuestion(
+        <p>
+          please, can you check what's wrong with this document? {e.detail.url}
+        </p>,
+      );
+    };
+
+    document.addEventListener('ask-chat', handleAskChat);
+
+    return () => {
+      document.removeEventListener('ask-chat', handleAskChat);
+    };
+  }, []);
 
   const emit = useCallback(() => {
     setIsLoading(true);
 
     setTimeout(() => {
-      const event = new CustomEvent("doc-send", {
+      const event = new CustomEvent('doc-send', {
         bubbles: true,
         composed: true,
         detail: {
           id: Math.random().toString(),
-          label: "diagnostics",
-          url: "https://morth.nic.in/sites/default/files/dd12-13_0.pdf",
+          label: 'diagnostics',
+          url: 'https://morth.nic.in/sites/default/files/dd12-13_0.pdf',
         },
       });
 
@@ -50,14 +68,14 @@ export default () => {
       <Suspense fallback={<my-spinner />}>
         <React1Topbar />
       </Suspense>
-      <div className="p-4 flex justify-center">
-        <div className="container flex gap-2 flex-col md:flex-row">
+      <div className="flex justify-center p-4">
+        <div className="container flex flex-col gap-2 md:flex-row">
           <Suspense fallback={<my-spinner />}>
             <my-card
               title="documents"
               class="flex-1"
-              // color="#fff"
-              // backgroundColor="#facc15"
+              headerColor="#facc15"
+              borderColor="#facc15"
             >
               <React1ListDocs />
             </my-card>
@@ -65,6 +83,7 @@ export default () => {
           <Suspense fallback={<my-spinner />}>
             <React1DrawerChat
               isOpen={isOpenChat}
+              question={question}
               onClose={() => setIsOpenChat(false)}
             />
           </Suspense>
@@ -72,10 +91,10 @@ export default () => {
             <my-card
               title="diagnostics"
               class="flex-1"
-              // color="#fff"
-              // backgroundColor="#ca8a04"
+              headerColor="#ca8a04"
+              borderColor="#ca8a04"
             >
-              <div className="flex gap-2 flex-col">
+              <div className="flex flex-col gap-2">
                 <React1Chart />
 
                 <div className="flex gap-2">
