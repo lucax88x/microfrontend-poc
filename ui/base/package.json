@@ -1,5 +1,5 @@
 {
-  "name": "@poc/ui",
+  "name": "@poc/ui/base",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -22,6 +22,7 @@
     "@custom-elements-manifest/analyzer": "^0.10.3",
     "@module-federation/vite": "catalog:vite",
     "@poc/shared/prettier-config": "file:../../shared/prettier",
+    "custom-element-react-wrappers": "^1.6.8",
     "eslint-plugin-lit": "^1.15.0",
     "eslint-plugin-wc": "^2.2.0",
     "lit-analyzer": "^2.0.3",

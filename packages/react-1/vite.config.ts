@@ -2,7 +2,7 @@ import { federation } from '@module-federation/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import {dependencies} from './package.json'
+import { dependencies } from './package.json';
 // import { buildSharedDependencies } from '@poc/shared/vite/dependencies';
 
 export default defineConfig(() => {
@@ -19,11 +19,11 @@ export default defineConfig(() => {
           './components/drawer-chat': './src/components/DrawerChat.tsx',
         },
         remotes: {
-          '@poc/ui': {
+          '@poc/ui/base': {
             type: 'module',
-            name: '@poc/ui',
+            name: '@poc/ui/base',
             entry: 'http://localhost:5172/remoteEntry.js',
-            entryGlobalName: '@poc/ui',
+            entryGlobalName: '@poc/ui/base',
             shareScope: 'default',
           },
         },

@@ -28,7 +28,8 @@
                 "text": "boolean"
               },
               "default": "false",
-              "fieldName": "loading"
+              "fieldName": "loading",
+              "propName": "loading"
             }
           ],
           "superclass": {
@@ -120,7 +121,8 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "title"
+              "fieldName": "title",
+              "propName": "title"
             },
             {
               "name": "headerColor",
@@ -128,7 +130,8 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "headerColor"
+              "fieldName": "headerColor",
+              "propName": "headercolor"
             },
             {
               "name": "color",
@@ -136,7 +139,8 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "color"
+              "fieldName": "color",
+              "propName": "color"
             },
             {
               "name": "backgroundColor",
@@ -144,7 +148,8 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "backgroundColor"
+              "fieldName": "backgroundColor",
+              "propName": "backgroundcolor"
             },
             {
               "name": "borderColor",
@@ -152,7 +157,8 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "borderColor"
+              "fieldName": "borderColor",
+              "propName": "bordercolor"
             }
           ],
           "superclass": {
@@ -230,7 +236,8 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "title"
+              "fieldName": "title",
+              "propName": "title"
             },
             {
               "name": "open",
@@ -238,7 +245,8 @@
                 "text": "boolean"
               },
               "default": "false",
-              "fieldName": "open"
+              "fieldName": "open",
+              "propName": "open"
             }
           ],
           "superclass": {
@@ -332,7 +340,8 @@
                 "text": "string"
               },
               "default": "'#333'",
-              "fieldName": "stroke"
+              "fieldName": "stroke",
+              "propName": "stroke"
             },
             {
               "name": "icon",
@@ -340,7 +349,8 @@
                 "text": "Icons"
               },
               "default": "'menu'",
-              "fieldName": "icon"
+              "fieldName": "icon",
+              "propName": "icon"
             }
           ],
           "superclass": {
@@ -451,7 +461,8 @@
                 "text": "string"
               },
               "default": "'World'",
-              "fieldName": "name"
+              "fieldName": "name",
+              "propName": "name"
             }
           ],
           "superclass": {
@@ -519,85 +530,6 @@
           "declaration": {
             "name": "Spinner",
             "module": "src/spinner.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/stories/Button.stories.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "Primary",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { primary: true, label: 'Button', }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Secondary",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { label: 'Button', }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Large",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { size: 'large', label: 'Button', }, }"
-        },
-        {
-          "kind": "variable",
-          "name": "Small",
-          "type": {
-            "text": "object"
-          },
-          "default": "{ args: { size: 'small', label: 'Button', }, }"
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "src/stories/Button.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Primary",
-          "declaration": {
-            "name": "Primary",
-            "module": "src/stories/Button.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Secondary",
-          "declaration": {
-            "name": "Secondary",
-            "module": "src/stories/Button.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Large",
-          "declaration": {
-            "name": "Large",
-            "module": "src/stories/Button.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "Small",
-          "declaration": {
-            "name": "Small",
-            "module": "src/stories/Button.stories.ts"
           }
         }
       ]

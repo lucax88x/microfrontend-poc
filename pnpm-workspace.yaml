@@ -3,6 +3,7 @@ packages:
   - 'shared/*'
   - 'shells/*'
   - 'packages/*'
+  - 'ui/*'
 catalogs:
   node:
     "@types/node": ^22.7.9

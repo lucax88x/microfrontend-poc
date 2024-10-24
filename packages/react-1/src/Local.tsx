@@ -1,4 +1,4 @@
-import '@poc/ui';
+import '@poc/ui/base';
 import './index.css';
 
 import App from './App';

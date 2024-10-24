@@ -13,11 +13,18 @@ export default defineConfig(() => ({
         federation({
             name: 'shell',
             remotes: {
-                '@poc/ui': {
+                '@poc/ui/base': {
                     type: 'module',
-                    name: '@poc/ui',
+                    name: '@poc/ui/base',
                     entry: 'http://localhost:5172/remoteEntry.js',
-                    entryGlobalName: '@poc/ui',
+                    entryGlobalName: '@poc/ui/base',
+                    shareScope: 'default',
+                },
+                '@poc/ui/react': {
+                    type: 'module',
+                    name: '@poc/ui/react',
+                    entry: 'http://localhost:5176/remoteEntry.js',
+                    entryGlobalName: '@poc/ui/react',
                     shareScope: 'default',
                 },
                 'angular-1': {

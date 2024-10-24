@@ -1,12 +1,17 @@
-import '@poc/ui';
+import '@poc/ui/base';
 import './index.css';
 
 // import { TopbarProps } from '@poc/react-1/Topbar';
-// import { state } from '@shared/shared';
-//
-// console.log(state);
+import { state } from '@shared/shared';
+
+console.log(state);
 
 import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
+
+const UiButton = lazy(
+    // @ts-ignore
+    async () => import('@poc/ui/react/button'),
+);
 
 const React1ListDocs = lazy(
     // @ts-ignore
@@ -67,6 +72,7 @@ export default function App() {
 
     return (
         <>
+            <UiButton>test</UiButton>
             <Suspense fallback={<my-spinner />}>
                 <React1Topbar />
             </Suspense>

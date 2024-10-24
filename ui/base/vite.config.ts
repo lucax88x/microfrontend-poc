@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [
     federation({
       filename: 'remoteEntry.js',
-      name: '@poc/ui',
+      name: '@poc/ui/base',
       exposes: {
         '.': './src/index.ts',
       },

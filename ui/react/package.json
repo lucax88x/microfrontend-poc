@@ -1,0 +1,21 @@
+{
+  "name": "@poc/ui/react",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5176",
+    "build": "tsx ./src/build.ts && vite build",
+    "preview": "pnpm run build && vite preview --port 5176"
+  },
+  "dependencies": {
+    "react": "catalog:react",
+    "react-dom": "catalog:react"
+  },
+  "devDependencies": {
+    "@module-federation/vite": "catalog:vite",
+    "@vitejs/plugin-react": "catalog:vite",
+    "custom-element-react-wrappers": "^1.6.8",
+    "tsx": "^4.19.1",
+    "vite": "catalog:vite"
+  }
+}
