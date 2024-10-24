@@ -14,7 +14,7 @@
 - shared logging library, "sentry" wise"?
 - migrate to angular components, not modules
 - how to typesafe web-components from lit?
-- eslint & prettier
+- (x) eslint & prettier
 - husky force lint, conv commit, format
 
 limits: 

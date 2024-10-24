@@ -1,0 +1,33 @@
+{
+  "name": "@poc/ui",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5172",
+    "build": "tsc && vite build",
+    "preview": "pnpm run build && vite preview --port 5172",
+    "lint": "pnpm run lint:lit-analyzer && pnpm run lint:eslint",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint:lit-analyzer": "lit-analyzer",
+    "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
+    "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.17.1",
+    "lit": "^3.2.1",
+    "lucide": "^0.453.0"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@module-federation/vite": "catalog:vite",
+    "@poc/shared/prettier-config": "file:../../shared/prettier",
+    "eslint-plugin-lit": "^1.15.0",
+    "eslint-plugin-wc": "^2.2.0",
+    "lit-analyzer": "^2.0.3",
+    "prettier": "catalog:prettier",
+    "prettier-plugin-tailwindcss": "catalog:prettier",
+    "typescript": "catalog:",
+    "vite": "catalog:vite"
+  }
+}

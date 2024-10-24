@@ -1,0 +1,19 @@
+{
+  "name": "@poc/shared-eslint-config",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "shared eslint config for the poc",
+  "exports": "eslint.config.mjs",
+  "peerDependencies": {
+    "eslint": "catalog:eslint",
+    "eslint-config-prettier": "catalog:eslint",
+    "eslint-plugin-jsx-a11y": "catalog:eslint",
+    "eslint-plugin-prettier": "catalog:eslint",
+    "eslint-plugin-react": "catalog:eslint",
+    "eslint-plugin-react-compiler": "catalog:eslint",
+    "eslint-plugin-react-hooks": "catalog:eslint",
+    "eslint-plugin-tailwindcss": "catalog:eslint",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:eslint"
+  }
+}
