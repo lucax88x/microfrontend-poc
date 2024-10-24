@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite --port 5173",
     "build": "tsc && vite build",
+    "tsc": "tsc --noEmit",
     "preview": "pnpm run build && vite preview --port 5173",
     "lint": "eslint",
     "format": "prettier --write ."
@@ -16,6 +17,9 @@
   },
   "devDependencies": {
     "@module-federation/vite": "catalog:vite",
+    "@poc/shared/eslint-config": "file:../../shared/eslint",
+    "@poc/shared/prettier-config": "file:../../shared/prettier",
+    "@poc/shared/vite": "file:../../shared/vite",
     "@types/react": "catalog:react",
     "@types/react-dom": "catalog:react",
     "@vitejs/plugin-react": "catalog:vite",
@@ -35,7 +39,7 @@
     "typescript": "catalog:",
     "typescript-eslint": "catalog:eslint",
     "vite": "catalog:vite",
-    "@poc/shared/eslint-config": "file:../../shared/eslint",
-    "@poc/shared/prettier-config": "file:../../shared/prettier"
+    "vite-tsconfig-paths": "catalog:vite",
+    "yaml": "^2.6.0"
   }
 }

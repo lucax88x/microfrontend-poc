@@ -1,0 +1,17 @@
+{
+  "name": "@poc/shared-vite",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "shared vite for the poc",
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "vite": "catalog:vite",
+    "yaml": "catalog:vite"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:node",
+    "typescript": "catalog:"
+  }
+}

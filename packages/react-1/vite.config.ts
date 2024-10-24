@@ -1,36 +1,18 @@
 import { federation } from '@module-federation/vite';
 import react from '@vitejs/plugin-react';
-import { writeFileSync } from 'fs';
-import { defineConfig, loadEnv } from 'vite';
-import { dependencies } from './package.json';
+import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
+import {dependencies} from './package.json'
+// import { buildSharedDependencies } from '@poc/shared/vite/dependencies';
 
-export default defineConfig(({ mode }) => {
-  const selfEnv = loadEnv(mode, process.cwd());
+export default defineConfig(() => {
   return {
-    server: {
-      fs: {
-        allow: ['.', '../shared'],
-      },
-    },
-    build: {
-      target: 'chrome89',
-    },
     plugins: [
-      {
-        name: 'generate-environment',
-        options: function () {
-          console.info('selfEnv', selfEnv);
-          writeFileSync(
-            './src/environment.ts',
-            `export default ${JSON.stringify(selfEnv, null, 2)};`,
-          );
-        },
-      },
+      tsconfigPaths(),
       federation({
         filename: 'remoteEntry.js',
-        name: 'react1',
+        name: '@poc/react1',
         exposes: {
-          './app': './src/App.tsx',
           './components/list-docs': './src/components/ListDocs.tsx',
           './components/line': './src/components/Line.tsx',
           './components/topbar': './src/components/Topbar.tsx',
@@ -45,6 +27,9 @@ export default defineConfig(({ mode }) => {
             shareScope: 'default',
           },
         },
+        // shared: {
+        //   // ...buildSharedDependencies('../../pnpm-workspace.yaml'),
+        // },
         shared: {
           react: {
             requiredVersion: dependencies.react,

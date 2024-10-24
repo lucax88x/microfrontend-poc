@@ -2,7 +2,11 @@ import '../index.css';
 
 import { PropsWithChildren } from 'react';
 
-export const Topbar = () => {
+export interface TopbarProps {
+  title: string;
+}
+
+export const Topbar = (props: PropsWithChildren<TopbarProps>) => {
   return (
     <nav className="r1-bg-gradient-to-r r1-from-yellow-400 r1-to-yellow-600 r1-p-4 r1-shadow-lg">
       <div className="r1-container r1-mx-auto r1-flex r1-items-center r1-justify-between">
@@ -21,7 +25,7 @@ export const Topbar = () => {
             />
           </svg>
           <span className="r1-text-xl r1-font-bold r1-text-white">
-            documents
+            {props.title}
           </span>
         </div>
 

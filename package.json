@@ -4,6 +4,7 @@
 	"scripts": {
 		"install:deps": "pnpm -r install",
 		"postinstall:deps": "pnpm run -r build",
+		"tsc": "pnpm run -r tsc",
 		"dev": "pnpm run -r dev",
 		"build": "pnpm run -r build",
 		"lint": "pnpm run -r lint",

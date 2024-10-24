@@ -17,13 +17,8 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "shared": ["../shared/shared.ts"]
+      "@shared": ["../../shared/lib/*"]
     }
   },
-  "include": ["src"],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "include": ["src"]
 }
