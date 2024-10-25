@@ -17,7 +17,8 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@shared/*": ["../../shared/lib/*"]
+      "@shared/*": ["../../shared/lib/*"],
+      "@poc/react-1/components/*": ["../../packages/react-1/src/components/*"]
     }
   },
   "include": ["src"]

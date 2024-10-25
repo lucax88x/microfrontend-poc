@@ -1,3 +1,5 @@
+import { Button } from "./components";
+
 export default () => {
-  return <button />;
+  return <Button />;
 };

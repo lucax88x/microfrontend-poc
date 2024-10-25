@@ -1,5 +1,5 @@
 import React from "react";
-import { MyElement as MyElementElement } from "@poc/ui/base";
+import { default as MyElementElement } from "@poc/ui/base";
 
 export type { MyElementElement };
 

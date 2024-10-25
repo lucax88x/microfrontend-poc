@@ -1,5 +1,5 @@
 import React from "react";
-import { Card as CardElement } from "@poc/ui/base";
+import { default as CardElement } from "@poc/ui/base";
 
 export type { CardElement };
 

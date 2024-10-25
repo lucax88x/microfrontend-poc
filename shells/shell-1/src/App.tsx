@@ -1,7 +1,7 @@
 import '@poc/ui/base';
 import './index.css';
 
-// import { TopbarProps } from '@poc/react-1/Topbar';
+import { Topbar } from '@poc/react-1/components/Topbar';
 import { state } from '@shared/shared';
 
 console.log(state);
@@ -11,6 +11,11 @@ import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 const UiButton = lazy(
     // @ts-ignore
     async () => import('@poc/ui/react/button'),
+);
+    
+const UiIcon = lazy(
+    // @ts-ignore
+    async () => import('@poc/ui/react/icon'),
 );
 
 const React1ListDocs = lazy(
@@ -24,9 +29,8 @@ const React1Chart = lazy(
 );
 
 const React1Topbar = lazy(
-    // @ts-ignore
     async () => import('@poc/react-1/components/topbar'),
-) as TopbarProps;
+) as typeof Topbar;
 
 const React1DrawerChat =
     // @ts-ignore
@@ -72,12 +76,15 @@ export default function App() {
 
     return (
         <>
-            <UiButton>test</UiButton>
             <Suspense fallback={<my-spinner />}>
                 <React1Topbar />
             </Suspense>
             <div className="flex justify-center p-4">
                 <div className="container flex flex-col gap-2 md:flex-row">
+                    <UiButton>
+                        <UiIcon slot="prefix" icon="upload"></UiIcon>
+                        <label slot="label">test</label>
+                    </UiButton>
                     <Suspense fallback={<my-spinner />}>
                         <my-card
                             title="documents"

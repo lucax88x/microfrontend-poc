@@ -12,6 +12,7 @@ export default defineConfig(() => {
         name: "@poc/ui/react",
         exposes: {
           "./button": "./src/components/Button.js",
+          "./icon": "./src/components/Icon.js",
         },
         remotes: {
           "@poc/ui/base": {

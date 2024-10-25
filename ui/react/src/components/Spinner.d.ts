@@ -1,5 +1,5 @@
 import React from "react";
-import { Spinner as SpinnerElement } from "@poc/ui/base";
+import { default as SpinnerElement } from "@poc/ui/base";
 
 export type { SpinnerElement };
 

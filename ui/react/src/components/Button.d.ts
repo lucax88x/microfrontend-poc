@@ -1,5 +1,5 @@
 import React from "react";
-import { Button as ButtonElement } from "@poc/ui/base";
+import { default as ButtonElement } from "@poc/ui/base";
 
 export type { ButtonElement };
 

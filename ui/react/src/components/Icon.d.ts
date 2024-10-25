@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon as IconElement } from "@poc/ui/base";
+import { default as IconElement } from "@poc/ui/base";
 
 export type { IconElement };
 

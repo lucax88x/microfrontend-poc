@@ -1,5 +1,5 @@
 import React from "react";
-import { Drawer as DrawerElement, CustomEvent } from "@poc/ui/base";
+import { default as DrawerElement, CustomEvent } from "@poc/ui/base";
 
 export type { DrawerElement, CustomEvent };
 
