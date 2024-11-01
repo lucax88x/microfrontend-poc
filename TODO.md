@@ -16,6 +16,8 @@
 - how to typesafe web-components from lit?
 - (x) eslint & prettier
 - husky force lint, conv commit, format
+- consider biomejs instead of eslint and prettier?
+- consider native federation instead of module federation
 
 limits: 
 - must import the index.css on every component to ensure tw

@@ -11,8 +11,8 @@ export default defineConfig(() => {
         filename: "remoteEntry.js",
         name: "@poc/ui/react",
         exposes: {
-          "./button": "./src/components/Button.js",
-          "./icon": "./src/components/Icon.js",
+          "./button": "./src/exports/Button.ts",
+          "./icon": "./src/exports/Icon.ts",
         },
         remotes: {
           "@poc/ui/base": {
