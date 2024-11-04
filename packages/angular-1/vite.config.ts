@@ -14,8 +14,8 @@ export default defineConfig(() => ({
       filename: "remoteEntry.js",
       name: "angular-1",
       exposes: {
-        "./remote-app": "./src/app.component.ts",
-        "./bootstrap": "./src/main.ts",
+        "./app": "./src/app.component.ts",
+        "./main": "./src/main.ts",
       },
       remotes: {},
       shared: ["@angular/core"],

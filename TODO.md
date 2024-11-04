@@ -1,13 +1,15 @@
 
+- preact
 - login, oidc
+- storybook
 - context? how to communicate properly between components?
 - check https://lit.dev/blog/2024-10-08-signals/
 - is shoelace a11y ready?
 - should we use tailwind with lit?
 - pwa
 - versioning of federations with pwa
-- shared ts
-- types of federation modules? props of components, etc
+- (x) shared ts
+- (x) types of federation modules? props of components, etc
 - use ts path
 - how to pass attributes from lit to inner html elements
 - pnpm shared dependencies?
@@ -15,8 +17,8 @@
 - migrate to angular components, not modules
 - how to typesafe web-components from lit?
 - (x) eslint & prettier
-- husky force lint, conv commit, format
 - consider biomejs instead of eslint and prettier?
+- husky force lint, conv commit, format
 - consider native federation instead of module federation
 
 limits: 

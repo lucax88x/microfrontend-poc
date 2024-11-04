@@ -28,6 +28,7 @@
     "lit-analyzer": "^2.0.3",
     "prettier": "catalog:prettier",
     "prettier-plugin-tailwindcss": "catalog:prettier",
+    "tsx": "^4.19.1",
     "typescript": "catalog:",
     "vite": "catalog:vite"
   }

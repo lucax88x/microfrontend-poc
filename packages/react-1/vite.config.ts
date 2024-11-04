@@ -13,10 +13,10 @@ export default defineConfig(() => {
         filename: 'remoteEntry.js',
         name: '@poc/react1',
         exposes: {
-          './components/list-docs': './src/components/ListDocs.tsx',
-          './components/line': './src/components/Line.tsx',
-          './components/topbar': './src/components/Topbar.tsx',
-          './components/drawer-chat': './src/components/DrawerChat.tsx',
+          './components/ListDocs': './src/components/ListDocs.tsx',
+          './components/Line': './src/components/Line.tsx',
+          './components/Topbar': './src/components/Topbar.tsx',
+          './components/DrawerChat': './src/components/DrawerChat.tsx',
         },
         remotes: {
           '@poc/ui/base': {

@@ -25,4 +25,7 @@ dist-ssr
 
 .__mf__temp
 
+src/components
+src/exports
+
 *storybook.log

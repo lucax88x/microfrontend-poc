@@ -1,39 +1,32 @@
 import '@poc/ui/base';
 import './index.css';
 
-import { Topbar } from '@poc/react-1/components/Topbar';
 import { state } from '@shared/shared';
 
 console.log(state);
 
 import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 
-const UiButton = lazy(
-  // @ts-expect-error wip
-  async () => import('@poc/ui/react/button'),
-);
-
-const UiIcon = lazy(
-  // @ts-expect-error wip
-  async () => import('@poc/ui/react/icon'),
-);
-//
+const UiButton = lazy(async () => import('@poc/ui/react/button'));
+const UiIcon = lazy(async () => import('@poc/ui/react/icon'));
+const UiSpinner = lazy(async () => import('@poc/ui/react/spinner'));
+const UiCard = lazy(async () => import('@poc/ui/react/card'));
 const React1ListDocs = lazy(
-  // @ts-expect-error wip
-  async () => import('@poc/react-1/components/list-docs'),
+  async () => import('@poc/react-1/components/ListDocs'),
+);
+const React1Chart = lazy(async () => import('@poc/react-1/components/Line'));
+const React1Topbar = lazy(async () => import('@poc/react-1/components/Topbar'));
+const React1DrawerChat = lazy(
+  async () => import('@poc/react-1/components/DrawerChat'),
 );
 
-const React1Chart = lazy(async () => import('@poc/react-1/components/line'));
+// @ts-expect-error demo
+const Angular1 = async () => import('angular-1/main');
 
-const Angular1 = async () => import('angular-1/bootstrap');
-
-const React1Topbar = lazy(
-  async () => import('@poc/react-1/components/topbar'),
-) as typeof Topbar;
-
-const React1DrawerChat =
-  // @ts-expect-error wip
-  lazy(async () => import('@poc/react-1/components/drawer-chat'));
+Angular1().then((a) => {
+  console.log(a);
+  a.bootstrap();
+});
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -46,9 +39,11 @@ export default function App() {
       setQuestion(<p>question {e.detail.url}</p>);
     };
 
+    // @ts-expect-error demo
     document.addEventListener('ask-chat', handleAskChat);
 
     return () => {
+      // @ts-expect-error demo
       document.removeEventListener('ask-chat', handleAskChat);
     };
   }, []);
@@ -75,38 +70,38 @@ export default function App() {
 
   return (
     <>
-      <Suspense fallback={<my-spinner />}>
-        <React1Topbar />
+      <Suspense fallback={<UiSpinner />}>
+        <React1Topbar title="some title" />
       </Suspense>
       <div className="flex justify-center p-4">
         <div className="container flex flex-col gap-2 md:flex-row">
-          <Suspense fallback={<my-spinner />}>
+          <Suspense fallback={<UiSpinner />}>
             <UiButton>
               <UiIcon slot="prefix" icon="upload"></UiIcon>
-              <label slot="label">test</label>
+              <span slot="label">test</span>
             </UiButton>
           </Suspense>
-          <Suspense fallback={<my-spinner />}>
-            <my-card
+          <Suspense fallback={<UiSpinner />}>
+            <UiCard
               title="documents"
-              class="flex-1"
+              className="flex-1"
               headerColor="#facc15"
               borderColor="#facc15"
             >
               <React1ListDocs />
-            </my-card>
+            </UiCard>
           </Suspense>
-          <Suspense fallback={<my-spinner />}>
+          <Suspense fallback={<UiSpinner />}>
             <React1DrawerChat
               isOpen={isOpenChat}
-              question={question}
+              question={question!}
               onClose={() => setIsOpenChat(false)}
             />
           </Suspense>
-          <Suspense fallback={<my-spinner />}>
-            <my-card
+          <Suspense fallback={<UiSpinner />}>
+            <UiCard
               title="charts"
-              class="flex-1"
+              className="flex-1"
               headerColor="#ca8a04"
               borderColor="#ca8a04"
             >
@@ -114,23 +109,24 @@ export default function App() {
                 <React1Chart />
 
                 <div className="flex gap-2">
-                  <my-button
+                  <UiButton
                     onClick={emit}
                     loading={isLoading ? true : undefined}
                   >
-                    <my-icon slot="prefix" icon="upload"></my-icon>
+                    <UiIcon slot="prefix" icon="upload"></UiIcon>
                     <slot slot="label">import</slot>
-                  </my-button>
+                  </UiButton>
 
-                  <my-button onClick={() => setIsOpenChat(true)}>
-                    <my-icon slot="prefix" icon="chat"></my-icon>
+                  <UiButton onClick={() => setIsOpenChat(true)}>
+                    <UiIcon slot="prefix" icon="chat"></UiIcon>
                     <slot slot="label">ask me</slot>
-                  </my-button>
+                  </UiButton>
                 </div>
               </div>
-            </my-card>
+            </UiCard>
           </Suspense>
         </div>
+        <app-remote-root />
       </div>
     </>
   );

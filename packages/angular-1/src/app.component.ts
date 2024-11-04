@@ -37,7 +37,6 @@ import { CounterComponent } from "./counter.component";
       </div>
       <div style="margin-top: 10px;font-size: 25px;">Angular 1 module</div>
       <app-remote-counter />
-      <app-remote-ai />
     </div>
   `,
   imports: [CommonModule, CounterComponent],

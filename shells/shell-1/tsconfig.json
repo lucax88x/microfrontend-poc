@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -17,9 +21,21 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@shared/*": ["../../shared/lib/*"],
-      "@poc/react-1/components/*": ["../../packages/react-1/src/components/*"]
+      "@shared/*": [
+        "../../shared/lib/*"
+      ],
+      "@poc/ui/react/*": [
+        "../../ui/react/src/exports/*"
+      ],
+      "@poc/react-1/components/*": [
+        "../../packages/react-1/src/components/*"
+      ],
+      "angular1/*": [
+        "../../packages/angular-1/src/*"
+      ]
     }
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

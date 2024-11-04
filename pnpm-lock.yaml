@@ -99,7 +99,7 @@ importers:
         version: 18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))
       '@angular/build':
         specifier: ^18.0.0
-        version: 18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.7.9)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4)
+        version: 18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.8.7)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4)
       '@angular/common':
         specifier: ^18.0.0
         version: 18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1)
@@ -120,7 +120,7 @@ importers:
         version: 18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))
       '@module-federation/vite':
         specifier: 1.1.3
-        version: 1.1.3(@types/node@22.7.9)(rollup@4.24.0)(sass@1.77.6)
+        version: 1.1.3(@types/node@22.8.7)(rollup@4.24.0)(sass@1.77.6)
       rxjs:
         specifier: ~7.8.0
         version: 7.8.1
@@ -133,7 +133,7 @@ importers:
     devDependencies:
       '@analogjs/vite-plugin-angular':
         specifier: ^1.7.3
-        version: 1.9.0(@angular/build@18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.7.9)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4))
+        version: 1.9.0(@angular/build@18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.8.7)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4))
       '@angular/compiler-cli':
         specifier: ^18.0.0
         version: 18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4)
@@ -142,7 +142,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: catalog:vite
-        version: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+        version: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
 
   packages/react-1:
     dependencies:
@@ -158,7 +158,7 @@ importers:
     devDependencies:
       '@module-federation/vite':
         specifier: catalog:vite
-        version: 1.1.3(@types/node@22.7.9)(rollup@4.24.0)(sass@1.77.6)
+        version: 1.1.3(@types/node@22.8.7)(rollup@4.24.0)(sass@1.77.6)
       '@poc/shared/eslint-config':
         specifier: file:../../shared/eslint
         version: link:../../shared/eslint
@@ -167,7 +167,7 @@ importers:
         version: link:../../shared/prettier
       '@poc/shared/vite':
         specifier: file:../../shared/vite
-        version: link:../../shared/vite
+        version: '@poc/shared-vite@file:shared/vite(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))(yaml@2.6.0)'
       '@types/react':
         specifier: catalog:react
         version: 18.2.79
@@ -176,7 +176,7 @@ importers:
         version: 18.2.25
       '@vitejs/plugin-react':
         specifier: catalog:vite
-        version: 4.2.1(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6))
+        version: 4.2.1(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))
       autoprefixer:
         specifier: catalog:tailwindcss
         version: 10.4.20(postcss@8.4.47)
@@ -224,10 +224,10 @@ importers:
         version: 8.11.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4)
       vite:
         specifier: catalog:vite
-        version: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+        version: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
       vite-tsconfig-paths:
         specifier: catalog:vite
-        version: 5.0.1(typescript@5.5.4)(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6))
+        version: 5.0.1(typescript@5.5.4)(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))
       yaml:
         specifier: catalog:vite
         version: 2.6.0
@@ -301,7 +301,7 @@ importers:
     devDependencies:
       '@module-federation/vite':
         specifier: catalog:vite
-        version: 1.1.3(@types/node@22.7.9)(rollup@4.24.0)(sass@1.77.6)
+        version: 1.1.3(@types/node@22.8.7)(rollup@4.24.0)(sass@1.77.6)
       '@poc/shared/eslint-config':
         specifier: file:../../shared/eslint
         version: link:../../shared/eslint
@@ -310,7 +310,7 @@ importers:
         version: link:../../shared/prettier
       '@poc/shared/vite':
         specifier: file:../../shared/vite
-        version: link:../../shared/vite
+        version: '@poc/shared-vite@file:shared/vite(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))(yaml@2.6.0)'
       '@types/react':
         specifier: catalog:react
         version: 18.2.79
@@ -319,7 +319,7 @@ importers:
         version: 18.2.25
       '@vitejs/plugin-react':
         specifier: catalog:vite
-        version: 4.2.1(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6))
+        version: 4.2.1(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))
       autoprefixer:
         specifier: catalog:tailwindcss
         version: 10.4.20(postcss@8.4.47)
@@ -367,10 +367,10 @@ importers:
         version: 8.11.0(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4)
       vite:
         specifier: catalog:vite
-        version: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+        version: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
       vite-tsconfig-paths:
         specifier: catalog:vite
-        version: 5.0.1(typescript@5.5.4)(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6))
+        version: 5.0.1(typescript@5.5.4)(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))
       yaml:
         specifier: ^2.6.0
         version: 2.6.0
@@ -392,7 +392,7 @@ importers:
         version: 0.10.3
       '@module-federation/vite':
         specifier: catalog:vite
-        version: 1.1.3(@types/node@22.7.9)(rollup@4.24.0)(sass@1.77.6)
+        version: 1.1.3(@types/node@22.8.7)(rollup@4.24.0)(sass@1.77.6)
       '@poc/shared/prettier-config':
         specifier: file:../../shared/prettier
         version: link:../../shared/prettier
@@ -414,12 +414,15 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: catalog:prettier
         version: 0.6.8(prettier@3.3.3)
+      tsx:
+        specifier: ^4.19.1
+        version: 4.19.1
       typescript:
         specifier: 'catalog:'
         version: 5.5.4
       vite:
         specifier: catalog:vite
-        version: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+        version: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
 
   ui/react:
     dependencies:
@@ -432,10 +435,13 @@ importers:
     devDependencies:
       '@module-federation/vite':
         specifier: catalog:vite
-        version: 1.1.3(@types/node@22.7.9)(rollup@4.24.0)(sass@1.77.6)
+        version: 1.1.3(@types/node@22.8.7)(rollup@4.24.0)(sass@1.77.6)
+      '@types/node':
+        specifier: ^22.8.7
+        version: 22.8.7
       '@vitejs/plugin-react':
         specifier: catalog:vite
-        version: 4.2.1(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6))
+        version: 4.2.1(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))
       custom-element-react-wrappers:
         specifier: ^1.6.8
         version: 1.6.8(prettier@3.3.3)
@@ -444,7 +450,7 @@ importers:
         version: 4.19.1
       vite:
         specifier: catalog:vite
-        version: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+        version: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
 
 packages:
 
@@ -1358,6 +1364,12 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@poc/shared-vite@file:shared/vite':
+    resolution: {directory: shared/vite, type: directory}
+    peerDependencies:
+      vite: catalog:vite
+      yaml: catalog:vite
+
   '@prettier/sync@0.5.2':
     resolution: {integrity: sha512-Yb569su456XNx5BsH/Vyem7xD6g/y9iLmLUzRKM1a/dhU/D7HqqvkAG72znulXlMXztbV0iiu9O5AL8K98TzZQ==}
     peerDependencies:
@@ -1586,6 +1598,9 @@ packages:
 
   '@types/node@22.7.9':
     resolution: {integrity: sha512-jrTfRC7FM6nChvU7X2KqcrgquofrWLFDeYC1hKfwNWomVvrn7JIksqf344WN2X/y8xrgqBd2dJATZV4GbatBfg==}
+
+  '@types/node@22.8.7':
+    resolution: {integrity: sha512-LidcG+2UeYIWcMuMUpBKOnryBWG/rnmOHQR5apjn8myTQcx3rinFRn7DcIFhMnS0PPFSC6OafdIKEad0lj6U0Q==}
 
   '@types/prop-types@15.7.13':
     resolution: {integrity: sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==}
@@ -1995,6 +2010,7 @@ packages:
 
   critters@0.0.24:
     resolution: {integrity: sha512-Oyqew0FGM0wYUSNqR0L6AteO5MpMoUU0rhKRieXeiKs+PmRTxiJMyaunYB2KF6fQ3dzChXKCpbFOEJx3OQ1v/Q==}
+    deprecated: Ownership of Critters has moved to the Nuxt team, who will be maintaining the project going forward. If you'd like to keep using Critters, please switch to the actively-maintained fork at https://github.com/danielroe/beasties
 
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
@@ -3772,12 +3788,12 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@analogjs/vite-plugin-angular@1.9.0(@angular/build@18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.7.9)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4))':
+  '@analogjs/vite-plugin-angular@1.9.0(@angular/build@18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.8.7)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4))':
     dependencies:
       ts-morph: 21.0.1
       vfile: 6.0.3
     optionalDependencies:
-      '@angular/build': 18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.7.9)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4)
+      '@angular/build': 18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.8.7)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4)
 
   '@angular-devkit/architect@0.1802.10(chokidar@3.6.0)':
     dependencies:
@@ -3802,7 +3818,7 @@ snapshots:
       '@angular/core': 18.2.9(rxjs@7.8.1)(zone.js@0.14.10)
       tslib: 2.8.0
 
-  '@angular/build@18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.7.9)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4)':
+  '@angular/build@18.2.10(@angular/compiler-cli@18.2.9(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@angular/platform-server@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))))(@types/node@22.8.7)(chokidar@3.6.0)(postcss@8.4.47)(tailwindcss@3.4.14)(typescript@5.5.4)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.1802.10(chokidar@3.6.0)
@@ -3812,7 +3828,7 @@ snapshots:
       '@babel/helper-split-export-declaration': 7.24.7
       '@babel/plugin-syntax-import-attributes': 7.24.7(@babel/core@7.25.2)
       '@inquirer/confirm': 3.1.22
-      '@vitejs/plugin-basic-ssl': 1.1.0(vite@5.4.6(@types/node@22.7.9)(sass@1.77.6))
+      '@vitejs/plugin-basic-ssl': 1.1.0(vite@5.4.6(@types/node@22.8.7)(sass@1.77.6))
       browserslist: 4.24.2
       critters: 0.0.24
       esbuild: 0.23.0
@@ -3829,7 +3845,7 @@ snapshots:
       sass: 1.77.6
       semver: 7.6.3
       typescript: 5.5.4
-      vite: 5.4.6(@types/node@22.7.9)(sass@1.77.6)
+      vite: 5.4.6(@types/node@22.8.7)(sass@1.77.6)
       watchpack: 2.4.1
     optionalDependencies:
       '@angular/platform-server': 18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/compiler@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(@angular/platform-browser@18.2.9(@angular/animations@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))(@angular/common@18.2.9(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10))(rxjs@7.8.1))(@angular/core@18.2.9(rxjs@7.8.1)(zone.js@0.14.10)))
@@ -4511,7 +4527,7 @@ snapshots:
 
   '@module-federation/sdk@0.6.12': {}
 
-  '@module-federation/vite@1.1.3(@types/node@22.7.9)(rollup@4.24.0)(sass@1.77.6)':
+  '@module-federation/vite@1.1.3(@types/node@22.8.7)(rollup@4.24.0)(sass@1.77.6)':
     dependencies:
       '@module-federation/runtime': 0.6.12
       '@rollup/pluginutils': 5.1.3(rollup@4.24.0)
@@ -4519,7 +4535,7 @@ snapshots:
       estree-walker: 2.0.2
       magic-string: 0.30.12
       pathe: 1.1.2
-      vitest: 2.1.3(@types/node@22.7.9)(sass@1.77.6)
+      vitest: 2.1.3(@types/node@22.8.7)(sass@1.77.6)
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@types/node'
@@ -4572,6 +4588,11 @@ snapshots:
     optional: true
 
   '@pkgr/core@0.1.1': {}
+
+  '@poc/shared-vite@file:shared/vite(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))(yaml@2.6.0)':
+    dependencies:
+      vite: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
+      yaml: 2.6.0
 
   '@prettier/sync@0.5.2(prettier@3.3.3)':
     dependencies:
@@ -4755,6 +4776,10 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
+  '@types/node@22.8.7':
+    dependencies:
+      undici-types: 6.19.8
+
   '@types/prop-types@15.7.13': {}
 
   '@types/raf@3.4.3': {}
@@ -4867,18 +4892,18 @@ snapshots:
       '@typescript-eslint/types': 8.11.0
       eslint-visitor-keys: 3.4.3
 
-  '@vitejs/plugin-basic-ssl@1.1.0(vite@5.4.6(@types/node@22.7.9)(sass@1.77.6))':
+  '@vitejs/plugin-basic-ssl@1.1.0(vite@5.4.6(@types/node@22.8.7)(sass@1.77.6))':
     dependencies:
-      vite: 5.4.6(@types/node@22.7.9)(sass@1.77.6)
+      vite: 5.4.6(@types/node@22.8.7)(sass@1.77.6)
 
-  '@vitejs/plugin-react@4.2.1(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6))':
+  '@vitejs/plugin-react@4.2.1(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))':
     dependencies:
       '@babel/core': 7.25.9
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.25.9)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.25.9)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+      vite: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
     transitivePeerDependencies:
       - supports-color
 
@@ -4889,13 +4914,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.3(@vitest/spy@2.1.3)(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6))':
+  '@vitest/mocker@2.1.3(@vitest/spy@2.1.3)(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))':
     dependencies:
       '@vitest/spy': 2.1.3
       estree-walker: 3.0.3
       magic-string: 0.30.12
     optionalDependencies:
-      vite: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+      vite: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
 
   '@vitest/pretty-format@2.1.3':
     dependencies:
@@ -6982,12 +7007,12 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-node@2.1.3(@types/node@22.7.9)(sass@1.77.6):
+  vite-node@2.1.3(@types/node@22.8.7)(sass@1.77.6):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
       pathe: 1.1.2
-      vite: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+      vite: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6999,13 +7024,13 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@5.0.1(typescript@5.5.4)(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6)):
+  vite-tsconfig-paths@5.0.1(typescript@5.5.4)(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6)):
     dependencies:
       debug: 4.3.7
       globrex: 0.1.2
       tsconfck: 3.1.4(typescript@5.5.4)
     optionalDependencies:
-      vite: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
+      vite: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -7020,20 +7045,30 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.6
 
-  vite@5.4.6(@types/node@22.7.9)(sass@1.77.6):
+  vite@5.4.10(@types/node@22.8.7)(sass@1.77.6):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.47
+      rollup: 4.24.0
+    optionalDependencies:
+      '@types/node': 22.8.7
+      fsevents: 2.3.3
+      sass: 1.77.6
+
+  vite@5.4.6(@types/node@22.8.7)(sass@1.77.6):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.22.4
     optionalDependencies:
-      '@types/node': 22.7.9
+      '@types/node': 22.8.7
       fsevents: 2.3.3
       sass: 1.77.6
 
-  vitest@2.1.3(@types/node@22.7.9)(sass@1.77.6):
+  vitest@2.1.3(@types/node@22.8.7)(sass@1.77.6):
     dependencies:
       '@vitest/expect': 2.1.3
-      '@vitest/mocker': 2.1.3(@vitest/spy@2.1.3)(vite@5.4.10(@types/node@22.7.9)(sass@1.77.6))
+      '@vitest/mocker': 2.1.3(@vitest/spy@2.1.3)(vite@5.4.10(@types/node@22.8.7)(sass@1.77.6))
       '@vitest/pretty-format': 2.1.3
       '@vitest/runner': 2.1.3
       '@vitest/snapshot': 2.1.3
@@ -7048,11 +7083,11 @@ snapshots:
       tinyexec: 0.3.1
       tinypool: 1.0.1
       tinyrainbow: 1.2.0
-      vite: 5.4.10(@types/node@22.7.9)(sass@1.77.6)
-      vite-node: 2.1.3(@types/node@22.7.9)(sass@1.77.6)
+      vite: 5.4.10(@types/node@22.8.7)(sass@1.77.6)
+      vite-node: 2.1.3(@types/node@22.8.7)(sass@1.77.6)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.7.9
+      '@types/node': 22.8.7
     transitivePeerDependencies:
       - less
       - lightningcss

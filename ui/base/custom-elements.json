@@ -28,8 +28,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "fieldName": "loading",
-              "propName": "loading"
+              "fieldName": "loading"
             }
           ],
           "superclass": {
@@ -121,8 +120,7 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "title",
-              "propName": "title"
+              "fieldName": "title"
             },
             {
               "name": "headerColor",
@@ -130,8 +128,7 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "headerColor",
-              "propName": "headercolor"
+              "fieldName": "headerColor"
             },
             {
               "name": "color",
@@ -139,8 +136,7 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "color",
-              "propName": "color"
+              "fieldName": "color"
             },
             {
               "name": "backgroundColor",
@@ -148,8 +144,7 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "backgroundColor",
-              "propName": "backgroundcolor"
+              "fieldName": "backgroundColor"
             },
             {
               "name": "borderColor",
@@ -157,8 +152,7 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "borderColor",
-              "propName": "bordercolor"
+              "fieldName": "borderColor"
             }
           ],
           "superclass": {
@@ -236,8 +230,7 @@
                 "text": "string"
               },
               "default": "''",
-              "fieldName": "title",
-              "propName": "title"
+              "fieldName": "title"
             },
             {
               "name": "open",
@@ -245,8 +238,7 @@
                 "text": "boolean"
               },
               "default": "false",
-              "fieldName": "open",
-              "propName": "open"
+              "fieldName": "open"
             }
           ],
           "superclass": {
@@ -340,8 +332,7 @@
                 "text": "string"
               },
               "default": "'#333'",
-              "fieldName": "stroke",
-              "propName": "stroke"
+              "fieldName": "stroke"
             },
             {
               "name": "icon",
@@ -349,8 +340,7 @@
                 "text": "Icons"
               },
               "default": "'menu'",
-              "fieldName": "icon",
-              "propName": "icon"
+              "fieldName": "icon"
             }
           ],
           "superclass": {
@@ -461,8 +451,7 @@
                 "text": "string"
               },
               "default": "'World'",
-              "fieldName": "name",
-              "propName": "name"
+              "fieldName": "name"
             }
           ],
           "superclass": {
