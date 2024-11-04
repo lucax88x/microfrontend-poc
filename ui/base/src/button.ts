@@ -1,8 +1,14 @@
+import './shoelace';
+
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
+export interface ButtonProps {
+  loading?: boolean;
+}
+
 @customElement('my-button')
-export class Button extends LitElement {
+export class Button extends LitElement implements ButtonProps {
   @property({ type: Boolean })
   loading = false;
 

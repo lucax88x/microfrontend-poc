@@ -8,5 +8,8 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": [
+    "src/**/*.stories.ts"
+  ]
 }

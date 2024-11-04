@@ -73,58 +73,54 @@ export default function App() {
       <Suspense fallback={<UiSpinner />}>
         <React1Topbar title="some title" />
       </Suspense>
-      <div className="flex justify-center p-4">
-        <div className="container flex flex-col gap-2 md:flex-row">
-          <Suspense fallback={<UiSpinner />}>
-            <UiButton>
-              <UiIcon slot="prefix" icon="upload"></UiIcon>
-              <span slot="label">test</span>
-            </UiButton>
-          </Suspense>
-          <Suspense fallback={<UiSpinner />}>
-            <UiCard
-              title="documents"
-              className="flex-1"
-              headerColor="#facc15"
-              borderColor="#facc15"
-            >
-              <React1ListDocs />
-            </UiCard>
-          </Suspense>
-          <Suspense fallback={<UiSpinner />}>
-            <React1DrawerChat
-              isOpen={isOpenChat}
-              question={question!}
-              onClose={() => setIsOpenChat(false)}
-            />
-          </Suspense>
-          <Suspense fallback={<UiSpinner />}>
-            <UiCard
-              title="charts"
-              className="flex-1"
-              headerColor="#ca8a04"
-              borderColor="#ca8a04"
-            >
-              <div className="flex flex-col gap-2">
-                <React1Chart />
+      <div className="flex flex-col justify-center p-4">
+        <div className="flex justify-center p-4">
+          <div className="container flex flex-col gap-2 md:flex-row">
+            <Suspense fallback={<UiSpinner />}>
+              <UiCard
+                title="documents"
+                className="flex-1"
+                headerColor="#facc15"
+                borderColor="#facc15"
+              >
+                <React1ListDocs />
+              </UiCard>
+            </Suspense>
+            <Suspense fallback={<UiSpinner />}>
+              <React1DrawerChat
+                isOpen={isOpenChat}
+                question={question!}
+                onClose={() => setIsOpenChat(false)}
+              />
+            </Suspense>
+            <Suspense fallback={<UiSpinner />}>
+              <UiCard
+                title="charts"
+                className="flex-1"
+                headerColor="#ca8a04"
+                borderColor="#ca8a04"
+              >
+                <div className="flex flex-col gap-2">
+                  <React1Chart />
 
-                <div className="flex gap-2">
-                  <UiButton
-                    onClick={emit}
-                    loading={isLoading ? true : undefined}
-                  >
-                    <UiIcon slot="prefix" icon="upload"></UiIcon>
-                    <slot slot="label">import</slot>
-                  </UiButton>
+                  <div className="flex gap-2">
+                    <UiButton
+                      onClick={emit}
+                      loading={isLoading ? true : undefined}
+                    >
+                      <UiIcon slot="prefix" icon="upload"></UiIcon>
+                      <slot slot="label">import</slot>
+                    </UiButton>
 
-                  <UiButton onClick={() => setIsOpenChat(true)}>
-                    <UiIcon slot="prefix" icon="chat"></UiIcon>
-                    <slot slot="label">ask me</slot>
-                  </UiButton>
+                    <UiButton onClick={() => setIsOpenChat(true)}>
+                      <UiIcon slot="prefix" icon="chat"></UiIcon>
+                      <slot slot="label">ask me</slot>
+                    </UiButton>
+                  </div>
                 </div>
-              </div>
-            </UiCard>
-          </Suspense>
+              </UiCard>
+            </Suspense>
+          </div>
         </div>
         <app-remote-root />
       </div>

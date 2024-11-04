@@ -11,7 +11,9 @@
     "lint:lit-analyzer": "lit-analyzer",
     "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
     "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "storybook": "storybook dev -p 6172",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@shoelace-style/shoelace": "^2.17.1",
@@ -19,15 +21,22 @@
     "lucide": "^0.453.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
     "@custom-elements-manifest/analyzer": "^0.10.3",
     "@module-federation/vite": "catalog:vite",
     "@poc/shared/prettier-config": "file:../../shared/prettier",
+    "@storybook/addon-essentials": "^8.4.1",
+    "@storybook/blocks": "^8.4.1",
+    "@storybook/test": "^8.4.1",
+    "@storybook/web-components": "^8.4.1",
+    "@storybook/web-components-vite": "^8.4.1",
     "custom-element-react-wrappers": "^1.6.8",
     "eslint-plugin-lit": "^1.15.0",
     "eslint-plugin-wc": "^2.2.0",
     "lit-analyzer": "^2.0.3",
     "prettier": "catalog:prettier",
     "prettier-plugin-tailwindcss": "catalog:prettier",
+    "storybook": "^8.4.1",
     "tsx": "^4.19.1",
     "typescript": "catalog:",
     "vite": "catalog:vite"

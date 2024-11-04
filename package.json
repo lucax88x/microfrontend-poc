@@ -2,13 +2,18 @@
 	"name": "@poc",
 	"version": "0.0.1",
 	"scripts": {
-    "recursive": "pnpm run --workspace-concurrency=Infinity -r",
+		"recursive": "pnpm run --workspace-concurrency=Infinity -r",
 		"install:deps": "pnpm run recursive -- install",
 		"postinstall:deps": "pnpm run recursive -- build",
 		"tsc": "pnpm run recursive -- tsc",
-		"dev": "pnpm run recursive -- dev",
+		"serve": "serve public -p 5170",
+		"dev": "pnpm run serve & pnpm run recursive -- dev",
+		"storybook": "pnpm run recursive -- storybook",
 		"build": "pnpm run recursive -- build",
 		"lint": "pnpm run recursive -- lint",
 		"format": "pnpm run recursive -- format"
+	},
+	"devDependencies": {
+		"serve": "^14.2.4"
 	}
 }

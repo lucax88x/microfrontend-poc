@@ -1,5 +1,3 @@
-import './shoelace';
-
 export { Card } from './card';
 export { Drawer } from './drawer';
 export { Button } from './button';

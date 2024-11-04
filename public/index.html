@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>microfrontend poc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section h2 {
+      color: #333;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>microfrontend poc</h1>
+  <div class="links-container">
+    <section>
+      <h2>UI</h2>
+      <ul>
+        <li><a href="http://localhost:5172">base</a></li>
+        <li><a href="http://localhost:6172">base@storybook</a></li>
+        <li><a href="http://localhost:5176">react</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Packages</h2>
+      <ul>
+        <li><a href="http://localhost:5174">angular-1</a></li>
+        <li><a href="http://localhost:5175">react-1</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Shells</h2>
+      <ul>
+        <li><a href="http://localhost:5173">shell-1</a></li>
+      </ul>
+    </section>
+  </div>
+</body>
+
+</html>

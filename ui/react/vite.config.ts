@@ -13,6 +13,8 @@ export default defineConfig(() => {
         exposes: {
           "./button": "./src/exports/Button.ts",
           "./icon": "./src/exports/Icon.ts",
+          "./card": "./src/exports/Card.ts",
+          "./spinner": "./src/exports/Spinner.ts",
         },
         remotes: {
           "@poc/ui/base": {
