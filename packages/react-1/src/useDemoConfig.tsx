@@ -146,10 +146,7 @@ export default function useChartConfig({
 					onChange={({ target: { value } }) =>
 						setState((old) => ({
 							...old,
-							[option]:
-								typeof options[option][0] === "boolean"
-									? value === "true"
-									: value,
+							[option]: typeof options[option][0] === "boolean" ? value === "true" : value,
 						}))
 					}
 				>
@@ -170,23 +167,13 @@ export default function useChartConfig({
 	};
 }
 
-function makeDataFrom(
-	dataType: DataType,
-	series: number,
-	datums: number,
-	useR?: boolean,
-) {
-	return [
-		...new Array(series || Math.max(Math.round(Math.random() * 5), 1)),
-	].map((d, i) => makeSeries(i, dataType, datums, useR));
+function makeDataFrom(dataType: DataType, series: number, datums: number, useR?: boolean) {
+	return [...new Array(series || Math.max(Math.round(Math.random() * 5), 1))].map((d, i) =>
+		makeSeries(i, dataType, datums, useR),
+	);
 }
 
-function makeSeries(
-	i: number,
-	dataType: DataType,
-	datums: number,
-	useR?: boolean,
-) {
+function makeSeries(i: number, dataType: DataType, datums: number, useR?: boolean) {
 	const start = 0;
 	const startDate = new Date();
 	// startDate.setFullYear(2020);
@@ -211,28 +198,18 @@ function makeSeries(
 			} else if (dataType === "time") {
 				x = new Date(startDate.getTime() + 60 * 1000 * 60 * 24 * i);
 			} else if (dataType === "linear") {
-				x =
-					Math.random() < nullChance
-						? null
-						: min + Math.round(Math.random() * (max - min));
+				x = Math.random() < nullChance ? null : min + Math.round(Math.random() * (max - min));
 			} else {
 				x = start + i;
 			}
 
 			const distribution = 1.1;
 
-			const y =
-				Math.random() < nullChance
-					? null
-					: min + Math.round(Math.random() * (max - min));
+			const y = Math.random() < nullChance ? null : min + Math.round(Math.random() * (max - min));
 
 			const r = !useR
 				? undefined
-				: rMax -
-					Math.floor(
-						Math.log(Math.random() * (distribution ** rMax - rMin) + rMin) /
-							Math.log(distribution),
-					);
+				: rMax - Math.floor(Math.log(Math.random() * (distribution ** rMax - rMin) + rMin) / Math.log(distribution));
 
 			return {
 				primary: x,

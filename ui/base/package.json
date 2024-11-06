@@ -1,45 +1,44 @@
 {
-  "name": "@poc/ui/base",
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "pnpm run generate && vite --port 5172",
-    "build": "tsc && vite build",
-    "preview": "pnpm run build && vite preview --port 5172",
-    "lint": "pnpm run lint:lit-analyzer && pnpm run lint:eslint",
-    "lint:eslint": "eslint 'src/**/*.ts'",
-    "lint:lit-analyzer": "lit-analyzer",
-    "generate": "pnpm run analyze",
-    "analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
-    "analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
-    "format": "prettier --write .",
-    "storybook": "storybook dev -p 6172",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "@shoelace-style/shoelace": "^2.17.1",
-    "lit": "^3.2.1",
-    "lucide": "^0.453.0"
-  },
-  "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.2",
-    "@custom-elements-manifest/analyzer": "^0.10.3",
-    "@module-federation/vite": "catalog:vite",
-    "@poc/shared/prettier-config": "file:../../shared/prettier",
-    "@storybook/addon-essentials": "^8.4.1",
-    "@storybook/blocks": "^8.4.1",
-    "@storybook/test": "^8.4.1",
-    "@storybook/web-components": "^8.4.1",
-    "@storybook/web-components-vite": "^8.4.1",
-    "custom-element-react-wrappers": "^1.6.8",
-    "eslint-plugin-lit": "^1.15.0",
-    "eslint-plugin-wc": "^2.2.0",
-    "lit-analyzer": "^2.0.3",
-    "prettier": "catalog:prettier",
-    "prettier-plugin-tailwindcss": "catalog:prettier",
-    "storybook": "^8.4.1",
-    "tsx": "^4.19.1",
-    "typescript": "catalog:",
-    "vite": "catalog:vite"
-  }
+	"name": "@poc/ui/base",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "pnpm run generate && vite --port 5172",
+		"build": "tsc && vite build",
+		"preview": "pnpm run build && vite preview --port 5172",
+		"lint": "pnpm run lint:lit-analyzer && pnpm run lint:biome && pnpm run lint:eslint",
+		"lint:biome": "biome lint --write .",
+		"lint:eslint": "eslint 'src/**/*.ts'",
+		"lint:lit-analyzer": "lit-analyzer",
+		"generate": "pnpm run analyze",
+		"analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
+		"analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
+		"format": "biome format --write .",
+		"storybook": "storybook dev -p 6172",
+		"build-storybook": "storybook build"
+	},
+	"dependencies": {
+		"@shoelace-style/shoelace": "^2.17.1",
+		"lit": "^3.2.1",
+		"lucide": "^0.453.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:biome",
+		"@chromatic-com/storybook": "^3.2.2",
+		"@custom-elements-manifest/analyzer": "^0.10.3",
+		"@liveryvideo/biome-lit": "^1.0.3",
+		"@module-federation/vite": "catalog:vite",
+		"@storybook/addon-essentials": "^8.4.1",
+		"@storybook/blocks": "^8.4.1",
+		"@storybook/test": "^8.4.1",
+		"@storybook/web-components": "^8.4.1",
+		"@storybook/web-components-vite": "^8.4.1",
+		"custom-element-react-wrappers": "^1.6.8",
+		"eslint": "^9.14.0",
+		"lit-analyzer": "^2.0.3",
+		"storybook": "^8.4.1",
+		"tsx": "^4.19.1",
+		"typescript": "catalog:",
+		"vite": "catalog:vite"
+	}
 }

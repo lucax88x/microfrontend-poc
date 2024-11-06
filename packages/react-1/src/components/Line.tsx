@@ -2,7 +2,7 @@ import "../index.css";
 
 import useDemoConfig from "../useDemoConfig";
 import React from "react";
-import { AxisOptions, Chart } from "react-charts";
+import { type AxisOptions, Chart } from "react-charts";
 
 export const Line = () => {
 	const { data } = useDemoConfig({
@@ -10,18 +10,14 @@ export const Line = () => {
 		dataType: "time",
 	});
 
-	const primaryAxis = React.useMemo<
-		AxisOptions<(typeof data)[number]["data"][number]>
-	>(
+	const primaryAxis = React.useMemo<AxisOptions<(typeof data)[number]["data"][number]>>(
 		() => ({
 			getValue: (datum) => datum.primary as unknown as Date,
 		}),
 		[],
 	);
 
-	const secondaryAxes = React.useMemo<
-		AxisOptions<(typeof data)[number]["data"][number]>[]
-	>(
+	const secondaryAxes = React.useMemo<AxisOptions<(typeof data)[number]["data"][number]>[]>(
 		() => [
 			{
 				getValue: (datum) => datum.secondary,

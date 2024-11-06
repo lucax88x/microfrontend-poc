@@ -1,45 +1,33 @@
 {
-  "name": "@poc/shell-1",
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --port 5173",
-    "build": "tsc && vite build",
-    "tsc": "tsc --noEmit",
-    "preview": "pnpm run build && vite preview --port 5173",
-    "lint": "eslint",
-    "format": "prettier --write ."
-  },
-  "dependencies": {
-    "react": "catalog:react",
-    "react-dom": "catalog:react",
-    "rxjs": "^7.8.1"
-  },
-  "devDependencies": {
-    "@module-federation/vite": "catalog:vite",
-    "@poc/shared/eslint-config": "file:../../shared/eslint",
-    "@poc/shared/prettier-config": "file:../../shared/prettier",
-    "@poc/shared/vite": "file:../../shared/vite",
-    "@types/react": "catalog:react",
-    "@types/react-dom": "catalog:react",
-    "@vitejs/plugin-react": "catalog:vite",
-    "autoprefixer": "catalog:tailwindcss",
-    "eslint": "catalog:eslint",
-    "eslint-config-prettier": "catalog:eslint",
-    "eslint-plugin-jsx-a11y": "catalog:eslint",
-    "eslint-plugin-prettier": "catalog:eslint",
-    "eslint-plugin-react": "catalog:eslint",
-    "eslint-plugin-react-compiler": "catalog:eslint",
-    "eslint-plugin-react-hooks": "catalog:eslint",
-    "eslint-plugin-tailwindcss": "catalog:eslint",
-    "postcss": "catalog:tailwindcss",
-    "prettier": "catalog:prettier",
-    "prettier-plugin-tailwindcss": "catalog:prettier",
-    "tailwindcss": "catalog:tailwindcss",
-    "typescript": "catalog:",
-    "typescript-eslint": "catalog:eslint",
-    "vite": "catalog:vite",
-    "vite-tsconfig-paths": "catalog:vite",
-    "yaml": "^2.6.0"
-  }
+	"name": "@poc/shell-1",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --port 5173",
+		"build": "tsc && vite build",
+		"tsc": "tsc --noEmit",
+		"preview": "pnpm run build && vite preview --port 5173",
+		"lint": "biome lint --write .",
+		"format": "biome format --write ."
+	},
+	"dependencies": {
+		"react": "catalog:react",
+		"react-dom": "catalog:react",
+		"rxjs": "^7.8.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:biome",
+		"@module-federation/vite": "catalog:vite",
+		"@poc/shared/vite": "file:../../shared/vite",
+		"@types/react": "catalog:react",
+		"@types/react-dom": "catalog:react",
+		"@vitejs/plugin-react": "catalog:vite",
+		"autoprefixer": "catalog:tailwindcss",
+		"postcss": "catalog:tailwindcss",
+		"tailwindcss": "catalog:tailwindcss",
+		"typescript": "catalog:",
+		"vite": "catalog:vite",
+		"vite-tsconfig-paths": "catalog:vite",
+		"yaml": "^2.6.0"
+	}
 }

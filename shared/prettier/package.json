@@ -1,9 +1,0 @@
-{
-  "name": "@poc/shared-prettier-config",
-  "version": "0.0.0",
-  "type": "module",
-  "description": "shared prettier config for the poc",
-  "peerDependencies": {
-    "prettier": "catalog:prettier"
-  }
-}

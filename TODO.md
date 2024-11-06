@@ -17,8 +17,8 @@
 - migrate to angular components, not modules
 - how to typesafe web-components from lit?
 - (x) eslint & prettier
-- consider biomejs instead of eslint and prettier?
-- husky force lint, conv commit, format
+- (x 0consider biomejs instead of eslint and prettier?
+- lefthook force lint, conv commit, format => https://biomejs.dev/recipes/git-hooks/ 
 - consider native federation instead of module federation
 
 limits: 

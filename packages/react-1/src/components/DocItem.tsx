@@ -1,5 +1,5 @@
-import { PropsWithChildren, useCallback } from "react";
-import { Doc } from "../models/doc";
+import { type PropsWithChildren, useCallback } from "react";
+import type { Doc } from "../models/doc";
 
 export const DocItem = ({ doc }: PropsWithChildren<{ doc: Doc }>) => {
 	const emit = useCallback(() => {

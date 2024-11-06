@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect } from "react";
+import { type PropsWithChildren, useEffect } from "react";
 import { Chat, Message } from "./Chat";
 
 export const DrawerChat = ({
@@ -17,18 +17,12 @@ export const DrawerChat = ({
 
 		const drawerElement = document.querySelector("my-drawer");
 		if (drawerElement) {
-			drawerElement.addEventListener(
-				"drawer-closed",
-				handleDrawerEvent as EventListener,
-			);
+			drawerElement.addEventListener("drawer-closed", handleDrawerEvent as EventListener);
 		}
 
 		return () => {
 			if (drawerElement) {
-				drawerElement.removeEventListener(
-					"drawer-closed",
-					handleDrawerEvent as EventListener,
-				);
+				drawerElement.removeEventListener("drawer-closed", handleDrawerEvent as EventListener);
 			}
 		};
 	}, []);

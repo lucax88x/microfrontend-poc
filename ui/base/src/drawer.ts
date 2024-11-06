@@ -1,15 +1,15 @@
-import './shoelace';
+import "./shoelace";
 
-import { LitElement, html, nothing } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, html, nothing } from "lit";
+import { customElement, property } from "lit/decorators.js";
 
-@customElement('my-drawer')
+@customElement("my-drawer")
 export class Drawer extends LitElement {
-  @property({ type: String }) title = '';
-  @property({ type: Boolean }) open = false;
+	@property({ type: String }) title = "";
+	@property({ type: Boolean }) open = false;
 
-  render() {
-    return html`
+	render() {
+		return html`
       <sl-drawer
         label="${this.title}"
         class="drawer-overview"
@@ -22,16 +22,16 @@ export class Drawer extends LitElement {
         >
       </sl-drawer>
     `;
-  }
+	}
 
-  private closeDrawer() {
-    this.open = false;
+	private closeDrawer() {
+		this.open = false;
 
-    this.dispatchEvent(
-      new CustomEvent('drawer-closed', {
-        bubbles: true,
-        composed: true,
-      }),
-    );
-  }
+		this.dispatchEvent(
+			new CustomEvent("drawer-closed", {
+				bubbles: true,
+				composed: true,
+			}),
+		);
+	}
 }

@@ -2,7 +2,7 @@ import "../index.css";
 
 import { useEffect, useState } from "react";
 import { DocItem } from "../components/DocItem";
-import { Doc } from "../models/doc";
+import type { Doc } from "../models/doc";
 
 export const ListDocs = () => {
 	const [docs, setDocs] = useState<Doc[]>([]);
@@ -20,15 +20,7 @@ export const ListDocs = () => {
 		};
 	}, []);
 
-	return (
-		<>
-			{docs.length === 0 ? (
-				<p>no documents yet</p>
-			) : (
-				docs.map((doc) => <DocItem key={doc.id} doc={doc} />)
-			)}
-		</>
-	);
+	return <>{docs.length === 0 ? <p>no documents yet</p> : docs.map((doc) => <DocItem key={doc.id} doc={doc} />)}</>;
 };
 
 export default ListDocs;

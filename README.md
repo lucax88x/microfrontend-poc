@@ -34,6 +34,4 @@ pnpm workspaces with catalog
 
 - shared 
   - lib => shared code
-  - eslint => shared eslint config
-  - prettier => shared prettier config
   - vite => vite helpers
