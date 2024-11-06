@@ -1,5 +1,5 @@
 {
-  "name": "@poc/ui",
+	"name": "@poc/ui",
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
@@ -26,6 +26,7 @@
 		"@angular/build": "^18.0.0",
 		"@angular/compiler-cli": "^18.0.0",
 		"typescript": "catalog:",
-		"vite": "catalog:vite"
+		"vite": "catalog:vite",
+    "vite-tsconfig-paths": "catalog:vite"
 	}
 }

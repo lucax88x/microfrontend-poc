@@ -1,11 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal } from "@angular/core";
+import { state } from "../../../shared/lib/shared";
 
 @Component({
-	selector: 'app-remote-counter',
-	standalone: true,
-	template: `
-		<button
-			style="
+  selector: "app-remote-counter",
+  standalone: true,
+  template: `
+    <button
+      style="
         border: 0 solid #e2e8f0;
         margin-top: 10px;
         backgroundColor: rgb(246, 179, 82);
@@ -14,16 +15,17 @@ import { Component, signal } from '@angular/core';
 				padding: .5rem 1rem .5rem 1rem;
 				color: rgb(24, 24, 24);
 			"
-			(click)="increment()"
-		>
-			Counter: {{ count() }}
-		</button>
-	`,
+      (click)="increment()"
+    >
+      Counter: {{ count() }}
+    </button>
+  `,
 })
 export class CounterComponent {
-	count = signal(0);
+  count = signal(0);
 
-	increment() {
-		this.count.update((value) => ++value);
-	}
+  increment() {
+    this.count.update((value) => ++value);
+    state.message = `shared message ${this.count()}`;
+  }
 }

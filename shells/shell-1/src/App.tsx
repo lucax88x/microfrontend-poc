@@ -3,8 +3,6 @@ import './index.css';
 
 import { state } from '@shared/shared';
 
-console.log(state);
-
 import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 
 const UiButton = lazy(async () => import('@poc/ui/react/button'));
@@ -21,7 +19,7 @@ const React1DrawerChat = lazy(
 );
 
 // @ts-expect-error demo
-const Angular1 = async () => import('angular-1/main');
+const Angular1 = async () => import('angular-1/bootstrap');
 
 Angular1().then((a) => {
   console.log(a);
@@ -32,6 +30,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isOpenChat, setIsOpenChat] = useState(false);
   const [question, setQuestion] = useState<JSX.Element | null>(null);
+  const [internalMessage, setInternalMessage] = useState('');
 
   useEffect(() => {
     const handleAskChat = (e: CustomEvent) => {
@@ -68,10 +67,20 @@ export default function App() {
     }, 500);
   }, []);
 
+  useEffect(() => {
+    const timeoutId = setInterval(() => {
+      setInternalMessage(state.message);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
   return (
     <>
       <Suspense fallback={<UiSpinner />}>
-        <React1Topbar title="some title" />
+        <React1Topbar title={internalMessage} />
       </Suspense>
       <div className="flex flex-col justify-center p-4">
         <div className="flex justify-center p-4">
@@ -122,7 +131,9 @@ export default function App() {
             </Suspense>
           </div>
         </div>
-        <app-remote-root />
+        <div className="flex justify-center p-4">
+          <app-remote-root />
+        </div>
       </div>
     </>
   );

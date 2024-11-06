@@ -8,14 +8,13 @@ import { CounterComponent } from "./counter.component";
   template: `
     <div
       style="
-				background: #1f2124;
 				boxShadow: 0 0 20px rgba(0, 0, 0, 0.4);
 				borderRadius: 5px;
 				margin: 20px 20px 20px 20px;
 				width: 250px;
 				padding: 20px;
 				textAlign: center;
-				color: white;
+				color: #333;
 				float: left;
 			"
     >

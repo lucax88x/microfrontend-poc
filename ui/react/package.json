@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5176",
+    "dev": "pnpm run generate && vite --port 5176",
     "generate": "tsx ./generate.ts",
     "build": "pnpm run generate && vite build",
     "preview": "pnpm run build && vite preview --port 5176"

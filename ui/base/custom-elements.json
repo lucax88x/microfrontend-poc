@@ -4,6 +4,59 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "src/Button.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "meta",
+          "default": "{ title: 'UI/Button', render: (args) => html`<my-button ?loading=${args.loading}></my-button>`, argTypes: { loading: { control: 'boolean', description: 'Controls the loading state of the button', defaultValue: false, }, // label: { // control: 'text', // description: 'The button label content (slot)', // defaultValue: 'Button', // }, }, args: { loading: true }, } satisfies Meta<ButtonProps>"
+        },
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "Story"
+          },
+          "default": "{ args: { loading: false, // label: 'Click me', }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Loading",
+          "type": {
+            "text": "Story"
+          },
+          "default": "{ args: { loading: true, // label: 'Loading...', }, }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "meta",
+            "module": "src/Button.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/Button.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Loading",
+          "declaration": {
+            "name": "Loading",
+            "module": "src/Button.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/button.ts",
       "declarations": [
         {
