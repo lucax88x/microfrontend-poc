@@ -3,10 +3,9 @@
 		"enabled": true
 	},
 	"formatter": {
-		"enabled": true,
-		"lineWidth": 120
+		"enabled": true
 	},
 	"organizeImports": {
-		"enabled": false
+		"enabled": true
 	}
 }
