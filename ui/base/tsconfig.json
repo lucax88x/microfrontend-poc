@@ -7,7 +7,12 @@
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
 		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true
+		"forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@ui/*": [
+        "./src/*"
+      ]
+    }
 	},
 	"exclude": ["src/**/*.stories.ts"]
 }

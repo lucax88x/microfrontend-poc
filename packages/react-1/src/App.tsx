@@ -1,7 +1,6 @@
 import "./index.css";
 
-import { useEffect } from "preact";
-import Counter from "./components/Counter";
+import { useEffect } from "preact/hooks";
 
 export default () => {
 	useEffect(() => {
@@ -41,8 +40,6 @@ export default () => {
 			<div style={{ marginTop: "10px", fontSize: "25px" }}>
 				React 1 module with subrouting
 			</div>
-
-			<Counter />
 		</div>
 	);
 };

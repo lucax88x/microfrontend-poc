@@ -20,16 +20,21 @@ function getComponentFiles(componentsDir: string) {
 }
 
 function generateExports() {
-	if (!fs.existsSync(exportsDir)) {
-		fs.mkdirSync(exportsDir, { recursive: true });
+	if (fs.existsSync(exportsDir)) {
+		fs.rmSync(exportsDir, { recursive: true });
 	}
+
+	fs.mkdirSync(exportsDir, { recursive: true });
 
 	const componentFiles = getComponentFiles(componentsDir);
 
 	componentFiles.forEach((componentFile) => {
 		const componentName = path.basename(componentFile, ".js");
 		const exportContent = `export { ${componentName} as default } from "../components/${componentName}.js";`;
-		const exportPath = path.join(exportsDir, `${componentName}.ts`);
+		const exportPath = path.join(
+			exportsDir,
+			`${componentName.toLowerCase()}.ts`,
+		);
 
 		fs.writeFileSync(exportPath, exportContent);
 	});

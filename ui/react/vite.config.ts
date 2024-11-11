@@ -13,10 +13,10 @@ export default defineConfig(({ mode }) => {
 				filename: "remoteEntry.js",
 				name: "@poc/ui/react",
 				exposes: {
-					"./button": "./src/exports/Button.ts",
-					"./icon": "./src/exports/Icon.ts",
-					"./card": "./src/exports/Card.ts",
-					"./spinner": "./src/exports/Spinner.ts",
+					"./button": "./src/exports/button.ts",
+					"./icon": "./src/exports/icon.ts",
+					"./card": "./src/exports/card.ts",
+					"./spinner": "./src/exports/spinner.ts",
 				},
 				remotes: {
 					"@poc/ui/base": {

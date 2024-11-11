@@ -1,608 +1,608 @@
 {
-	"schemaVersion": "1.0.0",
-	"readme": "",
-	"modules": [
-		{
-			"kind": "javascript-module",
-			"path": "src/button.stories.ts",
-			"declarations": [
-				{
-					"kind": "variable",
-					"name": "meta",
-					"default": "{ title: \"UI/Button\", render: (args) => html`<my-button ?loading=${args.loading}></my-button>`, argTypes: { loading: { control: \"boolean\", description: \"Controls the loading state of the button\", defaultValue: false, }, }, args: { loading: true }, } satisfies Meta<ButtonProps>"
-				},
-				{
-					"kind": "variable",
-					"name": "Default",
-					"type": {
-						"text": "Story"
-					},
-					"default": "{ args: { loading: false, }, }"
-				},
-				{
-					"kind": "variable",
-					"name": "Loading",
-					"type": {
-						"text": "Story"
-					},
-					"default": "{ args: { loading: true, }, }"
-				}
-			],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "default",
-					"declaration": {
-						"name": "meta",
-						"module": "src/button.stories.ts"
-					}
-				},
-				{
-					"kind": "js",
-					"name": "Default",
-					"declaration": {
-						"name": "Default",
-						"module": "src/button.stories.ts"
-					}
-				},
-				{
-					"kind": "js",
-					"name": "Loading",
-					"declaration": {
-						"name": "Loading",
-						"module": "src/button.stories.ts"
-					}
-				}
-			]
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/button.ts",
-			"declarations": [
-				{
-					"kind": "class",
-					"description": "",
-					"name": "Button",
-					"members": [
-						{
-							"kind": "field",
-							"name": "loading",
-							"type": {
-								"text": "boolean"
-							},
-							"default": "false",
-							"attribute": "loading"
-						}
-					],
-					"attributes": [
-						{
-							"name": "loading",
-							"type": {
-								"text": "boolean"
-							},
-							"default": "false",
-							"fieldName": "loading"
-						}
-					],
-					"superclass": {
-						"name": "LitElement",
-						"package": "lit"
-					},
-					"tagName": "my-button",
-					"customElement": true
-				}
-			],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "Button",
-					"declaration": {
-						"name": "Button",
-						"module": "src/button.ts"
-					}
-				},
-				{
-					"kind": "custom-element-definition",
-					"name": "my-button",
-					"declaration": {
-						"name": "Button",
-						"module": "src/button.ts"
-					}
-				}
-			]
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/card.ts",
-			"declarations": [
-				{
-					"kind": "class",
-					"description": "",
-					"name": "Card",
-					"members": [
-						{
-							"kind": "field",
-							"name": "title",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"attribute": "title"
-						},
-						{
-							"kind": "field",
-							"name": "headerColor",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"attribute": "headerColor"
-						},
-						{
-							"kind": "field",
-							"name": "color",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"attribute": "color"
-						},
-						{
-							"kind": "field",
-							"name": "backgroundColor",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"attribute": "backgroundColor"
-						},
-						{
-							"kind": "field",
-							"name": "borderColor",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"attribute": "borderColor"
-						}
-					],
-					"attributes": [
-						{
-							"name": "title",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"fieldName": "title"
-						},
-						{
-							"name": "headerColor",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"fieldName": "headerColor"
-						},
-						{
-							"name": "color",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"fieldName": "color"
-						},
-						{
-							"name": "backgroundColor",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"fieldName": "backgroundColor"
-						},
-						{
-							"name": "borderColor",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"fieldName": "borderColor"
-						}
-					],
-					"superclass": {
-						"name": "LitElement",
-						"package": "lit"
-					},
-					"tagName": "my-card",
-					"customElement": true
-				}
-			],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "Card",
-					"declaration": {
-						"name": "Card",
-						"module": "src/card.ts"
-					}
-				},
-				{
-					"kind": "custom-element-definition",
-					"name": "my-card",
-					"declaration": {
-						"name": "Card",
-						"module": "src/card.ts"
-					}
-				}
-			]
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/drawer.ts",
-			"declarations": [
-				{
-					"kind": "class",
-					"description": "",
-					"name": "Drawer",
-					"members": [
-						{
-							"kind": "field",
-							"name": "title",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"attribute": "title"
-						},
-						{
-							"kind": "field",
-							"name": "open",
-							"type": {
-								"text": "boolean"
-							},
-							"default": "false",
-							"attribute": "open"
-						},
-						{
-							"kind": "method",
-							"name": "closeDrawer",
-							"privacy": "private"
-						}
-					],
-					"events": [
-						{
-							"name": "drawer-closed",
-							"type": {
-								"text": "CustomEvent"
-							}
-						}
-					],
-					"attributes": [
-						{
-							"name": "title",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"\"",
-							"fieldName": "title"
-						},
-						{
-							"name": "open",
-							"type": {
-								"text": "boolean"
-							},
-							"default": "false",
-							"fieldName": "open"
-						}
-					],
-					"superclass": {
-						"name": "LitElement",
-						"package": "lit"
-					},
-					"tagName": "my-drawer",
-					"customElement": true
-				}
-			],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "Drawer",
-					"declaration": {
-						"name": "Drawer",
-						"module": "src/drawer.ts"
-					}
-				},
-				{
-					"kind": "custom-element-definition",
-					"name": "my-drawer",
-					"declaration": {
-						"name": "Drawer",
-						"module": "src/drawer.ts"
-					}
-				}
-			]
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/icon.ts",
-			"declarations": [
-				{
-					"kind": "class",
-					"description": "",
-					"name": "Icon",
-					"members": [
-						{
-							"kind": "field",
-							"name": "stroke",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"#333\"",
-							"attribute": "stroke"
-						},
-						{
-							"kind": "field",
-							"name": "icon",
-							"type": {
-								"text": "Icons"
-							},
-							"default": "\"menu\"",
-							"attribute": "icon"
-						},
-						{
-							"kind": "field",
-							"name": "svgIcon",
-							"type": {
-								"text": "SVGElement | null"
-							},
-							"default": "null"
-						},
-						{
-							"kind": "method",
-							"name": "updateIcon"
-						},
-						{
-							"kind": "method",
-							"name": "getIcon",
-							"return": {
-								"type": {
-									"text": "SVGElement"
-								}
-							},
-							"parameters": [
-								{
-									"name": "icon",
-									"type": {
-										"text": "Icons"
-									}
-								}
-							]
-						}
-					],
-					"attributes": [
-						{
-							"name": "stroke",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"#333\"",
-							"fieldName": "stroke"
-						},
-						{
-							"name": "icon",
-							"type": {
-								"text": "Icons"
-							},
-							"default": "\"menu\"",
-							"fieldName": "icon"
-						}
-					],
-					"superclass": {
-						"name": "LitElement",
-						"package": "lit"
-					},
-					"tagName": "my-icon",
-					"customElement": true
-				}
-			],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "Icon",
-					"declaration": {
-						"name": "Icon",
-						"module": "src/icon.ts"
-					}
-				},
-				{
-					"kind": "custom-element-definition",
-					"name": "my-icon",
-					"declaration": {
-						"name": "Icon",
-						"module": "src/icon.ts"
-					}
-				}
-			]
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/index.ts",
-			"declarations": [],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "Button",
-					"declaration": {
-						"name": "Button",
-						"module": "\"./button\""
-					}
-				},
-				{
-					"kind": "js",
-					"name": "Card",
-					"declaration": {
-						"name": "Card",
-						"module": "\"./card\""
-					}
-				},
-				{
-					"kind": "js",
-					"name": "Drawer",
-					"declaration": {
-						"name": "Drawer",
-						"module": "\"./drawer\""
-					}
-				},
-				{
-					"kind": "js",
-					"name": "Icon",
-					"declaration": {
-						"name": "Icon",
-						"module": "\"./icon\""
-					}
-				},
-				{
-					"kind": "js",
-					"name": "MyElement",
-					"declaration": {
-						"name": "MyElement",
-						"module": "\"./my-element\""
-					}
-				},
-				{
-					"kind": "js",
-					"name": "Spinner",
-					"declaration": {
-						"name": "Spinner",
-						"module": "\"./spinner\""
-					}
-				}
-			]
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/my-element.ts",
-			"declarations": [
-				{
-					"kind": "class",
-					"description": "",
-					"name": "MyElement",
-					"members": [
-						{
-							"kind": "field",
-							"name": "name",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"World\"",
-							"attribute": "name"
-						}
-					],
-					"attributes": [
-						{
-							"name": "name",
-							"type": {
-								"text": "string"
-							},
-							"default": "\"World\"",
-							"fieldName": "name"
-						}
-					],
-					"superclass": {
-						"name": "LitElement",
-						"package": "lit"
-					},
-					"tagName": "my-element",
-					"customElement": true
-				}
-			],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "MyElement",
-					"declaration": {
-						"name": "MyElement",
-						"module": "src/my-element.ts"
-					}
-				},
-				{
-					"kind": "custom-element-definition",
-					"name": "my-element",
-					"declaration": {
-						"name": "MyElement",
-						"module": "src/my-element.ts"
-					}
-				}
-			]
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/purgeEmpty.ts",
-			"declarations": [
-				{
-					"kind": "function",
-					"name": "purgeEmpty",
-					"parameters": [
-						{
-							"name": "obj",
-							"type": {
-								"text": "Record<string, string>"
-							}
-						}
-					]
-				}
-			],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "purgeEmpty",
-					"declaration": {
-						"name": "purgeEmpty",
-						"module": "src/purgeEmpty.ts"
-					}
-				}
-			]
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/shoelace.ts",
-			"declarations": [],
-			"exports": []
-		},
-		{
-			"kind": "javascript-module",
-			"path": "src/spinner.ts",
-			"declarations": [
-				{
-					"kind": "class",
-					"description": "",
-					"name": "Spinner",
-					"members": [],
-					"superclass": {
-						"name": "LitElement",
-						"package": "lit"
-					},
-					"tagName": "my-spinner",
-					"customElement": true
-				}
-			],
-			"exports": [
-				{
-					"kind": "js",
-					"name": "Spinner",
-					"declaration": {
-						"name": "Spinner",
-						"module": "src/spinner.ts"
-					}
-				},
-				{
-					"kind": "custom-element-definition",
-					"name": "my-spinner",
-					"declaration": {
-						"name": "Spinner",
-						"module": "src/spinner.ts"
-					}
-				}
-			]
-		}
-	]
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/button.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "meta",
+          "default": "{ title: \"UI/Button\", render: (args) => html`<my-button ?loading=${args.loading}></my-button>`, argTypes: { loading: { control: \"boolean\", description: \"Controls the loading state of the button\", defaultValue: false, }, }, args: { loading: true }, } satisfies Meta<ButtonProps>"
+        },
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "Story"
+          },
+          "default": "{ args: { loading: false, }, }"
+        },
+        {
+          "kind": "variable",
+          "name": "Loading",
+          "type": {
+            "text": "Story"
+          },
+          "default": "{ args: { loading: true, }, }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "meta",
+            "module": "src/button.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/button.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Loading",
+          "declaration": {
+            "name": "Loading",
+            "module": "src/button.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Button",
+          "members": [
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "loading"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "loading"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "my-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-button",
+          "declaration": {
+            "name": "Button",
+            "module": "src/button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/card.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Card",
+          "members": [
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "headerColor",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "headerColor"
+            },
+            {
+              "kind": "field",
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "color"
+            },
+            {
+              "kind": "field",
+              "name": "backgroundColor",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "backgroundColor"
+            },
+            {
+              "kind": "field",
+              "name": "borderColor",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "borderColor"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "title"
+            },
+            {
+              "name": "headerColor",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "headerColor"
+            },
+            {
+              "name": "color",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "color"
+            },
+            {
+              "name": "backgroundColor",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "backgroundColor"
+            },
+            {
+              "name": "borderColor",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "borderColor"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "my-card",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Card",
+          "declaration": {
+            "name": "Card",
+            "module": "src/card.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-card",
+          "declaration": {
+            "name": "Card",
+            "module": "src/card.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/drawer.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Drawer",
+          "members": [
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "open"
+            },
+            {
+              "kind": "method",
+              "name": "closeDrawer",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "name": "drawer-closed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "title"
+            },
+            {
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "open"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "my-drawer",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Drawer",
+          "declaration": {
+            "name": "Drawer",
+            "module": "src/drawer.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-drawer",
+          "declaration": {
+            "name": "Drawer",
+            "module": "src/drawer.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/icon.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Icon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "stroke",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"#333\"",
+              "attribute": "stroke"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "Icons"
+              },
+              "default": "\"menu\"",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "svgIcon",
+              "type": {
+                "text": "SVGElement | null"
+              },
+              "default": "null"
+            },
+            {
+              "kind": "method",
+              "name": "updateIcon"
+            },
+            {
+              "kind": "method",
+              "name": "getIcon",
+              "return": {
+                "type": {
+                  "text": "SVGElement"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "icon",
+                  "type": {
+                    "text": "Icons"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "stroke",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"#333\"",
+              "fieldName": "stroke"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "Icons"
+              },
+              "default": "\"menu\"",
+              "fieldName": "icon"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "my-icon",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Icon",
+          "declaration": {
+            "name": "Icon",
+            "module": "src/icon.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-icon",
+          "declaration": {
+            "name": "Icon",
+            "module": "src/icon.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Button",
+          "declaration": {
+            "name": "Button",
+            "module": "\"./button\""
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Card",
+          "declaration": {
+            "name": "Card",
+            "module": "\"./card\""
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Drawer",
+          "declaration": {
+            "name": "Drawer",
+            "module": "\"./drawer\""
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Icon",
+          "declaration": {
+            "name": "Icon",
+            "module": "\"./icon\""
+          }
+        },
+        {
+          "kind": "js",
+          "name": "MyElement",
+          "declaration": {
+            "name": "MyElement",
+            "module": "\"./my-element\""
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Spinner",
+          "declaration": {
+            "name": "Spinner",
+            "module": "\"./spinner\""
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/my-element.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MyElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"World\"",
+              "attribute": "name"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"World\"",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "my-element",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyElement",
+          "declaration": {
+            "name": "MyElement",
+            "module": "src/my-element.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-element",
+          "declaration": {
+            "name": "MyElement",
+            "module": "src/my-element.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/purgeEmpty.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "purgeEmpty",
+          "parameters": [
+            {
+              "name": "obj",
+              "type": {
+                "text": "Record<string, string>"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "purgeEmpty",
+          "declaration": {
+            "name": "purgeEmpty",
+            "module": "src/purgeEmpty.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/shoelace.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/spinner.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "Spinner",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "my-spinner",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Spinner",
+          "declaration": {
+            "name": "Spinner",
+            "module": "src/spinner.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "my-spinner",
+          "declaration": {
+            "name": "Spinner",
+            "module": "src/spinner.ts"
+          }
+        }
+      ]
+    }
+  ]
 }
