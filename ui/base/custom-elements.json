@@ -4,12 +4,12 @@
 	"modules": [
 		{
 			"kind": "javascript-module",
-			"path": "src/Button.stories.ts",
+			"path": "src/button.stories.ts",
 			"declarations": [
 				{
 					"kind": "variable",
 					"name": "meta",
-					"default": "{ title: \"UI/Button\", render: (args) => html`<my-button ?loading=${args.loading}></my-button>`, argTypes: { loading: { control: \"boolean\", description: \"Controls the loading state of the button\", defaultValue: false, }, // label: { // control: 'text', // description: 'The button label content (slot)', // defaultValue: 'Button', // }, }, args: { loading: true }, } satisfies Meta<ButtonProps>"
+					"default": "{ title: \"UI/Button\", render: (args) => html`<my-button ?loading=${args.loading}></my-button>`, argTypes: { loading: { control: \"boolean\", description: \"Controls the loading state of the button\", defaultValue: false, }, }, args: { loading: true }, } satisfies Meta<ButtonProps>"
 				},
 				{
 					"kind": "variable",
@@ -17,7 +17,7 @@
 					"type": {
 						"text": "Story"
 					},
-					"default": "{ args: { loading: false, // label: 'Click me', }, }"
+					"default": "{ args: { loading: false, }, }"
 				},
 				{
 					"kind": "variable",
@@ -25,7 +25,7 @@
 					"type": {
 						"text": "Story"
 					},
-					"default": "{ args: { loading: true, // label: 'Loading...', }, }"
+					"default": "{ args: { loading: true, }, }"
 				}
 			],
 			"exports": [
@@ -34,7 +34,7 @@
 					"name": "default",
 					"declaration": {
 						"name": "meta",
-						"module": "src/Button.stories.ts"
+						"module": "src/button.stories.ts"
 					}
 				},
 				{
@@ -42,7 +42,7 @@
 					"name": "Default",
 					"declaration": {
 						"name": "Default",
-						"module": "src/Button.stories.ts"
+						"module": "src/button.stories.ts"
 					}
 				},
 				{
@@ -50,7 +50,7 @@
 					"name": "Loading",
 					"declaration": {
 						"name": "Loading",
-						"module": "src/Button.stories.ts"
+						"module": "src/button.stories.ts"
 					}
 				}
 			]
@@ -430,6 +430,14 @@
 			"exports": [
 				{
 					"kind": "js",
+					"name": "Button",
+					"declaration": {
+						"name": "Button",
+						"module": "\"./button\""
+					}
+				},
+				{
+					"kind": "js",
 					"name": "Card",
 					"declaration": {
 						"name": "Card",
@@ -442,14 +450,6 @@
 					"declaration": {
 						"name": "Drawer",
 						"module": "\"./drawer\""
-					}
-				},
-				{
-					"kind": "js",
-					"name": "Button",
-					"declaration": {
-						"name": "Button",
-						"module": "\"./button\""
 					}
 				},
 				{
@@ -530,6 +530,34 @@
 					"declaration": {
 						"name": "MyElement",
 						"module": "src/my-element.ts"
+					}
+				}
+			]
+		},
+		{
+			"kind": "javascript-module",
+			"path": "src/purgeEmpty.ts",
+			"declarations": [
+				{
+					"kind": "function",
+					"name": "purgeEmpty",
+					"parameters": [
+						{
+							"name": "obj",
+							"type": {
+								"text": "Record<string, string>"
+							}
+						}
+					]
+				}
+			],
+			"exports": [
+				{
+					"kind": "js",
+					"name": "purgeEmpty",
+					"declaration": {
+						"name": "purgeEmpty",
+						"module": "src/purgeEmpty.ts"
 					}
 				}
 			]
