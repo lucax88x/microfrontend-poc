@@ -4,12 +4,8 @@ export const buildSharedDependencies = (path: string) => {
 	const workspace = getWorkspace(path);
 
 	return {
-		react: {
-			requiredVersion: workspace.catalogs.react.react,
-			singleton: true,
-		},
-		"react-dom": {
-			requiredVersion: workspace.catalogs.react["react-dom"],
+		preact: {
+			requiredVersion: workspace.catalogs.preact.preact,
 			singleton: true,
 		},
 	};

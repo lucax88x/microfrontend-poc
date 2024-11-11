@@ -11,16 +11,13 @@
 		"format": "biome format --write ."
 	},
 	"dependencies": {
-		"react": "catalog:react",
-		"react-dom": "catalog:react",
+		"preact": "catalog:preact",
 		"rxjs": "^7.8.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
 		"@module-federation/vite": "catalog:vite",
-		"@types/react": "catalog:react",
-		"@types/react-dom": "catalog:react",
-		"@vitejs/plugin-react": "catalog:vite",
+		"@preact/preset-vite": "catalog:vite",
 		"autoprefixer": "catalog:tailwindcss",
 		"postcss": "catalog:tailwindcss",
 		"tailwindcss": "catalog:tailwindcss",

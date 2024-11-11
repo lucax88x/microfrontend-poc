@@ -8,19 +8,16 @@
 		"build": "pnpm run generate && vite build",
 		"preview": "pnpm run build && vite preview --port 5176 --host"
 	},
-	"dependencies": {
-		"react": "catalog:react",
-		"react-dom": "catalog:react"
-	},
 	"devDependencies": {
 		"@module-federation/vite": "catalog:vite",
 		"@types/node": "^22.8.7",
-		"@types/react": "catalog:react",
-		"@types/react-dom": "catalog:react",
-		"@vitejs/plugin-react": "catalog:vite",
 		"custom-element-react-wrappers": "^1.6.8",
+		"@preact/preset-vite": "catalog:vite",
 		"tsx": "^4.19.1",
 		"vite": "catalog:vite",
 		"zod": "^3.23.8"
+	},
+	"dependencies": {
+		"preact": "^10.24.3"
 	}
 }

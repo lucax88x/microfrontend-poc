@@ -1,6 +1,6 @@
-import type React from "react";
-import { type PropsWithChildren, useEffect, useState } from "react";
-
+import type React from "preact";
+import type { PropsWithChildren } from "preact/compat";
+import { useEffect, useState } from "preact/hooks";
 export interface Message {
 	message: JSX.Element;
 	isUser: boolean;
@@ -26,7 +26,10 @@ export const Chat = (props: PropsWithChildren<{ question: JSX.Element }>) => {
 		// Simulated medical function answer
 		setTimeout(() => {
 			const medicalAnswer = getMedicalAnswer();
-			setMessages((prev) => [...prev, { message: <span>{medicalAnswer}</span>, isUser: false }]);
+			setMessages((prev) => [
+				...prev,
+				{ message: <span>{medicalAnswer}</span>, isUser: false },
+			]);
 			setIsLoading(false);
 		}, 500);
 
@@ -55,7 +58,10 @@ export const Chat = (props: PropsWithChildren<{ question: JSX.Element }>) => {
 		<div className="r1-flex r1-h-4/6 r1-flex-col r1-bg-gray-100">
 			<div className="r1-flex-1 r1-overflow-y-auto r1-p-4">
 				{messages.map((message, index) => (
-					<div key={index} className={`r1-mb-4 ${message.isUser ? "r1-text-right" : "r1-text-left"}`}>
+					<div
+						key={index}
+						className={`r1-mb-4 ${message.isUser ? "r1-text-right" : "r1-text-left"}`}
+					>
 						<div
 							className={`r1-inline-block r1-rounded-lg r1-p-2 ${message.isUser ? "r1-bg-yellow-500 r1-text-white" : "r1-bg-white r1-text-gray-800"}`}
 						>
@@ -64,12 +70,15 @@ export const Chat = (props: PropsWithChildren<{ question: JSX.Element }>) => {
 					</div>
 				))}
 			</div>
-			<form onSubmit={handleSubmit} className="r1-border-t r1-border-gray-200 r1-bg-white r1-pt-4">
+			<form
+				onSubmit={handleSubmit}
+				className="r1-border-t r1-border-gray-200 r1-bg-white r1-pt-4"
+			>
 				<div className="r1-flex r1-gap-2">
 					<input
 						type="text"
 						value={input}
-						onChange={(e) => setInput(e.target.value)}
+						onInput={(e) => setInput(e.target.value)}
 						className="r1-focus:outline-none r1-focus:ring-2 r1-focus:ring-yellow-500 r1-flex-1 r1-border r1-border-gray-300 r1-p-2"
 						placeholder="Type your message..."
 					/>

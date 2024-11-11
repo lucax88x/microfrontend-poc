@@ -14,13 +14,13 @@ pnpm workspaces with catalog
      shoelace
      cem (custom elements manifest)
 
-  - react => generates react components based on the ui/base
+  - react => generates preact components based on the ui/base
      vite
-     react
+     preact
      tailwindcss
       
 - packages
-  - react-1 => list of react reusable components
+  - react-1 => list of preact reusable components
     vite
     tailwindcss
   - angular-1 => list of angular reusable components
@@ -30,7 +30,7 @@ pnpm workspaces with catalog
 - shells
   - shell-1 => app that uses packages
     vite
-    react
+    preact
 
 - shared 
   - lib => shared code

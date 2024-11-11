@@ -1,9 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { render } from "preact";
+import { StrictMode } from "preact/compat";
 import Local from "./Local";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-	<React.StrictMode>
+render(
+	<StrictMode>
 		<Local />
-	</React.StrictMode>,
+	</StrictMode>,
+	document.getElementById("root") as HTMLElement,
 );

@@ -5,11 +5,8 @@ export interface Workspace {
 			postcss: string;
 			autoprefixer: string;
 		};
-		react: {
-			react: string;
-			"react-dom": string;
-			"@types/react": string;
-			"@types/react-dom": string;
+		preact: {
+			preact: string;
 		};
 		vite: {
 			vite: string;

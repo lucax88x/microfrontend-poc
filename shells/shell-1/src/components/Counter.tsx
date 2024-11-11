@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "preact";
 
 export default () => {
 	const [count, setCount] = useState<number>(0);

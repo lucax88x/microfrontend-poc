@@ -3,16 +3,21 @@ import "./index.css";
 
 import { state } from "@shared/shared";
 
-import { lazy, Suspense, useCallback, useEffect, useState } from "react";
+import { Suspense, lazy } from "preact/compat";
+import { useCallback, useEffect, useState } from "preact/hooks";
 
 const UiButton = lazy(async () => import("@poc/ui/react/button"));
 const UiIcon = lazy(async () => import("@poc/ui/react/icon"));
 const UiSpinner = lazy(async () => import("@poc/ui/react/spinner"));
 const UiCard = lazy(async () => import("@poc/ui/react/card"));
-const React1ListDocs = lazy(async () => import("@poc/react-1/components/ListDocs"));
+const React1ListDocs = lazy(
+	async () => import("@poc/react-1/components/ListDocs"),
+);
 const React1Chart = lazy(async () => import("@poc/react-1/components/Line"));
 const React1Topbar = lazy(async () => import("@poc/react-1/components/Topbar"));
-const React1DrawerChat = lazy(async () => import("@poc/react-1/components/DrawerChat"));
+const React1DrawerChat = lazy(
+	async () => import("@poc/react-1/components/DrawerChat"),
+);
 
 // @ts-expect-error demo
 const Angular1 = async () => import("angular-1/bootstrap");
@@ -82,20 +87,37 @@ export default function App() {
 				<div className="flex justify-center p-4">
 					<div className="container flex flex-col gap-2 md:flex-row">
 						<Suspense fallback={<UiSpinner />}>
-							<UiCard title="documents" className="flex-1" headerColor="#facc15" borderColor="#facc15">
+							<UiCard
+								title="documents"
+								className="flex-1"
+								headerColor="#facc15"
+								borderColor="#facc15"
+							>
 								<React1ListDocs />
 							</UiCard>
 						</Suspense>
 						<Suspense fallback={<UiSpinner />}>
-							<React1DrawerChat isOpen={isOpenChat} question={question!} onClose={() => setIsOpenChat(false)} />
+							<React1DrawerChat
+								isOpen={isOpenChat}
+								question={question!}
+								onClose={() => setIsOpenChat(false)}
+							/>
 						</Suspense>
 						<Suspense fallback={<UiSpinner />}>
-							<UiCard title="charts" className="flex-1" headerColor="#ca8a04" borderColor="#ca8a04">
+							<UiCard
+								title="charts"
+								className="flex-1"
+								headerColor="#ca8a04"
+								borderColor="#ca8a04"
+							>
 								<div className="flex flex-col gap-2">
 									<React1Chart />
 
 									<div className="flex gap-2">
-										<UiButton onClick={emit} loading={isLoading ? true : undefined}>
+										<UiButton
+											onClick={emit}
+											loading={isLoading ? true : undefined}
+										>
 											<UiIcon slot="prefix" icon="upload"></UiIcon>
 											<slot slot="label">import</slot>
 										</UiButton>

@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 import { federation } from "@module-federation/vite";
-import react from "@vitejs/plugin-react";
+import preact from "@preact/preset-vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { buildSharedDependencies } from "../../shared/vite/src/dependencies";
 import { parseEnv } from "./env";
@@ -48,7 +48,7 @@ export default defineConfig(({ mode }) => {
 				filename: "remoteEntry.js",
 				shared: buildSharedDependencies("../../pnpm-workspace.yaml"),
 			}),
-			react(),
+			preact(),
 		],
 	};
 });

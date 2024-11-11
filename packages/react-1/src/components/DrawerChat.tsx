@@ -1,5 +1,6 @@
-import { type PropsWithChildren, useEffect } from "react";
-import { Chat, Message } from "./Chat";
+import type { PropsWithChildren } from "preact/compat";
+import { useEffect } from "preact/hooks";
+import { Chat } from "./Chat";
 
 export const DrawerChat = ({
 	isOpen,
@@ -17,15 +18,21 @@ export const DrawerChat = ({
 
 		const drawerElement = document.querySelector("my-drawer");
 		if (drawerElement) {
-			drawerElement.addEventListener("drawer-closed", handleDrawerEvent as EventListener);
+			drawerElement.addEventListener(
+				"drawer-closed",
+				handleDrawerEvent as EventListener,
+			);
 		}
 
 		return () => {
 			if (drawerElement) {
-				drawerElement.removeEventListener("drawer-closed", handleDrawerEvent as EventListener);
+				drawerElement.removeEventListener(
+					"drawer-closed",
+					handleDrawerEvent as EventListener,
+				);
 			}
 		};
-	}, []);
+	}, [onClose]);
 
 	return (
 		<my-drawer title="Ask me" open={isOpen ? true : undefined}>

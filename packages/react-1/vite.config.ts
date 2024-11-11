@@ -1,5 +1,5 @@
 import { federation } from "@module-federation/vite";
-import react from "@vitejs/plugin-react";
+import preact from "@preact/preset-vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { buildSharedDependencies } from "../../shared/vite/src/dependencies";
@@ -31,7 +31,7 @@ export default defineConfig(({ mode }) => {
 				},
 				shared: buildSharedDependencies("../../pnpm-workspace.yaml"),
 			}),
-			react(),
+			preact(),
 		],
 	};
 });

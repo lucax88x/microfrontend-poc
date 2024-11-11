@@ -19,6 +19,7 @@
 - (x) consider biomejs instead of eslint and prettier?
 - (x) lefthook force lint, conv commit, format => https://biomejs.dev/recipes/git-hooks/ 
 - (x) consider native federation instead of module federation
+- ls-lint
 
 limits: 
 - must import the index.css on every component to ensure tw

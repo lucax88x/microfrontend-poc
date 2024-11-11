@@ -1,8 +1,9 @@
+import { useMemo } from "preact/hooks";
 import "../index.css";
 
-import useDemoConfig from "../useDemoConfig";
-import React from "react";
+import React from "preact";
 import { type AxisOptions, Chart } from "react-charts";
+import useDemoConfig from "../useDemoConfig";
 
 export const Line = () => {
 	const { data } = useDemoConfig({
@@ -10,14 +11,18 @@ export const Line = () => {
 		dataType: "time",
 	});
 
-	const primaryAxis = React.useMemo<AxisOptions<(typeof data)[number]["data"][number]>>(
+	const primaryAxis = useMemo<
+		AxisOptions<(typeof data)[number]["data"][number]>
+	>(
 		() => ({
 			getValue: (datum) => datum.primary as unknown as Date,
 		}),
 		[],
 	);
 
-	const secondaryAxes = React.useMemo<AxisOptions<(typeof data)[number]["data"][number]>[]>(
+	const secondaryAxes = useMemo<
+		AxisOptions<(typeof data)[number]["data"][number]>[]
+	>(
 		() => [
 			{
 				getValue: (datum) => datum.secondary,
