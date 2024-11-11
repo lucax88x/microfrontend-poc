@@ -67,6 +67,29 @@
       </ul>
     </section>
   </div>
+
+  <script type="text/javascript">
+    function updateLinks() {
+      // Get the current location.href
+      const currentUrl = window.location.href;
+
+      // Remove the port from the URL
+      const updatedUrl = currentUrl.substr(0,  currentUrl.lastIndexOf(":"))
+
+      // Get all the 'a' tags on the page
+      const links = document.querySelectorAll('a');
+
+      // Loop through the links and update the href
+      links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href.startsWith('http://localhost') || href.startsWith('https://localhost')) {
+          link.setAttribute('href', href.replace('http://localhost', updatedUrl));
+        }
+      });
+    }
+
+    updateLinks()
+  </script>
 </body>
 
 </html>

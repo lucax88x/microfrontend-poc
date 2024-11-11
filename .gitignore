@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+.env.local
+
 # Module federation temp files
 .__mf__temp
 *storybook.log

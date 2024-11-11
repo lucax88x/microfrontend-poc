@@ -9,7 +9,7 @@
 				{
 					"kind": "variable",
 					"name": "meta",
-					"default": "{ title: 'UI/Button', render: (args) => html`<my-button ?loading=${args.loading}></my-button>`, argTypes: { loading: { control: 'boolean', description: 'Controls the loading state of the button', defaultValue: false, }, // label: { // control: 'text', // description: 'The button label content (slot)', // defaultValue: 'Button', // }, }, args: { loading: true }, } satisfies Meta<ButtonProps>"
+					"default": "{ title: \"UI/Button\", render: (args) => html`<my-button ?loading=${args.loading}></my-button>`, argTypes: { loading: { control: \"boolean\", description: \"Controls the loading state of the button\", defaultValue: false, }, // label: { // control: 'text', // description: 'The button label content (slot)', // defaultValue: 'Button', // }, }, args: { loading: true }, } satisfies Meta<ButtonProps>"
 				},
 				{
 					"kind": "variable",
@@ -126,7 +126,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"attribute": "title"
 						},
 						{
@@ -135,7 +135,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"attribute": "headerColor"
 						},
 						{
@@ -144,7 +144,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"attribute": "color"
 						},
 						{
@@ -153,7 +153,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"attribute": "backgroundColor"
 						},
 						{
@@ -162,7 +162,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"attribute": "borderColor"
 						}
 					],
@@ -172,7 +172,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"fieldName": "title"
 						},
 						{
@@ -180,7 +180,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"fieldName": "headerColor"
 						},
 						{
@@ -188,7 +188,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"fieldName": "color"
 						},
 						{
@@ -196,7 +196,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"fieldName": "backgroundColor"
 						},
 						{
@@ -204,7 +204,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"fieldName": "borderColor"
 						}
 					],
@@ -250,7 +250,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"attribute": "title"
 						},
 						{
@@ -282,7 +282,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "''",
+							"default": "\"\"",
 							"fieldName": "title"
 						},
 						{
@@ -336,7 +336,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "'#333'",
+							"default": "\"#333\"",
 							"attribute": "stroke"
 						},
 						{
@@ -345,7 +345,7 @@
 							"type": {
 								"text": "Icons"
 							},
-							"default": "'menu'",
+							"default": "\"menu\"",
 							"attribute": "icon"
 						},
 						{
@@ -384,7 +384,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "'#333'",
+							"default": "\"#333\"",
 							"fieldName": "stroke"
 						},
 						{
@@ -392,7 +392,7 @@
 							"type": {
 								"text": "Icons"
 							},
-							"default": "'menu'",
+							"default": "\"menu\"",
 							"fieldName": "icon"
 						}
 					],
@@ -433,7 +433,7 @@
 					"name": "Card",
 					"declaration": {
 						"name": "Card",
-						"module": "./card"
+						"module": "\"./card\""
 					}
 				},
 				{
@@ -441,7 +441,7 @@
 					"name": "Drawer",
 					"declaration": {
 						"name": "Drawer",
-						"module": "./drawer"
+						"module": "\"./drawer\""
 					}
 				},
 				{
@@ -449,7 +449,7 @@
 					"name": "Button",
 					"declaration": {
 						"name": "Button",
-						"module": "./button"
+						"module": "\"./button\""
 					}
 				},
 				{
@@ -457,7 +457,7 @@
 					"name": "Icon",
 					"declaration": {
 						"name": "Icon",
-						"module": "./icon"
+						"module": "\"./icon\""
 					}
 				},
 				{
@@ -465,7 +465,7 @@
 					"name": "MyElement",
 					"declaration": {
 						"name": "MyElement",
-						"module": "./my-element"
+						"module": "\"./my-element\""
 					}
 				},
 				{
@@ -473,7 +473,7 @@
 					"name": "Spinner",
 					"declaration": {
 						"name": "Spinner",
-						"module": "./spinner"
+						"module": "\"./spinner\""
 					}
 				}
 			]
@@ -493,7 +493,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "'World'",
+							"default": "\"World\"",
 							"attribute": "name"
 						}
 					],
@@ -503,7 +503,7 @@
 							"type": {
 								"text": "string"
 							},
-							"default": "'World'",
+							"default": "\"World\"",
 							"fieldName": "name"
 						}
 					],

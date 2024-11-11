@@ -1,59 +1,54 @@
+import { defineConfig } from "vite";
+
 import { federation } from "@module-federation/vite";
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { dependencies } from "./package.json";
-// import { buildSharedDependencies } from '@poc/shared/vite/src/dependencies';
-//
-// console.log(buildSharedDependencies())
+import { buildSharedDependencies } from "../../shared/vite/src/dependencies";
+import { parseEnv } from "./env";
 
-export default defineConfig(() => ({
-	plugins: [
-		tsconfigPaths(),
-		federation({
-			name: "shell",
-			remotes: {
-				"@poc/ui/base": {
-					type: "module",
-					name: "@poc/ui/base",
-					entry: "http://localhost:5172/remoteEntry.js",
-					entryGlobalName: "@poc/ui/base",
-					shareScope: "default",
+export default defineConfig(({ mode }) => {
+	const env = parseEnv(mode, "SHELL_SHELL1");
+
+	return {
+		plugins: [
+			tsconfigPaths(),
+			federation({
+				name: "shell",
+				remotes: {
+					"@poc/ui/base": {
+						type: "module",
+						name: "@poc/ui/base",
+						entry: env.SHELL_SHELL1_UI_BASE_ENTRY,
+						entryGlobalName: "@poc/ui/base",
+						shareScope: "default",
+					},
+					"@poc/ui/react": {
+						type: "module",
+						name: "@poc/ui/react",
+						entry: env.SHELL_SHELL1_UI_REACT_ENTRY,
+						entryGlobalName: "@poc/ui/react",
+						shareScope: "default",
+					},
+					"angular-1": {
+						type: "module",
+						name: "angular-1",
+						entry: env.SHELL_SHELL1_MODULE_ANGULAR1_ENTRY,
+						entryGlobalName: "angular-1",
+						shareScope: "default",
+					},
+					"@poc/react-1": {
+						type: "module",
+						name: "@poc/react-1",
+						entry: env.SHELL_SHELL1_MODULE_REACT1_ENTRY,
+						entryGlobalName: "@poc/react-1",
+						shareScope: "default",
+					},
 				},
-				"@poc/ui/react": {
-					type: "module",
-					name: "@poc/ui/react",
-					entry: "http://localhost:5176/remoteEntry.js",
-					entryGlobalName: "@poc/ui/react",
-					shareScope: "default",
-				},
-				"angular-1": {
-					type: "module",
-					name: "angular-1",
-					entry: "http://localhost:5174/remoteEntry.js",
-					entryGlobalName: "angular-1",
-					shareScope: "default",
-				},
-				"@poc/react-1": {
-					type: "module",
-					name: "@poc/react-1",
-					entry: "http://localhost:5175/remoteEntry.js",
-					entryGlobalName: "@poc/react-1",
-					shareScope: "default",
-				},
-			},
-			exposes: {},
-			filename: "remoteEntry.js",
-			// shared: {
-			//     // ...buildSharedDependencies('../../pnpm-workspace.yaml'),
-			// },
-			shared: {
-				react: {
-					requiredVersion: dependencies.react,
-					singleton: true,
-				},
-			},
-		}),
-		react(),
-	],
-}));
+				exposes: {},
+				filename: "remoteEntry.js",
+				shared: buildSharedDependencies("../../pnpm-workspace.yaml"),
+			}),
+			react(),
+		],
+	};
+});

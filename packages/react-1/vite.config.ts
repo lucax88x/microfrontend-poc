@@ -2,10 +2,12 @@ import { federation } from "@module-federation/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { dependencies } from "./package.json";
-// import { buildSharedDependencies } from '@poc/shared/vite/dependencies';
+import { buildSharedDependencies } from "../../shared/vite/src/dependencies";
+import { parseEnv } from "./env";
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
+	const env = parseEnv(mode, "MODULE_REACT1");
+
 	return {
 		plugins: [
 			tsconfigPaths(),
@@ -22,20 +24,12 @@ export default defineConfig(() => {
 					"@poc/ui/base": {
 						type: "module",
 						name: "@poc/ui/base",
-						entry: "http://localhost:5172/remoteEntry.js",
+						entry: env.MODULE_REACT1_UI_BASE_ENTRY,
 						entryGlobalName: "@poc/ui/base",
 						shareScope: "default",
 					},
 				},
-				// shared: {
-				//   // ...buildSharedDependencies('../../pnpm-workspace.yaml'),
-				// },
-				shared: {
-					react: {
-						requiredVersion: dependencies.react,
-						singleton: true,
-					},
-				},
+				shared: buildSharedDependencies("../../pnpm-workspace.yaml"),
 			}),
 			react(),
 		],
