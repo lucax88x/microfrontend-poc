@@ -8,11 +8,9 @@
 		"experimentalDecorators": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
-    "paths": {
-      "@ui/*": [
-        "./src/*"
-      ]
-    }
+		"paths": {
+			"~/*": ["./src/*"]
+		}
 	},
 	"exclude": ["src/**/*.stories.ts"]
 }

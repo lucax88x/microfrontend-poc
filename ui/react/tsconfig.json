@@ -22,6 +22,9 @@
     "jsxImportSource": "preact",
     "baseUrl": ".",
     "paths": {
+      "~/*": [
+        "./src/*"
+      ],
       "@shared": [
         "../../shared/lib/*"
       ]

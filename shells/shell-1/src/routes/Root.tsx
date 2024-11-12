@@ -1,16 +1,15 @@
 import "@poc/ui/base";
-import "@shell1/index.css";
+import "~/index.css";
 
 import { Suspense, lazy } from "preact/compat";
 import { Outlet } from "react-router-dom";
 
-const UiSpinner = lazy(async () => import("@poc/ui/react/spinner"));
 const React1Topbar = lazy(async () => import("@poc/react-1/components/Topbar"));
 
 export const Root = () => {
 	return (
 		<>
-			<Suspense fallback={<UiSpinner />}>
+			<Suspense fallback={<p>loading</p>}>
 				<React1Topbar />
 			</Suspense>
 			<div className="flex flex-col justify-center p-4">

@@ -63,7 +63,7 @@ export default function App() {
 
 	return (
 		<>
-			<Suspense fallback={<UiSpinner />}>
+			<Suspense fallback={<p>loading</p>}>
 				<UiCard
 					title="documents"
 					className="flex-1"
@@ -73,14 +73,14 @@ export default function App() {
 					<React1ListDocs />
 				</UiCard>
 			</Suspense>
-			<Suspense fallback={<UiSpinner />}>
+			<Suspense fallback={<p>loading</p>}>
 				<React1DrawerChat
 					isOpen={isOpenChat}
 					question={question!}
 					onClose={() => setIsOpenChat(false)}
 				/>
 			</Suspense>
-			<Suspense fallback={<UiSpinner />}>
+			<Suspense fallback={<p>loading</p>}>
 				<UiCard
 					title="charts"
 					className="flex-1"

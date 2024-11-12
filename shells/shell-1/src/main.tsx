@@ -1,27 +1,44 @@
 import { render } from "preact";
 import { StrictMode } from "preact/compat";
-import { Root } from "@shell1/routes/Root";
-import { ErrorPage } from "@shell1/ErrorPage";
+import { Root } from "~/routes/Root";
+import { ErrorPage } from "~/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "@shell1/routes/Home";
+import Home from "~/routes/Home";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+	[
+		{
+			path: "/",
+			element: <Root />,
+			errorElement: <ErrorPage />,
+			children: [
+				{
+					path: "",
+					element: <Home />,
+				},
+			],
+		},
+	],
 	{
-		path: "/",
-		element: <Root />,
-		errorElement: <ErrorPage />,
-		children: [
-			{
-				path: "",
-				element: <Home />,
-			},
-		],
+		future: {
+			v7_normalizeFormMethod: true,
+			v7_skipActionErrorRevalidation: true,
+			v7_fetcherPersist: true,
+			v7_startTransition: true,
+			v7_relativeSplatPath: true,
+			v7_partialHydration: true,
+		},
 	},
-]);
+);
 
 render(
 	<StrictMode>
-		<RouterProvider router={router} />
+		<RouterProvider
+			router={router}
+			future={{
+				v7_startTransition: true,
+			}}
+		/>
 	</StrictMode>,
 	document.getElementById("root") as HTMLElement,
 );

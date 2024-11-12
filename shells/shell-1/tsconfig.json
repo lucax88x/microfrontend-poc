@@ -22,7 +22,7 @@
     "jsxImportSource": "preact",
     "baseUrl": ".",
     "paths": {
-      "@shell1/*": [
+      "~/*": [
         "./src/*"
       ],
       "@shared/*": [
