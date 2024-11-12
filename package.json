@@ -1,22 +1,25 @@
 {
-	"name": "@poc",
-	"version": "0.0.1",
-	"scripts": {
-		"recursive": "pnpm run --workspace-concurrency=Infinity -r",
-		"postinstall": "lefthook install",
-		"tsc": "pnpm run recursive -- tsc",
-		"serve": "serve public -p 5170",
-		"dev": "pnpm run serve & pnpm run recursive -- dev",
-		"storybook": "pnpm run recursive -- storybook",
-		"build": "pnpm run recursive -- build",
-		"lint": "pnpm run recursive -- lint",
-		"format": "pnpm run recursive -- format",
-		"cleandep": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^19.5.0",
-		"@commitlint/config-conventional": "^19.5.0",
-		"lefthook": "^1.8.2",
-		"serve": "^14.2.4"
-	}
+  "name": "@poc",
+  "version": "0.0.1",
+  "scripts": {
+    "recursive": "pnpm run --workspace-concurrency=Infinity -r",
+    "postinstall": "lefthook install",
+    "tsc": "pnpm run recursive -- tsc",
+    "serve": "serve public -p 5170",
+    "dev": "pnpm run serve & pnpm run recursive -- dev",
+    "storybook": "pnpm run recursive -- storybook",
+    "build": "pnpm run recursive -- build",
+    "lint": "pnpm run recursive -- lint",
+    "format": "pnpm run recursive -- format",
+    "cleandep": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "lefthook": "^1.8.2",
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
 }

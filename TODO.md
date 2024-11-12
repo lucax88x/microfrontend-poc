@@ -1,5 +1,5 @@
-
-- preact
+- (x) preact
+- remix test?
 - login, oidc
 - (x) storybook
 - context? how to communicate properly between components?
@@ -20,6 +20,7 @@
 - (x) lefthook force lint, conv commit, format => https://biomejs.dev/recipes/git-hooks/ 
 - (x) consider native federation instead of module federation
 - ls-lint
+- openapi ts typescript in mf only typescript library
 
 limits: 
 - must import the index.css on every component to ensure tw
