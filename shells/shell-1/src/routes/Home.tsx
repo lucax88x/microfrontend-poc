@@ -1,12 +1,12 @@
 import { Suspense, lazy } from "preact/compat";
 import { useCallback, useEffect, useState } from "preact/hooks";
+import { queryClient } from "~/query-client";
 
 const UiButton = lazy(async () => import("@poc/ui/react/button"));
 const UiIcon = lazy(async () => import("@poc/ui/react/icon"));
-const UiSpinner = lazy(async () => import("@poc/ui/react/spinner"));
 const UiCard = lazy(async () => import("@poc/ui/react/card"));
 const React1ListDocs = lazy(
-	async () => import("@poc/react-1/components/ListDocs"),
+	async () => import("@poc/react-1/components/AsyncListDocs"),
 );
 const React1Chart = lazy(async () => import("@poc/react-1/components/Line"));
 const React1DrawerChat = lazy(
@@ -70,7 +70,7 @@ export default function App() {
 					headerColor="#facc15"
 					borderColor="#facc15"
 				>
-					<React1ListDocs />
+					<React1ListDocs queryClient={queryClient} />
 				</UiCard>
 			</Suspense>
 			<Suspense fallback={<p>loading</p>}>
@@ -104,6 +104,7 @@ export default function App() {
 					</div>
 				</UiCard>
 			</Suspense>
+			<app-remote-root />
 		</>
 	);
 }

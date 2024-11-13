@@ -1,5 +1,6 @@
+- ionic
 - (x) preact
-- remix test?
+- (x)remix test?
 - login, oidc
 - (x) storybook
 - context? how to communicate properly between components?
@@ -23,6 +24,7 @@
 - openapi ts typescript in mf only typescript library
 
 limits: 
+- do not federate in fallback for suspense!
 - must import the index.css on every component to ensure tw
 - tailwind, needs prefix for all MFs
 - exported react components should always have default export

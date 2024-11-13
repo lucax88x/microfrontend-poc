@@ -1,33 +1,46 @@
+import { lazy, Suspense } from "preact/compat";
 import "../index.css";
 
-import { useEffect, useState } from "preact/hooks";
-import { DocItem } from "../components/DocItem";
-import type { Doc } from "../models/doc";
+import { useQuery } from "@tanstack/react-query";
+const UiSpinner = lazy(async () => import("@poc/ui/react/spinner"));
+// import { someFunction } from "@poc/shared/api1/api";
+
+const api = () => import("@poc/shared/api1/api");
 
 export const ListDocs = () => {
-	const [docs, setDocs] = useState<Doc[]>([]);
-
-	useEffect(() => {
-		const handleDocSend = (e: CustomEvent) => {
-			setDocs((docs) => {
-				return [...docs, e.detail];
+	const { isPending, error, data, isFetching } = useQuery({
+		queryKey: ["repoData"],
+		queryFn: async () => {
+			const a = await api();
+			const client = a.createApi1Client();
+			const response = await client.GET("/pet/{petId}", {
+				params: { path: { petId: 5 } },
 			});
-		};
-		document.addEventListener("doc-send", handleDocSend);
 
-		return () => {
-			document.removeEventListener("doc-send", handleDocSend);
-		};
-	}, []);
+			return response.data;
+		},
+	});
+
+	if (isPending)
+		return (
+			<Suspense fallback="loading">
+				<UiSpinner />
+			</Suspense>
+		);
+
+	if (error) return `An error has occurred: ${error.message}`;
+
+	console.log(data);
 
 	return (
-		<>
-			{docs.length === 0 ? (
-				<p>no documents yet</p>
-			) : (
-				docs.map((doc) => <DocItem key={doc.id} doc={doc} />)
-			)}
-		</>
+		<div>
+			<h1>{data.full_name}</h1>
+			<p>{data.description}</p>
+			<strong>👀 {data.subscribers_count}</strong>{" "}
+			<strong>✨ {data.stargazers_count}</strong>{" "}
+			<strong>🍴 {data.forks_count}</strong>
+			<div>{isFetching ? "Updating..." : ""}</div>
+		</div>
 	);
 };
 

@@ -9,19 +9,15 @@
 		"allowSyntheticDefaultImports": true,
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
+		"noUncheckedIndexedAccess": true,
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
-		"jsx": "react-jsx",
-		"jsxImportSource": "preact",
 		"baseUrl": ".",
 		"paths": {
-			"react": ["./node_modules/preact/compat/"],
-			"react-dom": ["./node_modules/preact/compat/"],
-			"~/*": ["./src/*"],
-			"@poc/shared/api1/*": ["../../shared/api-1/src/*"]
+			"~/*": ["./src/*"]
 		}
 	},
 	"include": ["src"]

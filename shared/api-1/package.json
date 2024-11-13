@@ -1,0 +1,25 @@
+{
+  "name": "@poc/shared-api-1",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5178 --host",
+    "build": "tsc && vite build",
+    "tsc": "tsc --noEmit",
+    "preview": "pnpm run build && vite preview --port 5178 --host",
+    "lint": "biome lint --write .",
+    "format": "biome format --write .",
+    "generate": "openapi-typescript https://petstore3.swagger.io/api/v3/openapi.json -o src/openapi/petstore.d.ts"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.13.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:biome",
+    "@module-federation/vite": "catalog:vite",
+    "openapi-typescript": "^7.4.3",
+    "typescript": "catalog:",
+    "vite": "catalog:vite",
+    "vite-tsconfig-paths": "catalog:vite"
+  }
+}
