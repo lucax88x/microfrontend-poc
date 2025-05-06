@@ -33,4 +33,3 @@ when to use tsconfig reference?
 ## architecture diagram
 
 ![arch](./arch.svg)
-<img src="./arch.svg">
