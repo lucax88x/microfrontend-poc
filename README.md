@@ -1,5 +1,13 @@
 # @poc/microfrontend
 
+## used libraries
+
+turbo - monorepo build system to understand dependencies between node projects
+pnpm workspaces - package manager with native monorepo support
+lit - web components framework
+vite - fast modern bundler
+biome - linter and formatter
+
 ## Getting started for development
 
 ```sh
