@@ -1,0 +1,41 @@
+{
+	"name": "@poc/ui/react",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
+		"clean:cache": "git clean -xdf .turbo .cache src/components src/exports",
+		"clean:deps": "git clean -xdf node_modules",
+		"clean:dist": "git clean -xdf dist",
+		"dev": "vite --host",
+		"dev:dev": "vite --host --mode dev",
+		"dev:local": "vite --host --mode dev:local",
+		"dev:mocks": "vite --host --mode mocks",
+		"generate": "tsx ./generate.ts",
+		"preview:vite": "vite preview",
+		"tsc": "tsx ./copy-types.ts"
+	},
+	"dependencies": {
+		"@module-federation/runtime": "catalog:vite",
+		"react": "catalog:react",
+		"react-dom": "catalog:react"
+	},
+	"devDependencies": {
+		"@module-federation/vite": "catalog:vite",
+		"@poc/ui/base": "workspace:*",
+		"@types/node": "catalog:node",
+		"@types/react": "catalog:react",
+		"@types/react-dom": "catalog:react",
+		"@vitejs/plugin-react": "catalog:vite",
+		"custom-element-react-wrappers": "^1.6.8",
+		"tsx": "catalog:",
+		"vite": "catalog:vite",
+		"vite-tsconfig-paths": "catalog:vite",
+		"zod": "catalog:"
+	},
+	"publishConfig": {
+		"directory": "dist/types",
+		"linkDirectory": true
+	}
+}

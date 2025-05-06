@@ -1,0 +1,54 @@
+---
+output:
+  - summary        # Print summary block (successful and failed steps)
+  - success        # Print successful steps
+  - failure        # Print failed steps printing
+  - execution      # Print any execution logs
+  - skips          # Print "skip" (i.e. no files matched)
+
+commit-msg:
+  parallel: true
+  commands:
+    lint-commit-msg:
+      run: pnpm exec commitlint --edit
+pre-commit:
+  parallel: true
+  commands:
+    biome-check:
+      glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+      run: pnpm exec biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+      stage_fixed: true
+    sort-root-package-json:
+      glob:
+        - "package.json"
+        - "*/package.json"
+      run: pnpm exec sort-package-json {staged_files}
+      stage_fixed: true
+    pnpm-lock-check:
+      glob:
+        - "package.json"
+        - "*/package.json"
+      run: pnpm install --frozen-lockfile --offline
+
+pre-push:
+  commands:
+    build:
+      run: pnpm lefthook run build
+
+build:
+  piped: true
+  commands:
+    tsc:
+      priority: 1
+      run: pnpm run tsc:clean
+    after-tsc:
+      priority: 2
+      run: pnpm lefthook run after-tsc
+
+after-tsc:
+  parallel: true
+  commands:
+    lint:
+      run: pnpm run lint
+    test:
+      run: pnpm run test

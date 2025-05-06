@@ -1,0 +1,45 @@
+{
+	"name": "@poc/package/components",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
+		"clean:cache": "git clean -xdf .turbo .cache",
+		"clean:deps": "git clean -xdf node_modules",
+		"clean:dist": "git clean -xdf dist",
+		"dev": "vite --host",
+		"dev:dev": "vite --host --mode dev",
+		"dev:local": "vite --host --mode dev:local",
+		"dev:mocks": "vite --host --mode mocks",
+		"format": "biome format --write .",
+		"lint": "biome lint --write .",
+		"preview:vite": "vite preview",
+		"tsc": "tsc"
+	},
+	"dependencies": {
+		"@module-federation/runtime": "catalog:vite",
+		"@poc/federation/core": "workspace:*",
+		"@poc/federation/ui/react": "workspace:*",
+		"react": "catalog:react",
+		"react-dom": "catalog:react"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:biome",
+		"@module-federation/vite": "catalog:vite",
+		"@types/react": "catalog:react",
+		"@types/react-dom": "catalog:react",
+		"@vitejs/plugin-react": "catalog:vite",
+		"autoprefixer": "catalog:tailwindcss",
+		"postcss": "catalog:tailwindcss",
+		"tailwindcss": "catalog:tailwindcss",
+		"typescript": "catalog:",
+		"vite": "catalog:vite",
+		"vite-tsconfig-paths": "catalog:vite",
+		"yaml": "catalog:vite"
+	},
+	"publishConfig": {
+		"directory": "dist/types",
+		"linkDirectory": true
+	}
+}

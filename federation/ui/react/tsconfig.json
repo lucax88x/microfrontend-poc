@@ -1,0 +1,13 @@
+{
+	"extends": "../../../infra/typescript/tsconfig.react-reference.json",
+	"compilerOptions": {
+		"paths": {
+			"~/federation/ui/react/*": ["./src/*"],
+
+			"@poc/federation/core/*": ["../../../federation/core/*"],
+			"@poc/ui/react/*": ["../../../ui/react/dist/types/*"]
+		}
+	},
+	"references": [{ "path": "../../../federation/core" }],
+	"include": ["src"]
+}

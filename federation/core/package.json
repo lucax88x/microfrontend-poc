@@ -1,0 +1,27 @@
+{
+	"name": "@poc/federation/core",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
+		"clean:cache": "git clean -xdf .turbo .cache",
+		"clean:deps": "git clean -xdf node_modules",
+		"clean:dist": "git clean -xdf dist",
+		"format": "biome format --write .",
+		"lint": "biome lint --write .",
+		"tsc": "tsc"
+	},
+	"dependencies": {
+		"@module-federation/runtime": "catalog:vite",
+		"react": "catalog:react",
+		"react-dom": "catalog:react",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:biome",
+		"@types/react": "catalog:react",
+		"@types/react-dom": "catalog:react",
+		"typescript": "catalog:",
+		"vite": "catalog:vite"
+	}
+}

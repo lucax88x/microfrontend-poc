@@ -1,0 +1,9 @@
+{
+	"name": "@poc/infra/tailwindcss",
+	"version": "0.0.1",
+	"description": "shared tailwindcss configuration",
+	"type": "module",
+	"devDependencies": {
+		"tailwindcss": "catalog:tailwindcss"
+	}
+}

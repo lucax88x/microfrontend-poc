@@ -1,0 +1,32 @@
+---
+ls:
+  .js: kebab-case | PascalCase
+  .stories.ts: point.case
+  .ts: camelCase | kebab-case
+  .tsx: PascalCase
+  .d.ts: camelCase | PascalCase
+  .spec.ts: kebab-case | camelCase | PascalCase
+  hook/**:
+    .tsx: camelCase
+  shell/**/routes:
+    .tsx: lowercase
+  shell/*/src:
+    .tsx: lowercase | camelCase | PascalCase
+# See https://github.com/loeffel-io/ls-lint/issues/246 about the glob patterns bug
+ignore:
+  - .git
+  - .turbo
+  - .cache
+  - node_modules
+  - ui/base/public
+  - ./{api,federation,infra,package,shared,shell,ui}/*.config.{ts,js}
+  - ./{api,federation,infra,package,shared,shell,ui}/*/*.config.{ts,js}
+  - ./{api,federation,infra,package,shared,shell,ui}/*/node_modules
+  - ./{api,federation,infra,package,shared,shell,ui}/*/*/node_modules
+  - ./{api,federation,infra,package,shared,shell,ui}/*/dist
+  - ./{api,federation,infra,package,shared,shell,ui}/*/.__mf__temp
+  - ./{api,federation,infra,package,shared,shell,ui}/*/src/main.tsx
+  - ./shell/*/src/routeTree.gen.ts
+  - test-results
+  - playwright-report
+  - playwright.config.ts

@@ -1,0 +1,24 @@
+{
+	"name": "@poc/shared/logger",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
+		"clean:cache": "git clean -xdf .turbo .cache",
+		"clean:deps": "git clean -xdf node_modules",
+		"clean:dist": "git clean -xdf dist",
+		"format": "biome format --write .",
+		"lint": "biome lint --write .",
+		"test": "vitest run --passWithNoTests src/",
+		"test:cov": "vitest run --coverage",
+		"test:watch": "vitest",
+		"tsc": "tsc"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:biome",
+		"typescript": "catalog:",
+		"vite": "catalog:vite",
+		"vite-tsconfig-paths": "catalog:vite",
+		"vitest": "catalog:vitest"
+	}
+}

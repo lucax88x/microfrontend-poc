@@ -1,0 +1,48 @@
+{
+	"name": "@poc/microfrontend",
+	"version": "0.0.1",
+	"scripts": {
+		"build": "turbo run build",
+		"clean": "pnpm run clean:cache && pnpm run clean:dist && pnpm run clean:deps",
+		"clean:cache": "turbo run clean:cache",
+		"clean:deps": "turbo run clean:deps && git clean -xdf node_modules",
+		"clean:dist": "turbo run clean:dist",
+		"deps:major": "taze -r major",
+		"deps:major:confirm": "taze -r major -w",
+		"deps:minor": "taze -r minor -w",
+		"deps:patch": "taze -r patch -w",
+		"dev": "turbo run dev serve",
+		"format": "turbo run format",
+		"pregenerate": "pnpm run -C ./ui/base analyze",
+		"generate": "turbo run generate",
+		"generate:certs": "tsx ./scripts/generate.certs.mts",
+		"postinstall": "lefthook install || echo 'Lefthook install failed, skipping'",
+		"lint": "turbo run ls-lint lint",
+		"lint:ls": "ls-lint",
+		"preview:vite": "turbo run preview:vite",
+		"serve": "serve public -p 5000 --ssl-cert ./infra/certs/localhost.crt --ssl-key ./infra/certs/localhost.key -s",
+		"test": "turbo run test",
+		"tsc": "turbo run tsc",
+		"tsc:clean": "pnpm run clean:dist && pnpm run clean:cache && pnpm run tsc"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@commitlint/cli": "^19.6.1",
+		"@commitlint/config-conventional": "^19.6.0",
+		"@ls-lint/ls-lint": "^2.2.3",
+		"@types/node": "^22.12.0",
+		"chalk": "^5.4.1",
+		"dotenv": "^16.4.7",
+		"execa": "^9.5.2",
+		"lefthook": "^1.10.10",
+		"serve": "^14.2.4",
+		"sort-package-json": "^2.13.0",
+		"tsx": "catalog:",
+		"turbo": "^2.3.4",
+		"typescript": "catalog:"
+	},
+	"packageManager": "pnpm@10.4.1",
+	"engines": {
+		"node": ">=20.0.0"
+	}
+}
