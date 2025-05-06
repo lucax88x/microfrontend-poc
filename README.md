@@ -4,9 +4,15 @@
 
 ```sh
 pnpm install # only if new dependencies added
+pnpm generate:certs # only the first time
 pnpm run tsc
 pnpm run dev
 ```
+
+after this you can open [localhost:5000](https://localhost:5000)
+
+*it's a good idea to whitelist in your OS the self-signed certs, or to allow them from the browser for each url to avoid errors.*
+
 
 ## Project structure
 
