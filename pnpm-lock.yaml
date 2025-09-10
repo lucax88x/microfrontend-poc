@@ -251,6 +251,9 @@ importers:
         specifier: catalog:vite
         version: 2.7.1
     devDependencies:
+      '@poc/typescript':
+        specifier: workspace:*
+        version: link:../typescript
       '@types/node':
         specifier: catalog:node
         version: 22.15.12

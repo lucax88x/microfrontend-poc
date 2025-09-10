@@ -2,6 +2,7 @@
 	"extends": "@poc/typescript/tsconfig.base.json",
 	"compilerOptions": {
 		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+
 		"target": "es2020",
 		"module": "nodenext",
 		"moduleResolution": "nodenext",
@@ -9,6 +10,7 @@
 		"declaration": true,
 		"declarationDir": "dist/types",
 		"emitDeclarationOnly": true,
+
 		"rootDir": "."
 	},
 	"include": ["src"]

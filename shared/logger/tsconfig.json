@@ -1,7 +1,7 @@
 {
 	"extends": "@poc/typescript/tsconfig.base.json",
 	"compilerOptions": {
-		"rootDir": "."
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
 	},
 	"include": ["src"]
 }

@@ -1,5 +1,5 @@
 {
-	"name": "@poc/infra/vite",
+	"name": "@poc/infra-vite",
 	"version": "0.0.1",
 	"description": "shared vite configuration and utilities",
 	"type": "module",
@@ -11,6 +11,7 @@
 		"tsc": "tsc"
 	},
 	"devDependencies": {
+		"@poc/typescript": "workspace:*",
 		"@types/node": "catalog:node",
 		"typescript": "catalog:"
 	},
