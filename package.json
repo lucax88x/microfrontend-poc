@@ -2,6 +2,7 @@
 	"name": "@poc/microfrontend",
 	"version": "0.0.1",
 	"scripts": {
+		"biome:fix": "biome check --write .",
 		"build": "turbo run build",
 		"clean": "pnpm run clean:cache && pnpm run clean:dist && pnpm run clean:deps",
 		"clean:cache": "turbo run clean:cache",
@@ -26,7 +27,7 @@
 		"tsc:clean": "pnpm run clean:dist && pnpm run clean:cache && pnpm run tsc"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
+		"@biomejs/biome": "^2.2.3",
 		"@commitlint/cli": "^19.6.1",
 		"@commitlint/config-conventional": "^19.6.0",
 		"@ls-lint/ls-lint": "^2.2.3",
