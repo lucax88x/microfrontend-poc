@@ -2,6 +2,7 @@
 	"name": "@poc/microfrontend",
 	"version": "0.0.1",
 	"scripts": {
+		"biome:ci": "biome ci . --error-on-warnings",
 		"biome:fix": "biome check --write .",
 		"build": "turbo run build",
 		"clean": "pnpm run clean:cache && pnpm run clean:dist && pnpm run clean:deps",

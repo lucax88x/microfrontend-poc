@@ -16,7 +16,7 @@ pre-commit:
   commands:
     biome-check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: pnpm exec biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+      run: pnpm exec biome check --write --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
       stage_fixed: true
     sort-root-package-json:
       glob:
@@ -49,6 +49,6 @@ after-tsc:
   parallel: true
   commands:
     lint:
-      run: pnpm run lint
+      run: pnpm run biome:ci && pnpm run lint:ls
     test:
       run: pnpm run test

@@ -1,7 +1,6 @@
 ---
 ls:
   .js: kebab-case | PascalCase
-  .stories.ts: point.case
   .ts: camelCase | kebab-case
   .tsx: PascalCase
   .d.ts: camelCase | PascalCase
