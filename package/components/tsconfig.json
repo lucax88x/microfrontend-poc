@@ -1,23 +1,7 @@
 {
-	"extends": "../../infra/typescript/tsconfig.react.json",
+	"extends": "@poc/typescript/tsconfig.react.json",
 	"compilerOptions": {
-		"declaration": true,
-		"declarationDir": "dist/types",
-		"emitDeclarationOnly": true,
-		"paths": {
-			"~/package/components/*": ["./src/*"],
-			"@poc/ui/react/*": ["../../ui/react/dist/types/*"],
-			"@poc/federation/core/*": ["../../federation/core/*"],
-			"@poc/federation/ui/react/*": ["../../federation/ui/react/*"]
-		}
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
 	},
-	"references": [
-		{
-			"path": "../../federation/core"
-		},
-		{
-			"path": "../../federation/ui/react"
-		}
-	],
 	"include": ["src"]
 }

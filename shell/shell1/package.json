@@ -2,6 +2,14 @@
 	"name": "@poc/shell/shell1",
 	"version": "0.0.1",
 	"type": "module",
+	"imports": {
+		"#*": [
+			"./src/*",
+			"./src/*.ts",
+			"./src/*.tsx",
+			"./src/*.css"
+		]
+	},
 	"scripts": {
 		"build": "vite build",
 		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
@@ -19,19 +27,20 @@
 	},
 	"dependencies": {
 		"@module-federation/runtime": "catalog:vite",
-		"@poc/federation/core": "workspace:*",
-		"@poc/federation/package/components": "workspace:*",
-		"@poc/federation/ui/react": "workspace:*",
-		"@poc/shared/logger": "workspace:*",
+		"@poc/federation-core": "workspace:*",
+		"@poc/federation-package-components": "workspace:*",
+		"@poc/federation-ui-react": "workspace:*",
+		"@poc/shared-logger": "workspace:*",
 		"react": "catalog:react",
 		"react-dom": "catalog:react"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
 		"@module-federation/vite": "catalog:vite",
-		"@poc/package/components": "workspace:*",
-		"@poc/ui/base": "workspace:*",
-		"@poc/ui/react": "workspace:*",
+		"@poc/package-components": "workspace:*",
+		"@poc/typescript": "workspace:*",
+		"@poc/ui-base": "workspace:*",
+		"@poc/ui-react": "workspace:*",
 		"@types/react": "catalog:react",
 		"@types/react-dom": "catalog:react",
 		"@vitejs/plugin-react": "catalog:vite",

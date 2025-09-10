@@ -1,5 +1,5 @@
 {
-	"@poc/ui/base": "https://localhost:5201/ui/base/remoteEntry.js",
-	"@poc/ui/react": "https://localhost:5202/ui/react/remoteEntry.js",
-	"@poc/package/components": "https://localhost:5301/package/components/remoteEntry.js"
+	"@poc/ui-base": "https://localhost:5201/ui/base/remoteEntry.js",
+	"@poc/ui-react": "https://localhost:5202/ui/react/remoteEntry.js",
+	"@poc/package-components": "https://localhost:5301/package/components/remoteEntry.js"
 }

@@ -1,9 +1,7 @@
 {
-	"extends": "../../infra/typescript/tsconfig.react-reference.json",
+	"extends": "@poc/typescript/tsconfig.react.json",
 	"compilerOptions": {
-		"paths": {
-			"~/federation/core/*": ["./src/*"]
-		}
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
 	},
 	"include": ["src"]
 }

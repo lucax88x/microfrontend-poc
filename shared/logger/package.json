@@ -1,7 +1,14 @@
 {
-	"name": "@poc/shared/logger",
+	"name": "@poc/shared-logger",
 	"version": "0.0.1",
 	"type": "module",
+	"exports": {
+		"./*": [
+			"./src/*",
+			"./src/*.ts",
+			"./src/*.d.ts"
+		]
+	},
 	"scripts": {
 		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
 		"clean:cache": "git clean -xdf .turbo .cache",
@@ -16,6 +23,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
+		"@poc/typescript": "workspace:*",
 		"typescript": "catalog:",
 		"vite": "catalog:vite",
 		"vite-tsconfig-paths": "catalog:vite",

@@ -19,7 +19,7 @@ export default defineConfig(({ command }) => ({
 				".": "./src/index.ts",
 			},
 			filename: "remoteEntry.js",
-			name: "@poc/ui/base",
+			name: "@poc/ui-base",
 			remotes: {},
 		}),
 	],

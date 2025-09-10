@@ -1,16 +1,16 @@
-import indexStyles from "./styles/index.scss?inline";
+import indexStyles from "#styles/index.scss?inline";
 
-export { Button } from "./button";
+export { Button } from "#button";
 
-import { LitElement, css, html, unsafeCSS } from "lit";
+import { css, html, LitElement, unsafeCSS } from "lit";
 import { customElement } from "lit/decorators.js";
 
 @customElement("poc-root")
-class Root extends LitElement {
+export class Root extends LitElement {
 	static styles = css`
       ${unsafeCSS(indexStyles)}
 
-      section {
+      section { 
         border: 1px solid #ddd;
         padding: 1rem;
         margin: 1rem 0;

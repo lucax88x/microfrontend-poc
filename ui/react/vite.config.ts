@@ -23,7 +23,7 @@ export default defineConfig(({ command }) => ({
 		tsconfigPaths(),
 		federation({
 			filename: "remoteEntry.js",
-			name: "@poc/ui/react",
+			name: "@poc/ui-react",
 			exposes: {
 				"./Button": "./src/components/Button.js",
 			},

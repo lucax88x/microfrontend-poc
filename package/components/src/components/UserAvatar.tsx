@@ -1,6 +1,6 @@
-import "~/package/components/tailwind.css";
+import "#tailwind.css";
 
-import { initModule } from "~/package/components/init-module";
+import { initModule } from "#init-module";
 
 await initModule();
 

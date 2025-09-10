@@ -1,8 +1,8 @@
-import UserAvatar from "~/package/components/components/UserAvatar";
+import UserAvatar from "#components/UserAvatar";
 import "./tailwind.css";
 import { loadRemote } from "@module-federation/runtime";
 
-loadRemote("@poc/ui/base");
+loadRemote("@poc/ui-base");
 
 export default () => {
 	return (

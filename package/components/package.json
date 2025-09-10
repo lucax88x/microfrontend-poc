@@ -1,7 +1,24 @@
 {
-	"name": "@poc/package/components",
+	"name": "@poc/package-components",
 	"version": "0.0.0",
 	"type": "module",
+	"imports": {
+		"#*": [
+			"./src/*",
+			"./src/*.ts",
+			"./src/*.tsx",
+			"./src/*.d.ts"
+		]
+	},
+	"exports": {
+		"./*": {
+			"types": [
+				"./src/*.ts",
+				"./src/*.tsx",
+				"./src/*.d.ts"
+			]
+		}
+	},
 	"scripts": {
 		"build": "vite build",
 		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
@@ -19,14 +36,15 @@
 	},
 	"dependencies": {
 		"@module-federation/runtime": "catalog:vite",
-		"@poc/federation/core": "workspace:*",
-		"@poc/federation/ui/react": "workspace:*",
+		"@poc/federation-core": "workspace:*",
+		"@poc/federation-ui-react": "workspace:*",
 		"react": "catalog:react",
 		"react-dom": "catalog:react"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
 		"@module-federation/vite": "catalog:vite",
+		"@poc/typescript": "workspace:*",
 		"@types/react": "catalog:react",
 		"@types/react-dom": "catalog:react",
 		"@vitejs/plugin-react": "catalog:vite",
@@ -37,9 +55,5 @@
 		"vite": "catalog:vite",
 		"vite-tsconfig-paths": "catalog:vite",
 		"yaml": "catalog:vite"
-	},
-	"publishConfig": {
-		"directory": "dist/types",
-		"linkDirectory": true
 	}
 }

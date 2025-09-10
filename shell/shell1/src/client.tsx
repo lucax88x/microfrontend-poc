@@ -1,13 +1,15 @@
-import "./tailwind.css";
+import "#tailwind.css";
 
+import { logger } from "@poc/shared-logger/logger";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { Root } from "~/shell/shell1/components/Root";
+import { Root } from "#components/Root";
 import { init } from "./init";
 
 const bootstrapped = await init();
 
 if (!bootstrapped) {
+	logger.error("app could not bootstrap");
 	throw new Error("app could not bootstrap");
 }
 

@@ -1,5 +1,5 @@
 {
-	"name": "@poc/ui/react",
+	"name": "@poc/ui-react",
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
@@ -23,7 +23,8 @@
 	},
 	"devDependencies": {
 		"@module-federation/vite": "catalog:vite",
-		"@poc/ui/base": "workspace:*",
+		"@poc/typescript": "workspace:*",
+		"@poc/ui-base": "workspace:*",
 		"@types/node": "catalog:node",
 		"@types/react": "catalog:react",
 		"@types/react-dom": "catalog:react",

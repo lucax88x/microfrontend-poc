@@ -1,5 +1,5 @@
-import { LazyButton } from "@poc/federation/ui/react/src/LazyButton";
-import { Layout } from "~/shell/shell1/components/Layout";
+import { LazyButton } from "@poc/federation-ui-react/LazyButton";
+import { Layout } from "#components/Layout";
 
 export const Root = () => {
 	return (

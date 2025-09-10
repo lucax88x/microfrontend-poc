@@ -1,6 +1,6 @@
 import { federation } from "@module-federation/vite";
 import react from "@vitejs/plugin-react";
-import { type ProxyOptions, defineConfig } from "vite";
+import { defineConfig, type ProxyOptions } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { build } from "../../infra/vite/src/build";
 import {
@@ -37,7 +37,7 @@ export default defineConfig(({ command }) => {
 			tsconfigPaths(),
 			federation({
 				filename: "remoteEntry.js",
-				name: "@poc/package/components",
+				name: "@poc/package-components",
 				exposes: {
 					"./UserAvatar": "./src/components/UserAvatar.tsx",
 				},

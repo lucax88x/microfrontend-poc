@@ -1,7 +1,7 @@
 {
-	"extends": "../../infra/typescript/tsconfig.react.json",
+	"extends": "@poc/typescript/tsconfig.react.json",
 	"compilerOptions": {
-		"noEmit": true
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
 	},
 	"include": ["src"]
 }

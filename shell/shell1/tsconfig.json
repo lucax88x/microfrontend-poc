@@ -1,32 +1,7 @@
 {
-	"extends": "../../infra/typescript/tsconfig.react.json",
+	"extends": "@poc/typescript/tsconfig.react.json",
 	"compilerOptions": {
-		"noEmit": true,
-		"paths": {
-			"~/shell/shell1/*": ["./src/*"],
-			"@poc/shared/logger/*": ["../../shared/logger/*"],
-			"@poc/federation/core/*": ["../../federation/core/*"],
-			"@poc/federation/ui/react/*": ["../../federation/ui/react/*"],
-			"@poc/federation/package/components/*": [
-				"../../federation/package/components/*"
-			],
-			"@poc/package/components/*": ["../../package/components/dist/types/*"],
-			"@poc/ui/react/*": ["../../ui/react/dist/types/*"]
-		}
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
 	},
-	"references": [
-		{
-			"path": "../../shared/logger"
-		},
-		{
-			"path": "../../federation/core"
-		},
-		{
-			"path": "../../federation/ui/react"
-		},
-		{
-			"path": "../../federation/package/components"
-		}
-	],
 	"include": ["src"]
 }

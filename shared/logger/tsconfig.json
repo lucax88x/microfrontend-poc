@@ -1,9 +1,7 @@
 {
-	"extends": "../../infra/typescript/tsconfig.reference.json",
+	"extends": "@poc/typescript/tsconfig.base.json",
 	"compilerOptions": {
-		"paths": {
-			"~/shared/logger/*": ["./src/*"]
-		}
+		"rootDir": "."
 	},
 	"include": ["src"]
 }

@@ -73,7 +73,7 @@ function generateReactWrapperComponents() {
 				// Join the parts by the - character
 				.join("-");
 
-			return `@poc/ui/base/${filePath}`;
+			return `@poc/ui-base/${filePath}`;
 		},
 
 		outdir: componentsDir,

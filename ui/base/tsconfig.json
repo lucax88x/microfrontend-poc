@@ -1,20 +1,15 @@
 {
+	"extends": "@poc/typescript/tsconfig.base.json",
 	"compilerOptions": {
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
 		"target": "es2020",
-		"module": "es2020",
-		"strict": true,
-		"moduleResolution": "node",
-		"esModuleInterop": true,
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
 		"experimentalDecorators": true,
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
 		"declaration": true,
 		"declarationDir": "dist/types",
 		"emitDeclarationOnly": true,
-		"paths": {
-			"~/*": ["./src/*"]
-		}
+		"rootDir": "."
 	},
-	"include": ["src"],
-	"exclude": ["src/**/*.stories.ts"]
+	"include": ["src"]
 }

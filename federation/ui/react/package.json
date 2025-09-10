@@ -1,7 +1,23 @@
 {
-	"name": "@poc/federation/ui/react",
+	"name": "@poc/federation-ui-react",
 	"version": "0.0.1",
 	"type": "module",
+	"imports": {
+		"#*": [
+			"./src/*",
+			"./src/*.ts",
+			"./src/*.tsx",
+			"./src/*.d.ts"
+		]
+	},
+	"exports": {
+		"./*": [
+			"./src/*",
+			"./src/*.ts",
+			"./src/*.tsx",
+			"./src/*.d.ts"
+		]
+	},
 	"scripts": {
 		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
 		"clean:cache": "git clean -xdf .turbo .cache",
@@ -13,14 +29,15 @@
 	},
 	"dependencies": {
 		"@module-federation/runtime": "catalog:vite",
-		"@poc/federation/core": "workspace:*",
+		"@poc/federation-core": "workspace:*",
 		"react": "catalog:react",
 		"react-dom": "catalog:react",
 		"zod": "catalog:"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
-		"@poc/ui/react": "workspace:*",
+		"@poc/typescript": "workspace:*",
+		"@poc/ui-react": "workspace:*",
 		"@types/react": "catalog:react",
 		"@types/react-dom": "catalog:react",
 		"typescript": "catalog:",

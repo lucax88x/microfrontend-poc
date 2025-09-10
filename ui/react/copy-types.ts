@@ -22,7 +22,7 @@ function copyTypes() {
 		const dtsContent = fs.readFileSync(fullPath, { encoding: "utf8" });
 
 		const updatedJsContent = dtsContent.replaceAll(
-			"@poc/ui/base/",
+			"@poc/ui-base/",
 			"../../../base/dist/types/",
 		);
 

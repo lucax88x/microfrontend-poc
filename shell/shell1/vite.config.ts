@@ -1,6 +1,6 @@
 import { federation } from "@module-federation/vite";
 import react from "@vitejs/plugin-react";
-import { type ProxyOptions, defineConfig } from "vite";
+import { defineConfig, type ProxyOptions } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { build } from "../../infra/vite/src/build";
 import {

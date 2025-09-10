@@ -1,5 +1,5 @@
 import { loadRemote } from "@module-federation/runtime";
-import { initWithRemotes } from "@poc/federation/core/src/initWithRemotes";
+import { initWithRemotes } from "@poc/federation-core/initWithRemotes";
 
 const initModule = () =>
 	initWithRemotes("@poc/shell/shell1", "/remotes/shell.json");
@@ -7,7 +7,7 @@ const initModule = () =>
 const preloadModules = async (): Promise<void> => {
 	try {
 		console.info("preloading modues");
-		await loadRemote("@poc/ui/base");
+		await loadRemote("@poc/ui-base");
 		console.info("preloaded modules");
 	} catch (error) {
 		// TODO: error

@@ -1,7 +1,22 @@
 {
-	"name": "@poc/ui/base",
+	"name": "@poc/ui-base",
 	"version": "0.0.1",
 	"type": "module",
+	"imports": {
+		"#*": [
+			"./src/*",
+			"./src/*.ts",
+			"./src/*.scss"
+		]
+	},
+	"exports": {
+		"./*": {
+			"types": [
+				"./src/*.ts",
+				"./src/*.tsx"
+			]
+		}
+	},
 	"scripts": {
 		"analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
 		"analyze:watch": "cem analyze --litelement --globs \"src/**/*.ts\" --watch",
@@ -33,6 +48,7 @@
 		"@custom-elements-manifest/analyzer": "^0.10.3",
 		"@liveryvideo/biome-lit": "^1.0.3",
 		"@module-federation/vite": "catalog:vite",
+		"@poc/typescript": "workspace:*",
 		"autoprefixer": "catalog:tailwindcss",
 		"custom-element-react-wrappers": "^1.6.8",
 		"eslint": "^9.14.0",
