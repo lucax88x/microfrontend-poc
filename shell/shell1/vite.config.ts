@@ -45,7 +45,7 @@ export default defineConfig(({ command }) => {
 		plugins: [
 			tsconfigPaths(),
 			federation({
-				name: "@poc/shell/shell1",
+				name: "@poc/shell-shell1",
 				remotes: {},
 				exposes: {},
 				filename: "remoteEntry.js",
