@@ -1,8 +1,6 @@
 {
 	"extends": "@poc/infra-typescript/tsconfig.emitTypes.json",
 	"compilerOptions": {
-		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
-
 		"target": "esnext",
 
 		"experimentalDecorators": true,

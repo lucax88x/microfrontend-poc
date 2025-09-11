@@ -1,8 +1,6 @@
 {
 	"extends": "@poc/infra-typescript/tsconfig.react.emitTypes.json",
 	"compilerOptions": {
-		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
-
 		"allowJs": true
 	},
 	"include": ["src"]
