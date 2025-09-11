@@ -35,8 +35,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
 		"@module-federation/vite": "catalog:vite",
+		"@poc/infra-typescript": "workspace:*",
 		"@poc/package-components": "workspace:*",
-		"@poc/typescript": "workspace:*",
 		"@poc/ui-base": "workspace:*",
 		"@poc/ui-react": "workspace:*",
 		"@types/react": "catalog:react",

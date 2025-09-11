@@ -135,7 +135,7 @@ importers:
       '@biomejs/biome':
         specifier: catalog:biome
         version: 1.9.4
-      '@poc/typescript':
+      '@poc/infra-typescript':
         specifier: workspace:*
         version: link:../../infra/typescript
       '@types/react':
@@ -172,12 +172,12 @@ importers:
       '@biomejs/biome':
         specifier: catalog:biome
         version: 1.9.4
+      '@poc/infra-typescript':
+        specifier: workspace:*
+        version: link:../../../infra/typescript
       '@poc/package-components':
         specifier: workspace:*
         version: link:../../../package/components
-      '@poc/typescript':
-        specifier: workspace:*
-        version: link:../../../infra/typescript
       '@poc/ui-react':
         specifier: workspace:*
         version: link:../../../ui/react
@@ -215,7 +215,7 @@ importers:
       '@biomejs/biome':
         specifier: catalog:biome
         version: 1.9.4
-      '@poc/typescript':
+      '@poc/infra-typescript':
         specifier: workspace:*
         version: link:../../../infra/typescript
       '@poc/ui-react':
@@ -251,7 +251,7 @@ importers:
         specifier: catalog:vite
         version: 2.7.1
     devDependencies:
-      '@poc/typescript':
+      '@poc/infra-typescript':
         specifier: workspace:*
         version: link:../typescript
       '@types/node':
@@ -285,7 +285,7 @@ importers:
       '@module-federation/vite':
         specifier: catalog:vite
         version: 1.2.7(rollup@4.40.2)
-      '@poc/typescript':
+      '@poc/infra-typescript':
         specifier: workspace:*
         version: link:../../infra/typescript
       '@types/react':
@@ -324,7 +324,7 @@ importers:
       '@biomejs/biome':
         specifier: catalog:biome
         version: 1.9.4
-      '@poc/typescript':
+      '@poc/infra-typescript':
         specifier: workspace:*
         version: link:../../infra/typescript
       typescript:
@@ -370,12 +370,12 @@ importers:
       '@module-federation/vite':
         specifier: catalog:vite
         version: 1.2.7(rollup@4.40.2)
+      '@poc/infra-typescript':
+        specifier: workspace:*
+        version: link:../../infra/typescript
       '@poc/package-components':
         specifier: workspace:*
         version: link:../../package/components
-      '@poc/typescript':
-        specifier: workspace:*
-        version: link:../../infra/typescript
       '@poc/ui-base':
         specifier: workspace:*
         version: link:../../ui/base
@@ -443,7 +443,7 @@ importers:
       '@module-federation/vite':
         specifier: catalog:vite
         version: 1.2.7(rollup@4.40.2)
-      '@poc/typescript':
+      '@poc/infra-typescript':
         specifier: workspace:*
         version: link:../../infra/typescript
       autoprefixer:
@@ -492,7 +492,7 @@ importers:
       '@module-federation/vite':
         specifier: catalog:vite
         version: 1.2.7(rollup@4.40.2)
-      '@poc/typescript':
+      '@poc/infra-typescript':
         specifier: workspace:*
         version: link:../../infra/typescript
       '@poc/ui-base':

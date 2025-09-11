@@ -1,5 +1,5 @@
 {
-	"extends": "@poc/typescript/tsconfig.emitTypes.json",
+	"extends": "@poc/infra-typescript/tsconfig.emitTypes.json",
 	"compilerOptions": {
 		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
 

@@ -34,8 +34,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
+		"@poc/infra-typescript": "workspace:*",
 		"@poc/package-components": "workspace:*",
-		"@poc/typescript": "workspace:*",
 		"@poc/ui-react": "workspace:*",
 		"@types/react": "catalog:react",
 		"@types/react-dom": "catalog:react",

@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
-		"@poc/typescript": "workspace:*",
+		"@poc/infra-typescript": "workspace:*",
 		"typescript": "catalog:",
 		"vite": "catalog:vite",
 		"vite-tsconfig-paths": "catalog:vite",

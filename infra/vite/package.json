@@ -11,7 +11,7 @@
 		"tsc": "tsc"
 	},
 	"devDependencies": {
-		"@poc/typescript": "workspace:*",
+		"@poc/infra-typescript": "workspace:*",
 		"@types/node": "catalog:node",
 		"typescript": "catalog:"
 	},

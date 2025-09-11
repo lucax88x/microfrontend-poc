@@ -28,7 +28,7 @@
 	},
 	"devDependencies": {
 		"@module-federation/vite": "catalog:vite",
-		"@poc/typescript": "workspace:*",
+		"@poc/infra-typescript": "workspace:*",
 		"@poc/ui-base": "workspace:*",
 		"@types/node": "catalog:node",
 		"@types/react": "catalog:react",

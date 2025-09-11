@@ -1,5 +1,5 @@
 {
-	"extends": "@poc/typescript/tsconfig.react.emitTypes.json",
+	"extends": "@poc/infra-typescript/tsconfig.react.emitTypes.json",
 	"compilerOptions": {
 		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
 	},
