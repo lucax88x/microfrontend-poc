@@ -6,16 +6,15 @@
 		"#*": [
 			"./src/*",
 			"./src/*.ts",
+			"./src/*.d.ts",
 			"./src/*.scss"
 		]
 	},
 	"exports": {
 		"./*": {
-			"types": [
-				"./src/*.ts",
-				"./src/*.tsx"
-			]
-		}
+			"types": "./dist/*.d.ts"
+		},
+		"./custom-elements.json": "./custom-elements.json"
 	},
 	"scripts": {
 		"analyze": "cem analyze --litelement --globs \"src/**/*.ts\"",
@@ -34,8 +33,7 @@
 		"lint:biome": "biome lint --write .",
 		"lint:eslint": "eslint .",
 		"lint:lit-analyzer": "lit-analyzer",
-		"preview": "pnpm run tsc && vite preview --port 5201 --host",
-		"preview:vite": "vite preview",
+		"preview": "vite preview",
 		"tsc": "tsc"
 	},
 	"dependencies": {
@@ -59,9 +57,5 @@
 		"tsx": "catalog:",
 		"typescript": "catalog:",
 		"vite": "catalog:vite"
-	},
-	"publishConfig": {
-		"directory": "dist/types",
-		"linkDirectory": true
 	}
 }

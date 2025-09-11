@@ -20,9 +20,7 @@
 		"dev:dev": "vite --host --mode dev",
 		"dev:local": "vite --host --mode dev:local",
 		"dev:mocks": "vite --host --mode mocks",
-		"format": "biome format --write .",
-		"lint": "biome lint --write .",
-		"preview:vite": "vite preview",
+		"preview": "vite preview",
 		"tsc": "tsc"
 	},
 	"dependencies": {

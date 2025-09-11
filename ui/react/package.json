@@ -2,6 +2,11 @@
 	"name": "@poc/ui-react",
 	"version": "0.0.1",
 	"type": "module",
+	"exports": {
+		"./*": {
+			"types": "./dist/components/*.d.ts"
+		}
+	},
 	"scripts": {
 		"build": "vite build",
 		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
@@ -13,8 +18,8 @@
 		"dev:local": "vite --host --mode dev:local",
 		"dev:mocks": "vite --host --mode mocks",
 		"generate": "tsx ./generate.ts",
-		"preview:vite": "vite preview",
-		"tsc": "tsx ./copy-types.ts"
+		"preview": "vite preview",
+		"tsc": "tsc && tsx ./copy-types.ts"
 	},
 	"dependencies": {
 		"@module-federation/runtime": "catalog:vite",
@@ -34,9 +39,5 @@
 		"vite": "catalog:vite",
 		"vite-tsconfig-paths": "catalog:vite",
 		"zod": "catalog:"
-	},
-	"publishConfig": {
-		"directory": "dist/types",
-		"linkDirectory": true
 	}
 }

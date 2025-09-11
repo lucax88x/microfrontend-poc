@@ -21,7 +21,6 @@ after this you can open [localhost:5000](https://localhost:5000)
 
 *it's a good idea to whitelist in your OS the self-signed certs, or to allow them from the browser for each url to avoid errors.*
 
-
 ## Project structure
 
 - shell: frontend which will be accessed by endusers, federating modules in `ui` and `package`
@@ -31,7 +30,6 @@ after this you can open [localhost:5000](https://localhost:5000)
 - federation: Thin wrappers for the federated Components to reduce boilerplate code and code related to the module fereration in vite
 - scripts: scripts to automate development tasks.
 - infra: configuration files for the dev tools
-
 
 ## Q & A, troubleshooting
 

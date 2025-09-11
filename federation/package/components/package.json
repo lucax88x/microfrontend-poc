@@ -23,8 +23,6 @@
 		"clean:cache": "git clean -xdf .turbo .cache",
 		"clean:deps": "git clean -xdf node_modules",
 		"clean:dist": "git clean -xdf dist",
-		"format": "biome format --write .",
-		"lint": "biome lint --write .",
 		"tsc": "tsc"
 	},
 	"dependencies": {

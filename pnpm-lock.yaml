@@ -180,7 +180,7 @@ importers:
         version: link:../../../infra/typescript
       '@poc/ui-react':
         specifier: workspace:*
-        version: link:../../../ui/react/dist/types
+        version: link:../../../ui/react
       '@types/react':
         specifier: catalog:react
         version: 19.1.3
@@ -220,7 +220,7 @@ importers:
         version: link:../../../infra/typescript
       '@poc/ui-react':
         specifier: workspace:*
-        version: link:../../../ui/react/dist/types
+        version: link:../../../ui/react
       '@types/react':
         specifier: catalog:react
         version: 19.1.3
@@ -378,10 +378,10 @@ importers:
         version: link:../../infra/typescript
       '@poc/ui-base':
         specifier: workspace:*
-        version: link:../../ui/base/dist/types
+        version: link:../../ui/base
       '@poc/ui-react':
         specifier: workspace:*
-        version: link:../../ui/react/dist/types
+        version: link:../../ui/react
       '@types/react':
         specifier: catalog:react
         version: 19.1.3
@@ -476,7 +476,6 @@ importers:
       vite:
         specifier: catalog:vite
         version: 6.3.5(@types/node@22.15.12)(jiti@2.4.2)(sass@1.87.0)(tsx@4.19.2)(yaml@2.7.1)
-    publishDirectory: dist/types
 
   ui/react:
     dependencies:
@@ -498,7 +497,7 @@ importers:
         version: link:../../infra/typescript
       '@poc/ui-base':
         specifier: workspace:*
-        version: link:../base/dist/types
+        version: link:../base
       '@types/node':
         specifier: catalog:node
         version: 22.15.12
@@ -526,7 +525,6 @@ importers:
       zod:
         specifier: 'catalog:'
         version: 3.24.4
-    publishDirectory: dist/types
 
 packages:
 

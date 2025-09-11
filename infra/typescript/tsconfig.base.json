@@ -9,15 +9,14 @@
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
 		"noUncheckedIndexedAccess": true,
-		"target": "ESNext",
+		"target": "esnext",
 		"module": "preserve",
 		"moduleResolution": "bundler",
-		"moduleDetection": "force",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"incremental": true,
-		"noEmit": true,
-		"baseUrl": "${configDir}"
+		"baseUrl": "${configDir}",
+		"noEmit": true
 	},
 	"exclude": ["node_modules", "dist"]
 }

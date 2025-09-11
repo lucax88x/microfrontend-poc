@@ -13,7 +13,7 @@
 			"cache": false,
 			"persistent": true
 		},
-		"preview:vite": {
+		"preview": {
 			"cache": false,
 			"persistent": true
 		},

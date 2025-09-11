@@ -21,7 +21,7 @@
 		"postinstall": "lefthook install || echo 'Lefthook install failed, skipping'",
 		"lint": "turbo run ls-lint lint",
 		"lint:ls": "ls-lint",
-		"preview:vite": "turbo run preview:vite",
+		"preview": "turbo run preview",
 		"serve": "serve public -p 5000 --ssl-cert ./infra/certs/localhost.crt --ssl-key ./infra/certs/localhost.key -s",
 		"test": "turbo run test",
 		"tsc": "turbo run tsc",

@@ -1,17 +1,12 @@
 {
-	"extends": "@poc/typescript/tsconfig.base.json",
+	"extends": "@poc/typescript/tsconfig.emitTypes.json",
 	"compilerOptions": {
 		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
 
-		"target": "es2020",
-		"module": "nodenext",
-		"moduleResolution": "nodenext",
-		"experimentalDecorators": true,
-		"declaration": true,
-		"declarationDir": "dist/types",
-		"emitDeclarationOnly": true,
+		"target": "esnext",
 
-		"rootDir": "."
+		"experimentalDecorators": true,
+		"useDefineForClassFields": false
 	},
 	"include": ["src"]
 }

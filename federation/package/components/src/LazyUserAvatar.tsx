@@ -2,7 +2,7 @@ import { LazyComponent } from "@poc/federation-core/LazyComponent";
 import type {
 	UserAvatar,
 	UserAvatarProps,
-} from "@poc/package-components/components/UserAvatar";
+} from "@poc/package-components/UserAvatar";
 import { UserAvatarSkeleton } from "#Skeletons";
 
 export const LazyUserAvatar = (props: UserAvatarProps) => (
