@@ -18,7 +18,7 @@
 	"scripts": {
 		"build": "vite build",
 		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
-		"clean:cache": "git clean -xdf .turbo .cache",
+		"clean:cache": "git clean -xdf .turbo .cache node_modules/.cache",
 		"clean:deps": "git clean -xdf node_modules",
 		"clean:dist": "git clean -xdf dist",
 		"dev": "vite --host",
