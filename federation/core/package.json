@@ -1,14 +1,27 @@
 {
-	"name": "@poc/federation/core",
+	"name": "@poc/federation-core",
 	"version": "0.0.1",
 	"type": "module",
+	"imports": {
+		"#*": [
+			"./src/*.ts",
+			"./src/*.tsx",
+			"./src/*.d.ts"
+		]
+	},
+	"exports": {
+		"./*": [
+			"./src/*",
+			"./src/*.ts",
+			"./src/*.tsx",
+			"./src/*.d.ts"
+		]
+	},
 	"scripts": {
 		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
-		"clean:cache": "git clean -xdf .turbo .cache",
+		"clean:cache": "git clean -xdf .turbo .cache node_modules/.cache",
 		"clean:deps": "git clean -xdf node_modules",
 		"clean:dist": "git clean -xdf dist",
-		"format": "biome format --write .",
-		"lint": "biome lint --write .",
 		"tsc": "tsc"
 	},
 	"dependencies": {
@@ -19,6 +32,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
+		"@poc/infra-typescript": "workspace:*",
 		"@types/react": "catalog:react",
 		"@types/react-dom": "catalog:react",
 		"typescript": "catalog:",

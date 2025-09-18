@@ -1,6 +1,6 @@
 export const UserAvatarSkeleton = () => (
 	<div className="animate-pulse">
-		<div className="w-8 h-8 bg-gray-200 rounded-full" />
+		<div className="h-8 w-8 rounded-full bg-gray-200" />
 		<span className="sr-only">Loading...</span>
 	</div>
 );

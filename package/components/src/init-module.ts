@@ -1,9 +1,9 @@
-import { determineFederationRemotesEndpoint } from "@poc/federation/core/src/determineFederationRemotesEndpoint";
-import { initWithRemotes } from "@poc/federation/core/src/initWithRemotes";
+import { determineFederationRemotesEndpoint } from "@poc/federation-core/determineFederationRemotesEndpoint";
+import { initWithRemotes } from "@poc/federation-core/initWithRemotes";
 
 export const initModule = () =>
 	initWithRemotes(
-		"@poc/package/components",
+		"@poc/package-components",
 
 		determineFederationRemotesEndpoint(
 			new URL(

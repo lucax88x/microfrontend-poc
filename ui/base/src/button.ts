@@ -1,8 +1,7 @@
-import "./shoelace";
+import "#shoelace";
 import "@shoelace-style/shoelace/dist/components/button/button.js";
-import { LitElement, html } from "lit";
+import { html, LitElement } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import "@shoelace-style/shoelace/dist/components/button/button.js";
 
 type ButtonType = "button" | "submit";
 
@@ -20,7 +19,7 @@ export class Button extends LitElement {
 				bubbles: true,
 				composed: true,
 				detail: {
-					timestamp: new Date().getTime(),
+					timestamp: Date.now(),
 				},
 			}),
 		);

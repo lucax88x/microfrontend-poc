@@ -1,5 +1,4 @@
-import { defineConfig, mergeConfig } from "vitest/config";
-import { configDefaults } from "vitest/config";
+import { configDefaults, defineConfig, mergeConfig } from "vitest/config";
 import viteConfig from "./vite.config";
 
 const FIVE_MINUTES = 5 * 60 * 1000;

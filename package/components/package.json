@@ -1,32 +1,44 @@
 {
-	"name": "@poc/package/components",
+	"name": "@poc/package-components",
 	"version": "0.0.0",
 	"type": "module",
+	"imports": {
+		"#*": [
+			"./src/*",
+			"./src/*.ts",
+			"./src/*.tsx",
+			"./src/*.d.ts"
+		]
+	},
+	"exports": {
+		"./*": {
+			"types": "./dist/components/*.d.ts"
+		}
+	},
 	"scripts": {
 		"build": "vite build",
 		"clean": "pnpm run clean:deps && pnpm run clean:cache && pnpm run clean:dist",
-		"clean:cache": "git clean -xdf .turbo .cache",
+		"clean:cache": "git clean -xdf .turbo .cache node_modules/.cache",
 		"clean:deps": "git clean -xdf node_modules",
 		"clean:dist": "git clean -xdf dist",
 		"dev": "vite --host",
 		"dev:dev": "vite --host --mode dev",
 		"dev:local": "vite --host --mode dev:local",
 		"dev:mocks": "vite --host --mode mocks",
-		"format": "biome format --write .",
-		"lint": "biome lint --write .",
-		"preview:vite": "vite preview",
+		"preview": "vite preview",
 		"tsc": "tsc"
 	},
 	"dependencies": {
 		"@module-federation/runtime": "catalog:vite",
-		"@poc/federation/core": "workspace:*",
-		"@poc/federation/ui/react": "workspace:*",
+		"@poc/federation-core": "workspace:*",
+		"@poc/federation-ui-react": "workspace:*",
 		"react": "catalog:react",
 		"react-dom": "catalog:react"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:biome",
 		"@module-federation/vite": "catalog:vite",
+		"@poc/infra-typescript": "workspace:*",
 		"@types/react": "catalog:react",
 		"@types/react-dom": "catalog:react",
 		"@vitejs/plugin-react": "catalog:vite",
@@ -37,9 +49,5 @@
 		"vite": "catalog:vite",
 		"vite-tsconfig-paths": "catalog:vite",
 		"yaml": "catalog:vite"
-	},
-	"publishConfig": {
-		"directory": "dist/types",
-		"linkDirectory": true
 	}
 }

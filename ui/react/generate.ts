@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import manifest from "@poc/ui-base/custom-elements.json";
 import { generateReactWrappers } from "custom-element-react-wrappers";
-import manifest from "../base/custom-elements.json";
 
 const componentsDir = path.join(process.cwd(), "src/components");
 
@@ -41,7 +41,7 @@ function removeUiBaseImport() {
 		const jsContent = fs.readFileSync(componentJsPath, { encoding: "utf8" });
 
 		const updatedJsContent = jsContent
-			.replaceAll(/import\s+["']@poc\/ui\/base\/.*?["'];?\n?/g, "")
+			.replaceAll(/import\s+["']@poc\/ui-base\/.*?["'];?\n?/g, "")
 			.replaceAll(' ? "" : undefined', "");
 
 		fs.writeFileSync(componentJsPath, updatedJsContent);
@@ -73,7 +73,7 @@ function generateReactWrapperComponents() {
 				// Join the parts by the - character
 				.join("-");
 
-			return `@poc/ui/base/${filePath}`;
+			return `@poc/ui-base/${filePath}`;
 		},
 
 		outdir: componentsDir,

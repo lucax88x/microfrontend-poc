@@ -1,7 +1,7 @@
 {
-	"extends": "../../infra/typescript/tsconfig.react.json",
+	"extends": "@poc/infra-typescript/tsconfig.react.emitTypes.json",
 	"compilerOptions": {
-		"noEmit": true
+		"allowJs": true
 	},
 	"include": ["src"]
 }

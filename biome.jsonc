@@ -1,0 +1,50 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"files": {
+		"includes": ["**/*.{ts,tsx,js,jsx,json,jsonc,html}"]
+	},
+	"linter": {
+		"enabled": true,
+		"domains": {
+			"test": "recommended",
+			"project": "recommended",
+			"react": "recommended"
+		},
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noNonNullAssertion": "error"
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"level": "error",
+					"fix": "safe",
+					"options": {
+						"attributes": ["className", "class"],
+						"functions": ["cn"]
+					}
+				}
+			},
+			"correctness": {
+				"noUnusedImports": {
+					"level": "warn",
+					"fix": "safe"
+				}
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
+	},
+	"assist": {
+		"actions": {
+			"recommended": true
+		},
+		"enabled": true
+	}
+}

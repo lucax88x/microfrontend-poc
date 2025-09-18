@@ -75,8 +75,8 @@ importers:
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.9.4
-        version: 1.9.4
+        specifier: ^2.2.3
+        version: 2.2.3
       '@commitlint/cli':
         specifier: ^19.6.1
         version: 19.8.0(@types/node@22.15.12)(typescript@5.8.3)
@@ -135,6 +135,9 @@ importers:
       '@biomejs/biome':
         specifier: catalog:biome
         version: 1.9.4
+      '@poc/infra-typescript':
+        specifier: workspace:*
+        version: link:../../infra/typescript
       '@types/react':
         specifier: catalog:react
         version: 19.1.3
@@ -153,7 +156,7 @@ importers:
       '@module-federation/runtime':
         specifier: catalog:vite
         version: 0.12.0
-      '@poc/federation/core':
+      '@poc/federation-core':
         specifier: workspace:*
         version: link:../../core
       react:
@@ -169,12 +172,15 @@ importers:
       '@biomejs/biome':
         specifier: catalog:biome
         version: 1.9.4
-      '@poc/package/components':
+      '@poc/infra-typescript':
         specifier: workspace:*
-        version: link:../../../package/components/dist/types
-      '@poc/ui/react':
+        version: link:../../../infra/typescript
+      '@poc/package-components':
         specifier: workspace:*
-        version: link:../../../ui/react/dist/types
+        version: link:../../../package/components
+      '@poc/ui-react':
+        specifier: workspace:*
+        version: link:../../../ui/react
       '@types/react':
         specifier: catalog:react
         version: 19.1.3
@@ -193,7 +199,7 @@ importers:
       '@module-federation/runtime':
         specifier: catalog:vite
         version: 0.12.0
-      '@poc/federation/core':
+      '@poc/federation-core':
         specifier: workspace:*
         version: link:../../core
       react:
@@ -209,9 +215,12 @@ importers:
       '@biomejs/biome':
         specifier: catalog:biome
         version: 1.9.4
-      '@poc/ui/react':
+      '@poc/infra-typescript':
         specifier: workspace:*
-        version: link:../../../ui/react/dist/types
+        version: link:../../../infra/typescript
+      '@poc/ui-react':
+        specifier: workspace:*
+        version: link:../../../ui/react
       '@types/react':
         specifier: catalog:react
         version: 19.1.3
@@ -231,6 +240,8 @@ importers:
         specifier: catalog:tailwindcss
         version: 3.4.17
 
+  infra/typescript: {}
+
   infra/vite:
     dependencies:
       vite:
@@ -240,6 +251,9 @@ importers:
         specifier: catalog:vite
         version: 2.7.1
     devDependencies:
+      '@poc/infra-typescript':
+        specifier: workspace:*
+        version: link:../typescript
       '@types/node':
         specifier: catalog:node
         version: 22.15.12
@@ -252,10 +266,10 @@ importers:
       '@module-federation/runtime':
         specifier: catalog:vite
         version: 0.12.0
-      '@poc/federation/core':
+      '@poc/federation-core':
         specifier: workspace:*
         version: link:../../federation/core
-      '@poc/federation/ui/react':
+      '@poc/federation-ui-react':
         specifier: workspace:*
         version: link:../../federation/ui/react
       react:
@@ -271,6 +285,9 @@ importers:
       '@module-federation/vite':
         specifier: catalog:vite
         version: 1.2.7(rollup@4.40.2)
+      '@poc/infra-typescript':
+        specifier: workspace:*
+        version: link:../../infra/typescript
       '@types/react':
         specifier: catalog:react
         version: 19.1.3
@@ -301,13 +318,15 @@ importers:
       yaml:
         specifier: catalog:vite
         version: 2.7.1
-    publishDirectory: dist/types
 
   shared/logger:
     devDependencies:
       '@biomejs/biome':
         specifier: catalog:biome
         version: 1.9.4
+      '@poc/infra-typescript':
+        specifier: workspace:*
+        version: link:../../infra/typescript
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -326,16 +345,16 @@ importers:
       '@module-federation/runtime':
         specifier: catalog:vite
         version: 0.12.0
-      '@poc/federation/core':
+      '@poc/federation-core':
         specifier: workspace:*
         version: link:../../federation/core
-      '@poc/federation/package/components':
+      '@poc/federation-package-components':
         specifier: workspace:*
         version: link:../../federation/package/components
-      '@poc/federation/ui/react':
+      '@poc/federation-ui-react':
         specifier: workspace:*
         version: link:../../federation/ui/react
-      '@poc/shared/logger':
+      '@poc/shared-logger':
         specifier: workspace:*
         version: link:../../shared/logger
       react:
@@ -351,15 +370,18 @@ importers:
       '@module-federation/vite':
         specifier: catalog:vite
         version: 1.2.7(rollup@4.40.2)
-      '@poc/package/components':
+      '@poc/infra-typescript':
         specifier: workspace:*
-        version: link:../../package/components/dist/types
-      '@poc/ui/base':
+        version: link:../../infra/typescript
+      '@poc/package-components':
         specifier: workspace:*
-        version: link:../../ui/base/dist/types
-      '@poc/ui/react':
+        version: link:../../package/components
+      '@poc/ui-base':
         specifier: workspace:*
-        version: link:../../ui/react/dist/types
+        version: link:../../ui/base
+      '@poc/ui-react':
+        specifier: workspace:*
+        version: link:../../ui/react
       '@types/react':
         specifier: catalog:react
         version: 19.1.3
@@ -421,6 +443,9 @@ importers:
       '@module-federation/vite':
         specifier: catalog:vite
         version: 1.2.7(rollup@4.40.2)
+      '@poc/infra-typescript':
+        specifier: workspace:*
+        version: link:../../infra/typescript
       autoprefixer:
         specifier: catalog:tailwindcss
         version: 10.4.21(postcss@8.5.3)
@@ -451,7 +476,6 @@ importers:
       vite:
         specifier: catalog:vite
         version: 6.3.5(@types/node@22.15.12)(jiti@2.4.2)(sass@1.87.0)(tsx@4.19.2)(yaml@2.7.1)
-    publishDirectory: dist/types
 
   ui/react:
     dependencies:
@@ -468,9 +492,12 @@ importers:
       '@module-federation/vite':
         specifier: catalog:vite
         version: 1.2.7(rollup@4.40.2)
-      '@poc/ui/base':
+      '@poc/infra-typescript':
         specifier: workspace:*
-        version: link:../base/dist/types
+        version: link:../../infra/typescript
+      '@poc/ui-base':
+        specifier: workspace:*
+        version: link:../base
       '@types/node':
         specifier: catalog:node
         version: 22.15.12
@@ -498,7 +525,6 @@ importers:
       zod:
         specifier: 'catalog:'
         version: 3.24.4
-    publishDirectory: dist/types
 
 packages:
 
@@ -598,8 +624,19 @@ packages:
     engines: {node: '>=14.21.3'}
     hasBin: true
 
+  '@biomejs/biome@2.2.3':
+    resolution: {integrity: sha512-9w0uMTvPrIdvUrxazZ42Ib7t8Y2yoGLKLdNne93RLICmaHw7mcLv4PPb5LvZLJF3141gQHiCColOh/v6VWlWmg==}
+    engines: {node: '>=14.21.3'}
+    hasBin: true
+
   '@biomejs/cli-darwin-arm64@1.9.4':
     resolution: {integrity: sha512-bFBsPWrNvkdKrNCYeAp+xo2HecOGPAy9WyNyB/jKnnedgzl4W4Hb9ZMzYNbf8dMCGmUdSavlYHiR01QaYR58cw==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@biomejs/cli-darwin-arm64@2.2.3':
+    resolution: {integrity: sha512-OrqQVBpadB5eqzinXN4+Q6honBz+tTlKVCsbEuEpljK8ASSItzIRZUA02mTikl3H/1nO2BMPFiJ0nkEZNy3B1w==}
     engines: {node: '>=14.21.3'}
     cpu: [arm64]
     os: [darwin]
@@ -610,8 +647,20 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  '@biomejs/cli-darwin-x64@2.2.3':
+    resolution: {integrity: sha512-OCdBpb1TmyfsTgBAM1kPMXyYKTohQ48WpiN9tkt9xvU6gKVKHY4oVwteBebiOqyfyzCNaSiuKIPjmHjUZ2ZNMg==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [darwin]
+
   '@biomejs/cli-linux-arm64-musl@1.9.4':
     resolution: {integrity: sha512-v665Ct9WCRjGa8+kTr0CzApU0+XXtRgwmzIf1SeKSGAv+2scAlW6JR5PMFo6FzqqZ64Po79cKODKf3/AAmECqA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@biomejs/cli-linux-arm64-musl@2.2.3':
+    resolution: {integrity: sha512-q3w9jJ6JFPZPeqyvwwPeaiS/6NEszZ+pXKF+IczNo8Xj6fsii45a4gEEicKyKIytalV+s829ACZujQlXAiVLBQ==}
     engines: {node: '>=14.21.3'}
     cpu: [arm64]
     os: [linux]
@@ -622,8 +671,20 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+  '@biomejs/cli-linux-arm64@2.2.3':
+    resolution: {integrity: sha512-g/Uta2DqYpECxG+vUmTAmUKlVhnGEcY7DXWgKP8ruLRa8Si1QHsWknPY3B/wCo0KgYiFIOAZ9hjsHfNb9L85+g==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+
   '@biomejs/cli-linux-x64-musl@1.9.4':
     resolution: {integrity: sha512-gEhi/jSBhZ2m6wjV530Yy8+fNqG8PAinM3oV7CyO+6c3CEh16Eizm21uHVsyVBEB6RIM8JHIl6AGYCv6Q6Q9Tg==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+
+  '@biomejs/cli-linux-x64-musl@2.2.3':
+    resolution: {integrity: sha512-y76Dn4vkP1sMRGPFlNc+OTETBhGPJ90jY3il6jAfur8XWrYBQV3swZ1Jo0R2g+JpOeeoA0cOwM7mJG6svDz79w==}
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [linux]
@@ -634,14 +695,32 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  '@biomejs/cli-linux-x64@2.2.3':
+    resolution: {integrity: sha512-LEtyYL1fJsvw35CxrbQ0gZoxOG3oZsAjzfRdvRBRHxOpQ91Q5doRVjvWW/wepgSdgk5hlaNzfeqpyGmfSD0Eyw==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+
   '@biomejs/cli-win32-arm64@1.9.4':
     resolution: {integrity: sha512-tlbhLk+WXZmgwoIKwHIHEBZUwxml7bRJgk0X2sPyNR3S93cdRq6XulAZRQJ17FYGGzWne0fgrXBKpl7l4M87Hg==}
     engines: {node: '>=14.21.3'}
     cpu: [arm64]
     os: [win32]
 
+  '@biomejs/cli-win32-arm64@2.2.3':
+    resolution: {integrity: sha512-Ms9zFYzjcJK7LV+AOMYnjN3pV3xL8Prxf9aWdDVL74onLn5kcvZ1ZMQswE5XHtnd/r/0bnUd928Rpbs14BzVmA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [win32]
+
   '@biomejs/cli-win32-x64@1.9.4':
     resolution: {integrity: sha512-8Y5wMhVIPaWe6jw2H+KlEm4wP/f7EW3810ZLmDlrEEy5KvBsb9ECEfu/kMWD484ijfQ8+nIi0giMgu9g1UAuuA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [win32]
+
+  '@biomejs/cli-win32-x64@2.2.3':
+    resolution: {integrity: sha512-gvCpewE7mBwBIpqk1YrUqNR4mCiyJm6UI3YWQQXkedSSEwzRdodRpaKhbdbHw1/hmTWOVXQ+Eih5Qctf4TCVOQ==}
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
@@ -3894,28 +3973,63 @@ snapshots:
       '@biomejs/cli-win32-arm64': 1.9.4
       '@biomejs/cli-win32-x64': 1.9.4
 
+  '@biomejs/biome@2.2.3':
+    optionalDependencies:
+      '@biomejs/cli-darwin-arm64': 2.2.3
+      '@biomejs/cli-darwin-x64': 2.2.3
+      '@biomejs/cli-linux-arm64': 2.2.3
+      '@biomejs/cli-linux-arm64-musl': 2.2.3
+      '@biomejs/cli-linux-x64': 2.2.3
+      '@biomejs/cli-linux-x64-musl': 2.2.3
+      '@biomejs/cli-win32-arm64': 2.2.3
+      '@biomejs/cli-win32-x64': 2.2.3
+
   '@biomejs/cli-darwin-arm64@1.9.4':
+    optional: true
+
+  '@biomejs/cli-darwin-arm64@2.2.3':
     optional: true
 
   '@biomejs/cli-darwin-x64@1.9.4':
     optional: true
 
+  '@biomejs/cli-darwin-x64@2.2.3':
+    optional: true
+
   '@biomejs/cli-linux-arm64-musl@1.9.4':
+    optional: true
+
+  '@biomejs/cli-linux-arm64-musl@2.2.3':
     optional: true
 
   '@biomejs/cli-linux-arm64@1.9.4':
     optional: true
 
+  '@biomejs/cli-linux-arm64@2.2.3':
+    optional: true
+
   '@biomejs/cli-linux-x64-musl@1.9.4':
+    optional: true
+
+  '@biomejs/cli-linux-x64-musl@2.2.3':
     optional: true
 
   '@biomejs/cli-linux-x64@1.9.4':
     optional: true
 
+  '@biomejs/cli-linux-x64@2.2.3':
+    optional: true
+
   '@biomejs/cli-win32-arm64@1.9.4':
     optional: true
 
+  '@biomejs/cli-win32-arm64@2.2.3':
+    optional: true
+
   '@biomejs/cli-win32-x64@1.9.4':
+    optional: true
+
+  '@biomejs/cli-win32-x64@2.2.3':
     optional: true
 
   '@commitlint/cli@19.8.0(@types/node@22.15.12)(typescript@5.8.3)':

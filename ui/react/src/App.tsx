@@ -1,7 +1,7 @@
 import { loadRemote } from "@module-federation/runtime";
 import { Button } from "./components";
 
-loadRemote("@poc/ui/base");
+loadRemote("@poc/ui-base");
 
 export default () => {
 	return (

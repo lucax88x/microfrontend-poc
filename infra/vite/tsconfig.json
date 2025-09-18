@@ -1,13 +1,10 @@
 {
+	"extends": "@poc/infra-typescript/tsconfig.base.json",
 	"compilerOptions": {
+		"target": "ESNext",
 		"module": "ESNext",
 		"moduleResolution": "Node",
-		"target": "ESNext",
 		"outDir": "./dist",
-		"rootDir": "./src",
-		"strict": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true
+		"rootDir": "./src"
 	}
 }

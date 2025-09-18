@@ -1,20 +1,10 @@
 {
+	"extends": "@poc/infra-typescript/tsconfig.emitTypes.json",
 	"compilerOptions": {
-		"target": "es2020",
-		"module": "es2020",
-		"strict": true,
-		"moduleResolution": "node",
-		"esModuleInterop": true,
+		"target": "esnext",
+
 		"experimentalDecorators": true,
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
-		"declaration": true,
-		"declarationDir": "dist/types",
-		"emitDeclarationOnly": true,
-		"paths": {
-			"~/*": ["./src/*"]
-		}
+		"useDefineForClassFields": false
 	},
-	"include": ["src"],
-	"exclude": ["src/**/*.stories.ts"]
+	"include": ["src"]
 }

@@ -1,7 +1,7 @@
 import { type PropsWithChildren, type ReactElement, Suspense } from "react";
 import { useDynamicImport } from "./useDynamicImport";
 
-type Scope = "@poc/ui/react" | "@poc/package/components";
+type Scope = "@poc/ui-react" | "@poc/package-components";
 
 // NOTE: Use me, as much as possible, ONLY in federation/** packages
 export const LazyComponent = <C extends {}>({
